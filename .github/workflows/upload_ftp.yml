@@ -32,5 +32,6 @@ jobs:
         password: ${{ secrets.FTP_SECRET }}
         local-dir: novelty-seeking/build/
         server-dir: /novelty_seeking/ # Change this to the desired remote directory
+        dangerous-clean-slate: true
 #        fail-on-warnings: true
 #        delete: true
