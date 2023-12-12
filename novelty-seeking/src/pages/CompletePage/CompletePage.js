@@ -1,5 +1,4 @@
 import Header from "../../GeneralComponents/Header";
-import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 
 function CompletePage(props){

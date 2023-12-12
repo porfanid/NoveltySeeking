@@ -22,7 +22,7 @@ jobs:
       run: cd novelty-seeking&&npm install
 
     - name: Build React app
-      run: cd novelty-seeking&&npm run build
+      run: cd novelty-seeking&&CI=false npm run build
 
     - name: Upload to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
