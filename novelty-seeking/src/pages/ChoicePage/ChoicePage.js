@@ -3,12 +3,11 @@ import image1 from "./images/1.jpg";
 import image2 from "./images/2.jpg";
 import image4 from "./images/3.jpg";
 import image3 from "./images/4.jpg";
-import {useState} from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 
 function ChoicePage(props){
 
-
+    let { index } = useParams();
 
     return(
         <>
@@ -59,7 +58,7 @@ function ChoicePage(props){
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={"/video"}>
+                    <NavLink className="active" to={process.env.PUBLIC_URL+`/video/`+index}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>

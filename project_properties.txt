@@ -1,0 +1,5 @@
+database_name = exbragr_novelty_seeking
+
+database_user_name = exbragr_novelty_seeking
+
+database_password = rLicLgJ4ey9TLSFv6vWQsqA4wmGNMF

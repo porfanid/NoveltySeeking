@@ -931,8 +931,8 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/background.webp);
-  opacity: 0.5;
+  background-image: url(../images/banner-bg.jpg);
+  opacity: 1;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

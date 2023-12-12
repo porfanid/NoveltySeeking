@@ -1,22 +1,25 @@
 import Header from "../../GeneralComponents/Header";
-import {NavLink} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 
 function VideoPage(props){
+    let { index } = useParams();
+
+
     return(<>
         <>
             <Header/>
             <h2>Welcome</h2>
-            <p>Παρακαλώ παρακολουθήστε το παρακάτω video</p>
+            <p>Παρακαλώ παρακολουθήστε το παρακάτω video {props.video}</p>
 
             <video className={"img-fluid"} controls>
-                <source src={props.video} type="video/mp4"/>
+                <source src={process.env.PUBLIC_URL+`/assets/videos/${props.video}/${index}.mp4`} type="video/mp4"/>
                     Your browser does not support the video tag.
             </video>
 
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={"/quiz"}>
+                    <NavLink className="active" to={process.env.PUBLIC_URL+"/quiz/"+index}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>
