@@ -30,7 +30,7 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_SECRET }}
-        local-dir: novelty-seeking/build
-        remote-dir: /novelty_seeking # Change this to the desired remote directory
-        fail-on-warnings: true
-        delete: true
+        local-dir: novelty-seeking/build/
+        server-dir: /novelty_seeking/ # Change this to the desired remote directory
+#        fail-on-warnings: true
+#        delete: true
