@@ -19,10 +19,10 @@ jobs:
         node-version: 21
 
     - name: Install dependencies
-      run: npm install
+      run: cd novelty_seeking&&npm install
 
     - name: Build React app
-      run: npm run build
+      run: cd novelty_seeking&&npm run build
 
     - name: Upload to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -30,7 +30,7 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_SECRET }}
-        local-dir: build
+        local-dir: novelty_seeking/build
         remote-dir: /novelty_seeking # Change this to the desired remote directory
         fail-on-warnings: true
         delete: true
