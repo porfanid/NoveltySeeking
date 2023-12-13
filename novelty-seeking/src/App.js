@@ -79,7 +79,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/complete",
-      element: <CompletePage answers = {answers} completeAnswerSet={completeAnswerSet}/>,
+      element: <CompletePage answers={answers} completeAnswerSet={completeAnswerSet}/>,
     },
   ])
 
@@ -93,12 +93,10 @@ function App() {
               <div className="header-text">
                 <RouterProvider router={router} />
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
     </>
   );
 }

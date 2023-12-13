@@ -9,7 +9,7 @@ function VideoPage(props){
         <>
             <Header/>
             <h2>Welcome</h2>
-            <p>Παρακαλώ παρακολουθήστε το παρακάτω video {props.video}</p>
+            <p>Παρακαλώ παρακολουθήστε το παρακάτω video</p>
 
             <video className={"img-fluid"} controls>
                 <source src={process.env.PUBLIC_URL+`/assets/videos/${props.video}/${index}.mp4`} type="video/mp4"/>
