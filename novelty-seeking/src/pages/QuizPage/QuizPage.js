@@ -55,7 +55,7 @@ function QuizPage(props){
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={process.env.PUBLIC_URL+(index<=7)?`/quizResult/${index}`:"/complete"}>
+                    <NavLink className="active" to={(index<=7)?process.env.PUBLIC_URL+`/quizResult/${index}`:process.env.PUBLIC_URL+"/complete"}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>

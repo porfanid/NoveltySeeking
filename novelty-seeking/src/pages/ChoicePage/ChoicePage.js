@@ -3,11 +3,28 @@ import image1 from "./images/1.jpg";
 import image2 from "./images/2.jpg";
 import image4 from "./images/3.jpg";
 import image3 from "./images/4.jpg";
-import {NavLink, useParams} from "react-router-dom";
+import {NavLink, useNavigate, useParams} from "react-router-dom";
+import {useEffect} from "react";
 
 function ChoicePage(props){
+    const navigate = useNavigate();
 
     let { index } = useParams();
+    const previousChoice=props.getLastChoice(index)
+
+    useEffect(() => {
+        const choices=["Ocean", "City", "Animals", "Space"];
+        if (previousChoice !== null) {
+            const isEqualToPrevious = (value) => {
+                return value !== previousChoice
+            }
+            const randomArray = choices.filter(isEqualToPrevious)
+            const randomIndex = Math.floor(Math.random() * randomArray.length);
+            props.setSelectedImage(randomArray[randomIndex])
+            navigate(process.env.PUBLIC_URL + `/video/` + index)
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     return(
         <>

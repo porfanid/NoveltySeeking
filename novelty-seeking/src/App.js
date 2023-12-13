@@ -48,6 +48,14 @@ function App() {
     setCurrentAnswer("choice", image);
   }
 
+  function getLastChoice(index){
+    index=parseInt(index)
+    if(index<2) {
+      return null;
+    }
+    index=index-1
+    return answers[index+""]["choice"]
+  }
 
   const router = createBrowserRouter([
     {
@@ -56,7 +64,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/choice/:index",
-      element: <ChoicePage setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
+      element: <ChoicePage getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index",
