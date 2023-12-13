@@ -15,10 +15,10 @@ function ChoicePage(props){
     useEffect(() => {
         const choices=["Ocean", "City", "Animals", "Space"];
         if (previousChoice !== null) {
-            const isEqualToPrevious = (value) => {
+            const isDifferentFromPrevious = (value) => {
                 return value !== previousChoice
             }
-            const randomArray = choices.filter(isEqualToPrevious)
+            const randomArray = choices.filter(isDifferentFromPrevious)
             const randomIndex = Math.floor(Math.random() * randomArray.length);
             props.setSelectedImage(randomArray[randomIndex])
             navigate(process.env.PUBLIC_URL + `/video/` + index)

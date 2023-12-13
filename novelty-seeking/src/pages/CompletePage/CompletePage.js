@@ -8,6 +8,7 @@ function CompletePage(props){
 
     useEffect(() => {
         addToAnswerSet();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     console.log(JSON.stringify(props.answers))

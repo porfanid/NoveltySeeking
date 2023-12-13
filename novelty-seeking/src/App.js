@@ -29,11 +29,10 @@ function App() {
   const [selectedImage, setImage] = useState(null);
   const [selectedQuiz, setQuiz] = useState(null);
   const [quizCorrectanswer, setQuizCorrectanswer] = useState(null);
-  const [answers, setAnswers] = useState({});
+  const [answers] = useState({});
   const [currentAnswer, setAnswer] = useState({});
   function setCurrentAnswer(question, answer){
     currentAnswer[question] = answer
-    console.log("Answer has been registered");
     console.log(JSON.stringify(currentAnswer))
   }
 
