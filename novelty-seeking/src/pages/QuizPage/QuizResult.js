@@ -25,6 +25,11 @@ function QuizResult(props){
         navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+category+"/counter/"+(parseInt(counter)+1))
     }
 
+    function changeCategory(){
+        props.setCurrentAnswer("choice", choice);
+        navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+(parseInt(category)+1)+"/counter/"+counter)
+    }
+
     function moveToNext(){
         navigate(process.env.PUBLIC_URL+"/choice/"+(index+1)+"/category/"+(parseInt(category)+1)+"/counter/1")
     }
@@ -47,6 +52,18 @@ function QuizResult(props){
                         />
                         <p></p>
                         <h2 onClick={repeat}>Επανάληψη</h2>
+                    </div>
+
+
+                    <div className={"col-md-4 p-3"}>
+                        <img
+                            name={"repeat"}
+                            src={repeatImage}
+                            alt={"repeat"}
+                            onClick={changeCategory}
+                        />
+                        <p></p>
+                        <h2 onClick={changeCategory}>Αλλαγή κατηγορίας</h2>
                     </div>
 
                     <div className={"col-md-4 p-3"}>
