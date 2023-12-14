@@ -1,25 +1,30 @@
 import Header from "../../GeneralComponents/Header";
 import {NavLink, useParams} from "react-router-dom";
+import {useEffect} from "react";
 
 function VideoPage(props){
-    let { index } = useParams();
+    let { index, choice, category, counter } = useParams();
 
+    useEffect(() => {
+        props.setCategoryAndCounter(category, counter);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    return(<>
+    return(
         <>
             <Header/>
             <h2>Welcome</h2>
             <p>Παρακαλώ παρακολουθήστε το παρακάτω video</p>
 
             <video className={"img-fluid"} controls>
-                <source src={process.env.PUBLIC_URL+`/assets/videos/${props.video}/${index}.mp4`} type="video/mp4"/>
-                    Your browser does not support the video tag.
+                <source src={process.env.PUBLIC_URL+`/assets/videos/${choice}/${category}/${counter}.mp4`} type="video/mp4"/>
+                Your browser does not support the video tag.
             </video>
 
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={process.env.PUBLIC_URL+"/quiz/"+index}>
+                    <NavLink className="active" to={process.env.PUBLIC_URL+"/quiz/"+index+"/choice/"+choice+"/category/"+category+"/counter/"+counter}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>
@@ -28,7 +33,7 @@ function VideoPage(props){
                 </div>
             </div>
         </>
-    </>)
+    )
 
 }
 

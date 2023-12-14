@@ -1,5 +1,5 @@
 import './App.css';
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom"
 import HomePage from "./pages/HomePage/HomePage";
 import ChoicePage from "./pages/ChoicePage/ChoicePage";
 import VideoPage from "./pages/VideoPage/VideoPage";
@@ -31,6 +31,22 @@ function App() {
   const [quizCorrectanswer, setQuizCorrectanswer] = useState(null);
   const [answers] = useState({});
   const [currentAnswer, setAnswer] = useState({});
+
+  const [counter] = useState({"Ocean":1, "City":1, "Animals":1, "Space":1});
+
+  function increaseCounter(category){
+    const currentValue=counter[category];
+    counter[category]=currentValue+1;
+  }
+
+  function getCounter(category){
+    return counter[category];
+  }
+
+  function resetCounter(category){
+    counter[category]=0;
+  }
+
   function setCurrentAnswer(question, answer){
     currentAnswer[question] = answer
     console.log(JSON.stringify(currentAnswer))
@@ -45,6 +61,11 @@ function App() {
   function setSelectedImage(image){
     setImage(image);
     setCurrentAnswer("choice", image);
+  }
+
+  function setCategoryAndCounter(category, counter){
+    setCurrentAnswer("category", category);
+    setCurrentAnswer("counter", counter);
   }
 
   function getLastChoice(index){
@@ -62,20 +83,28 @@ function App() {
       element: <HomePage />,
     },
     {
-      path: process.env.PUBLIC_URL+"/choice/:index",
+      path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",
       element: <ChoicePage getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
     },
     {
-      path: process.env.PUBLIC_URL+"/video/:index",
-      element: <VideoPage video={selectedImage}/>,
+      path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
+      element: <Navigate to="category/1/counter/1" replace/>
     },
     {
-      path: process.env.PUBLIC_URL+"/quiz/:index",
+      path: process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter",
+      element: <VideoPage setCategoryAndCounter={setCategoryAndCounter}/>,
+    },
+    {
+      path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice",
+      element: <Navigate to="category/1/counter/1" replace/>
+    },
+    {
+      path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",
       element: <QuizPage currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} />,
     },
     {
-      path: process.env.PUBLIC_URL+"/quizResult/:index",
-      element: <QuizResult currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
+      path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",
+      element: <QuizResult setCurrentAnswer={setCurrentAnswer} increaseCounter={increaseCounter} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/complete",

@@ -36,7 +36,8 @@
       "question": "Hello",
       "correct answer": "World",
       "false answers": ["temp1", "temp2"]
-    }},
+    }
+  },
   "Ocean": {"1": {
     "question": "Hello",
     "correct answer": "World",

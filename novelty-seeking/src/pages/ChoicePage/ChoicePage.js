@@ -9,19 +9,20 @@ import {useEffect} from "react";
 function ChoicePage(props){
     const navigate = useNavigate();
 
-    let { index } = useParams();
+    let { index,choice,category, counter} = useParams();
+    index=parseInt(index);
     const previousChoice=props.getLastChoice(index)
 
     useEffect(() => {
         const choices=["Ocean", "City", "Animals", "Space"];
-        if (previousChoice !== null) {
+        if(index>1) {
             const isDifferentFromPrevious = (value) => {
                 return value !== previousChoice
             }
             const randomArray = choices.filter(isDifferentFromPrevious)
             const randomIndex = Math.floor(Math.random() * randomArray.length);
             props.setSelectedImage(randomArray[randomIndex])
-            navigate(process.env.PUBLIC_URL + `/video/` + index)
+            navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+randomArray[randomIndex]+"/category/"+category+"/counter/1")
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
@@ -75,7 +76,7 @@ function ChoicePage(props){
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={process.env.PUBLIC_URL+`/video/`+index}>
+                    <NavLink className="active" to={process.env.PUBLIC_URL+`/video/`+index+"/choice/"+props.selectedImage}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>

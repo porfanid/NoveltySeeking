@@ -5,7 +5,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 
 function QuizResult(props){
-    let { index } = useParams();
+    let { index,choice,category, counter } = useParams();
     const addToAnswerSet=()=>{
         props.completeAnswerSet(index)
     }
@@ -21,11 +21,12 @@ function QuizResult(props){
     const answer=(props.isAnswerCorrect===true)?"Σωστά":"Λάθος";
 
     function repeat(){
-        navigate("/video/"+index)
+        props.setCurrentAnswer("choice", choice);
+        navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+category+"/counter/"+(parseInt(counter)+1))
     }
 
     function moveToNext(){
-        navigate(process.env.PUBLIC_URL+"/choice/" +(index+1))
+        navigate(process.env.PUBLIC_URL+"/choice/"+(index+1)+"/category/"+(parseInt(category)+1)+"/counter/1")
     }
     return(
         <>

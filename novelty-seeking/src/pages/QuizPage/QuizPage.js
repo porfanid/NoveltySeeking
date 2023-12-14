@@ -4,13 +4,16 @@ import "./answer.css";
 import {useEffect, useState} from "react";
 
 function QuizPage(props){
-    let {index} = useParams();
+    let {index,choice, category, counter} = useParams();
 
     const [answers, setAllAnswers] = useState([]);
 
     const questions = props.questions
-    const choice = props.choice;
     const setQuizCorrectAnswer = props.setQuizCorrectAnswer;
+
+    console.log(questions);
+
+    console.log("Choice"+ choice);
 
     useEffect(()=> {
         const falseAnswers = questions[choice][index]["false answers"];
@@ -24,6 +27,7 @@ function QuizPage(props){
             [allAnswers[i], allAnswers[j]] = [allAnswers[j], allAnswers[i]];
         }
         setAllAnswers(allAnswers);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [questions, index, choice, setQuizCorrectAnswer])
 
 
@@ -39,7 +43,7 @@ function QuizPage(props){
     return(
         <>
             <Header/>
-            <h2>{props.questions[props.choice][index].question}</h2>
+            <h2>{props.questions[choice][index].question}</h2>
 
             <div className="answer-container">
                     {answers.map((answer, index) => (
@@ -55,7 +59,7 @@ function QuizPage(props){
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={(index<=7)?process.env.PUBLIC_URL+`/quizResult/${index}`:process.env.PUBLIC_URL+"/complete"}>
+                    <NavLink className="active" to={(index<=7)?process.env.PUBLIC_URL+`/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}`:process.env.PUBLIC_URL+"/complete"}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>
