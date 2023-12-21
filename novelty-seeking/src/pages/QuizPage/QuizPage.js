@@ -16,8 +16,8 @@ function QuizPage(props){
     console.log("Choice"+ choice);
 
     useEffect(()=> {
-        const falseAnswers = questions[choice][index]["false answers"];
-        const correctAnswer = questions[choice][index]["correct answer"];
+        const falseAnswers = questions[choice][category][counter]["false answers"];
+        const correctAnswer = questions[choice][category][counter]["correct answer"];
         setQuizCorrectAnswer(correctAnswer);
         const allAnswers = [...falseAnswers, correctAnswer];
 
@@ -43,7 +43,7 @@ function QuizPage(props){
     return(
         <>
             <Header/>
-            <h2>{props.questions[choice][index].question}</h2>
+            <h2>{props.questions[choice][category][counter].question}</h2>
 
             <div className="answer-container">
                     {answers.map((answer, index) => (

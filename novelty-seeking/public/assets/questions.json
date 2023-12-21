@@ -1,41 +1,52 @@
 {
-  "Animals": {"1": {
-    "question": "Hello",
-    "correct answer": "World",
-    "false answers": ["temp1", "temp2"]
-  },"2": {
-    "question": "Hello",
-    "correct answer": "World",
-    "false answers": ["temp1", "temp2"]
-  },"3": {
-    "question": "Hello",
-    "correct answer": "World",
-    "false answers": ["temp1", "temp2"]
-  },
-    "4": {
-      "question": "Hello",
-      "correct answer": "World",
-      "false answers": ["temp1", "temp2"]
-    },
-    "5": {
-      "question": "Hello",
-      "correct answer": "World",
-      "false answers": ["temp1", "temp2"]
-    },
-    "6": {
-      "question": "Hello",
-      "correct answer": "World",
-      "false answers": ["temp1", "temp2"]
-    },
-    "7": {
-      "question": "Hello",
-      "correct answer": "World",
-      "false answers": ["temp1", "temp2"]
-    },
-    "8": {
-      "question": "Hello",
-      "correct answer": "World",
-      "false answers": ["temp1", "temp2"]
+  "Animals": {
+    "1": {
+      "1":{
+        "question": "Ποια είναι η κύρια πηγή τροφής για τις καμηλοπαρδάλεις στη φύση;",
+        "correct answer": "Φύλλα από δέντρα",
+        "false answers": ["Ψάρια", "Μούρα"]
+      },"2": {
+        "question": "Τι είδους ζώο απεικονίζεται να συνυπάρχει ειρηνικά με τις καμηλοπαρδάλεις;",
+        "correct answer": "Ζέβρες",
+        "false answers": ["Αντιλόπες", "Γατόπαρδοι"]
+      },"3": {
+        "question": "Ποια είναι η χαρακτηριστική ιδιότητα στο κεφάλι της καμηλοπάρδαλης;",
+        "correct answer": "Κέρατο",
+        "false answers": ["Προβοσκίδα", "Αφτιά"]
+      },"4": {
+        "question": "Ποια είναι η χαρακτηριστική ιδιότητα του σχεδίου του τριχώματος της καμηλοπάρδαλης;",
+        "correct answer": "Κηλίδες",
+        "false answers": ["Ρίγες", "Τετράγωνα"]
+      },
+      "5": {
+        "question": "Ποιο είναι το χρώμα των κηλίδων μιας καμηλοπάρδαλης;",
+        "correct answer": "Μία",
+        "false answers": ["Δύο", "Τρεις"]
+      },
+      "6": {
+        "question": "Πόσες καμηλοπαρδάλεις φαίνονται στο βάθος στην τελευταία σκηνή;",
+        "correct answer": "World",
+        "false answers": ["temp1", "temp2"]
+      },
+      "7": {
+        "question": "Τι χαρακτηριστικό σύμβολο σχηματίζεται πάνω στο μοτίβο του τριχώματος της καμηλοπάρδαλης;",
+        "correct answer": " Σταυρός",
+        "false answers": ["Τρίγωνο", "Ημισέληνο"]
+      }
+    },"2": {
+      "1":{
+        "question": "Πώς ζούνε τα λιοντάρια στο φυσικό τους περιβάλλον;",
+        "correct answer": "Σε αγέλες",
+        "false answers": ["Μοναχικά", "Σε δυάδες"]
+      },"2": {
+        "question": "Ποιος είναι ο φυσικός χώρος διαβίωσης των λιονταριών;",
+        "correct answer": "Λιβάδια και σαβάνες",
+        "false answers": ["Υποθαλάσσια σπήλαια", "Χιονισμένα βουνά"]
+      },"3": {
+        "question": "Πόσα πόδια έχουν τα λιοντάρια;",
+        "correct answer": "Τέσσερα",
+        "false answers": ["Δύο", "Έξι"]
+      }
     }
   },
   "Ocean": {"1": {

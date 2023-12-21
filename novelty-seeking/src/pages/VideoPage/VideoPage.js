@@ -16,7 +16,7 @@ function VideoPage(props){
             <h2>Welcome</h2>
             <p>Παρακαλώ παρακολουθήστε το παρακάτω video</p>
 
-            <video className={"img-fluid"} autoPlay={true}>
+            <video className={"img-fluid"} autoPlay={true} muted={true}>
                 <source src={process.env.PUBLIC_URL+`/assets/videos/${choice}/${category}/${counter}.mp4`} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
