@@ -41,6 +41,8 @@ function ChoicePage(props){
                             alt={"Ocean"}
                             style={{ border: props.selectedImage === 'Ocean' ? '10px solid red' : 'none' }}
                             onClick={() => props.setSelectedImage("Ocean")}
+                            width={"640px"}
+                            height={"240px"}
                         />
                     </div>
                     <div className={"col-md-4 p-3"}>
@@ -49,6 +51,8 @@ function ChoicePage(props){
                             src={image2} alt={"City"}
                             style={{ border: props.selectedImage === 'City' ? '10px solid red' : 'none' }}
                             onClick={() => props.setSelectedImage("City")}
+                            width={"640px"}
+                            height={"240px"}
                         />
                     </div>
                 </div>
@@ -60,6 +64,8 @@ function ChoicePage(props){
                             alt={"Animals"}
                             onClick={() => props.setSelectedImage("Animals")}
                             style={{ border: props.selectedImage === 'Animals' ? '10px solid red' : 'none' }}
+                            width={"640px"}
+                            height={"240px"}
                         />
                     </div>
                     <div className={"col-md-4 p-3"}>
@@ -68,6 +74,8 @@ function ChoicePage(props){
                              alt={"Space"}
                              onClick={() => props.setSelectedImage("Space")}
                              style={{ border: props.selectedImage === 'Space' ? '10px solid red' : 'none' }}
+                             width={"640px"}
+                             height={"240px"}
                         />
                     </div>
                 </div>
@@ -80,9 +88,10 @@ function ChoicePage(props){
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>
-                <div className="icon-button">
+                {/*<div className="icon-button">
                     <a href="https://youtube.com/templatemo" target="_blank" rel={"noreferrer"}><i className="fa fa-play"></i> Watch Our Video Now</a>
                 </div>
+                */}
             </div>
         </>
     )
