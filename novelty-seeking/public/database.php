@@ -28,7 +28,7 @@ $envVars = parseEnv(__DIR__ . '/.env');
 $host = $envVars['DB_HOST'];
 $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
-$password = "Pa123!12";//$envVars['DB_PASSWORD'];
+$password = $envVars['DB_PASSWORD'];
 
 try {
     // Create a PDO connection
