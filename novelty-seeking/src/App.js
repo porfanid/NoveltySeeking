@@ -57,7 +57,7 @@ function App() {
   function completeAnswerSet(index){
 
     const data=currentAnswer;
-    data["id"] = index;
+    data["index"] = index;
 
     console.log(data)
 
