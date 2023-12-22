@@ -59,8 +59,13 @@ function App() {
     const data=currentAnswer;
     data.id = index;
 
+    console.log(data)
 
-    axios.post(process.env.PUBLIC_URL+"/database.php", data)
+    axios.post(process.env.PUBLIC_URL+"/database.php", JSON.stringify(data), {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
         .then(response => {
           console.log(response.data);
           // Handle the response data as needed
