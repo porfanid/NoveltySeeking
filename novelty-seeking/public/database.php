@@ -67,6 +67,7 @@ try {
 
 } catch (PDOException $e) {
     // Handle database connection errors or query execution errors
-    echo "Error2".$e;
+    echo "Error2".$e.PHP_EOL;
+    echo "Hello".$_POST['code'];
 }
 ?>

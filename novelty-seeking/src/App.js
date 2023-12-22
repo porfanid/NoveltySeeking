@@ -55,9 +55,6 @@ function App() {
   }
 
   function completeAnswerSet(index){
-    answers[index]={...currentAnswer}
-    setAnswer({});
-    setImage(null);
 
     const data=currentAnswer;
     data.id = index;
@@ -72,6 +69,10 @@ function App() {
           console.error('Error:', error);
           // Handle errors
         });
+
+    answers[index]={...currentAnswer}
+    setAnswer({});
+    setImage(null);
   }
 
   function setSelectedImage(image){
