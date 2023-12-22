@@ -63,7 +63,7 @@ function App() {
     data.code = code;
 
 
-    axios.post(process.env.PUBLIC_URL+"database.php", data)
+    axios.post(process.env.PUBLIC_URL+"/database.php", data)
         .then(response => {
           console.log(response.data);
           // Handle the response data as needed
