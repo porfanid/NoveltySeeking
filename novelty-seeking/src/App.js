@@ -7,6 +7,7 @@ import QuizPage from "./pages/QuizPage/QuizPage";
 import CompletePage from "./pages/CompletePage/CompletePage";
 import {useEffect, useState} from "react";
 import QuizResult from "./pages/QuizPage/QuizResult";
+import axios from 'axios';
 
 
 function App() {
@@ -62,17 +63,10 @@ function App() {
     data.code = code;
 
 
-    fetch(process.env.PUBLIC_URL+'database.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-        .then(response => console.log(response))
-        .then(result => {
-          console.log(result);
-          // Handle the result as needed
+    axios.post('/path-to-your-php-script.php', data)
+        .then(response => {
+          console.log(response.data);
+          // Handle the response data as needed
         })
         .catch(error => {
           console.error('Error:', error);
