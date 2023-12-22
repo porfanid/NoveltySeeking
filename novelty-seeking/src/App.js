@@ -57,11 +57,11 @@ function App() {
   function completeAnswerSet(index){
 
     const data=currentAnswer;
-    data.id = index;
+    data["id"] = index;
 
     console.log(data)
 
-    axios.post(process.env.PUBLIC_URL+"/database.php", convertToURLSearchParams(data))
+    axios.post(process.env.PUBLIC_URL+"/database.php", data)
         .then(response => {
           console.log(response.data);
           // Handle the response data as needed
