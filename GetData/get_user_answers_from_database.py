@@ -4,8 +4,9 @@ def get_answers():
     token = 'xWi5tHFb5X4Scwp9pP4dX6hSSnXbdZqjJ9rBjEpfj9jXSkjFj5DKqL5uik4WKwS'
     headers = {'Authorization': f'Bearer {token}'}
 
-    codes_url = 'https://www.exploringthebrain.gr/novelty_seeking/get_all.php'
-    codes = [i["code"] for i in json.loads(requests.get(codes_url, headers=headers).text.encode('utf-8').decode('unicode-escape'))]
+    codes_url = 'https://www.exploringthebrain.gr/novelty_seeking/get_id.php'
+    result = requests.get(codes_url, headers=headers).text.encode('utf-8').decode('unicode-escape')
+    codes = [i["code"] for i in json.loads(result)]
 
     user = {}
 
