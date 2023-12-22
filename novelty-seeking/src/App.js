@@ -34,20 +34,6 @@ function App() {
   const [answers] = useState({});
   const [currentAnswer, setAnswer] = useState({});
 
-  const [counter] = useState({"Ocean":1, "City":1, "Animals":1, "Space":1});
-
-  function increaseCounter(category){
-    const currentValue=counter[category];
-    counter[category]=currentValue+1;
-  }
-
-  function getCounter(category){
-    return counter[category];
-  }
-
-  function resetCounter(category){
-    counter[category]=0;
-  }
 
   function setCurrentAnswer(question, answer){
     currentAnswer[question] = answer
@@ -81,19 +67,6 @@ function App() {
     setImage(image);
     setCurrentAnswer("choice", image);
   }
-
-  // Function to convert a data dictionary to URLSearchParams
-  const convertToURLSearchParams = (data) => {
-    const params = new URLSearchParams();
-
-    for (const key in data) {
-      if (data.hasOwnProperty(key)) {
-        params.append(key, data[key]);
-      }
-    }
-
-    return params;
-  };
 
   function setCategoryAndCounter(category, counter){
     setCurrentAnswer("category", category);
@@ -136,7 +109,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizResult setCurrentAnswer={setCurrentAnswer} increaseCounter={increaseCounter} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
+      element: <QuizResult setCurrentAnswer={setCurrentAnswer}s currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/complete",
