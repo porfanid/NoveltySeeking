@@ -48,7 +48,7 @@ try {
         $quiz = $_POST['quiz'];
 
         // Prepare and execute the SQL query to insert data
-        $stmt = $pdo->prepare("INSERT INTO your_table_name (code, id, choice, category, counter, quiz) VALUES (:code, :id, :choice, :category, :counter, :quiz)");
+        $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz) VALUES (:code, :id, :choice, :category, :counter, :quiz)");
         $stmt->bindParam(':code', $code);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':choice', $choice);
@@ -59,14 +59,14 @@ try {
         $stmt->execute();
 
         // You can handle the success or provide a response as needed
-        echo json_encode(['success' => true, 'message' => 'Data inserted successfully']);
+        echo "Success";
     } else {
         // Handle non-POST requests
-        echo json_encode(['error' => 'Invalid request method']);
+        echo "error";
     }
 
 } catch (PDOException $e) {
     // Handle database connection errors or query execution errors
-    echo json_encode(['error' => 'Database error: ' . $e->getMessage()]);
+    echo "Error2".$e;
 }
 ?>

@@ -60,7 +60,7 @@ function App() {
     setImage(null);
 
     const data=currentAnswer;
-    data.code = code;
+    data.id = index;
 
 
     axios.post(process.env.PUBLIC_URL+"/database.php", data)
