@@ -69,7 +69,7 @@ function App() {
       },
       body: JSON.stringify(data),
     })
-        .then(response => console.log(response.json()))
+        .then(response => console.log(response))
         .then(result => {
           console.log(result);
           // Handle the result as needed
