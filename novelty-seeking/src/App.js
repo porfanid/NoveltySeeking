@@ -61,11 +61,7 @@ function App() {
 
     console.log(data)
 
-    axios.post(process.env.PUBLIC_URL+"/database.php", JSON.stringify(data), {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    axios.post(process.env.PUBLIC_URL+"/database.php", convertToURLSearchParams(data))
         .then(response => {
           console.log(response.data);
           // Handle the response data as needed
@@ -84,6 +80,19 @@ function App() {
     setImage(image);
     setCurrentAnswer("choice", image);
   }
+
+  // Function to convert a data dictionary to URLSearchParams
+  const convertToURLSearchParams = (data) => {
+    const params = new URLSearchParams();
+
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        params.append(key, data[key]);
+      }
+    }
+
+    return params;
+  };
 
   function setCategoryAndCounter(category, counter){
     setCurrentAnswer("category", category);
