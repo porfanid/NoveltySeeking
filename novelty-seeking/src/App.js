@@ -58,6 +58,7 @@ function App() {
 
     const data=currentAnswer;
     data["index"] = index;
+    data["code"]=code;
 
     console.log(data)
 
