@@ -1,31 +1,14 @@
-import requests
-import json
+from get_user_answers_from_database import get_answers
 
 token = 'xWi5tHFb5X4Scwp9pP4dX6hSSnXbdZqjJ9rBjEpfj9jXSkjFj5DKqL5uik4WKwS'
 headers = {'Authorization': f'Bearer {token}'}
 
-questions_url = 'https://exploringthebrain.gr/novelty_seeking/assets/questions.json'
-questions = json.loads(requests.get(questions_url, headers=headers).text)
+import requests
+import json
 
-codes_url = 'https://www.exploringthebrain.gr/novelty_seeking/get_all.php'
-codes = [i["code"] for i in json.loads(requests.get(codes_url, headers=headers).text.encode('utf-8').decode('unicode-escape'))]
+#questions_url = 'https://exploringthebrain.gr/novelty_seeking/assets/questions.json'
+#questions = json.loads(requests.get(questions_url, headers=headers).text)
 
-print(codes)
+users = get_answers()
 
-user = {}
-
-for code in codes:
-    user[code] = {1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}, 7: {}, 8: {}}
-    
-    url = 'https://www.exploringthebrain.gr/novelty_seeking/get.php?code=' + code
-    answer = json.loads(requests.get(url, headers=headers).text.encode('utf-8').decode('unicode-escape'))
-    
-    for entry in answer:
-        question_id = int(entry['id'])
-        user[code][question_id]["choice"] = entry["choice"]
-        user[code][question_id]["category"] = entry["category"]
-        user[code][question_id]["counter"] = entry["counter"]
-        user[code][question_id]["quiz"] = entry["quiz"]
-    print(f"User: {code} has been completely")
-
-print(user)
+print(users)
