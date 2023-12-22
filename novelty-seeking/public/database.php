@@ -37,19 +37,36 @@ try {
     // Set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // You are now connected to the database!
+    // Check if the request is a POST request
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Assuming you have received the data in the POST request
+        $code = $_POST['code'];
+        $id = $_POST['id'];
+        $choice = $_POST['choice'];
+        $category = $_POST['category'];
+        $counter = $_POST['counter'];
+        $quiz = $_POST['quiz'];
 
-    // You can perform database operations here
+        // Prepare and execute the SQL query to insert data
+        $stmt = $pdo->prepare("INSERT INTO your_table_name (code, id, choice, category, counter, quiz) VALUES (:code, :id, :choice, :category, :counter, :quiz)");
+        $stmt->bindParam(':code', $code);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':choice', $choice);
+        $stmt->bindParam(':category', $category);
+        $stmt->bindParam(':counter', $counter);
+        $stmt->bindParam(':quiz', $quiz);
 
-    // For example, fetch all rows from a table named 'example_table'
-    $stmt = $pdo->prepare("SELECT * FROM answer;");
-    $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->execute();
 
-    // Print the result
-    print_r($result);
+        // You can handle the success or provide a response as needed
+        echo json_encode(['success' => true, 'message' => 'Data inserted successfully']);
+    } else {
+        // Handle non-POST requests
+        echo json_encode(['error' => 'Invalid request method']);
+    }
+
 } catch (PDOException $e) {
-    // Handle database connection errors
-    echo "Connection failed: " . $e->getMessage();
+    // Handle database connection errors or query execution errors
+    echo json_encode(['error' => 'Database error: ' . $e->getMessage()]);
 }
 ?>

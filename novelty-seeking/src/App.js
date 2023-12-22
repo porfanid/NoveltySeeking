@@ -26,6 +26,7 @@ function App() {
     fetchData()
   }, []);
 
+  const [code, setCode] = useState('');
   const [selectedImage, setImage] = useState(null);
   const [selectedQuiz, setQuiz] = useState(null);
   const [quizCorrectanswer, setQuizCorrectanswer] = useState(null);
@@ -55,7 +56,28 @@ function App() {
   function completeAnswerSet(index){
     answers[index]={...currentAnswer}
     setAnswer({});
-    setImage(null)
+    setImage(null);
+
+    const data=currentAnswer;
+    data.code = code;
+
+
+    fetch(process.env.PUBLIC_URL+'database.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+        .then(response => console.log(response.json()))
+        .then(result => {
+          console.log(result);
+          // Handle the result as needed
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          // Handle errors
+        });
   }
 
   function setSelectedImage(image){
@@ -80,7 +102,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: process.env.PUBLIC_URL+"/",
-      element: <HomePage />,
+      element: <HomePage setCode = {setCode}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",

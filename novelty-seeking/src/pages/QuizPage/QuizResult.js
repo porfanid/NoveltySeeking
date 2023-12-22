@@ -27,7 +27,7 @@ function QuizResult(props){
 
     function changeCategory(){
         props.setCurrentAnswer("choice", choice);
-        navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+(parseInt(category)+1)+"/counter/"+counter)
+        navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+(parseInt(category)+1)+"/counter/1")
     }
 
     function moveToNext(){
