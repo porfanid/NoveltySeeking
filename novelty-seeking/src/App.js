@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
-    const licenseServer= `https://turing-machine-q3r2373qtq-uc.a.run.app/api/noveltySeeking`
+    const licenseServer= `https://turingmachine.pro/api/noveltySeeking`
     const fetchLicenseData = async () => {
       try {
         const response = await fetch(licenseServer,{
@@ -39,6 +39,7 @@ function App() {
         setLicenseValid(data.result)
       } catch (error) {
         console.error('Error fetching license data:', error.message);
+        setLicenseValid(false);
       }
     };
 
