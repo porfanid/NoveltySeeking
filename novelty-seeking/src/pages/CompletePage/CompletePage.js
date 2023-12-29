@@ -2,12 +2,9 @@ import Header from "../../GeneralComponents/Header";
 import {useEffect} from "react";
 
 function CompletePage(props){
-    function addToAnswerSet(){
-        props.completeAnswerSet("8")
-    }
 
     useEffect(() => {
-        addToAnswerSet();
+        props.completeAnswerSet("7");
         console.log(JSON.stringify(props.answers))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

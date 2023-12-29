@@ -43,12 +43,19 @@ function QuizResult(props){
 
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
-                    <div className={"col-md-4 p-3"}>
+                    <div className={"col-md-5 p-3"}>
                         <img
                             name={"repeat"}
-                            src={repeatImage}
+                            src={process.env.PUBLIC_URL+`/assets/images/options/${choice}/repeat/${category}/${counter}.PNG`}
                             alt={"repeat"}
                             onClick={repeat}
+                            width={"100%"}
+                            style={{
+                                width: '100%',
+                                top: 0,
+                                left: 0,
+                                filter: "blur(3px)"
+                            }}
                         />
                         <p></p>
                         <h2 onClick={repeat}>Επανάληψη</h2>
@@ -58,15 +65,20 @@ function QuizResult(props){
                     <div className={"col-md-4 p-3"}>
                         <img
                             name={"repeat"}
-                            src={repeatImage}
-                            alt={"repeat"}
+                            src={process.env.PUBLIC_URL+`/assets/images/options/${choice}/category.png`}
+                            alt={"change category"}
                             onClick={changeCategory}
+                            width={"100%"}
+                            style={{
+                                width: '100%',
+                                height: '61%',
+                                top: 0,
+                                left: 0,
+                            }}
                         />
-                        <p></p>
-                        <h2 onClick={changeCategory}>Αλλαγή κατηγορίας</h2>
                     </div>
 
-                    <div className={"col-md-4 p-3"}>
+                    <div className={"col-md-3 p-3"}>
                         <img
                             name={"next"}
                             src={nextImage}

@@ -8,13 +8,42 @@ import CompletePage from "./pages/CompletePage/CompletePage";
 import {useEffect, useState} from "react";
 import QuizResult from "./pages/QuizPage/QuizResult";
 import axios from 'axios';
+import NotLicensed from "./pages/notLicensed/notLicensed";
 
 
 function App() {
 
   const [questions, setJsonData] = useState(null);
 
+  const [licenseValid, setLicenseValid] = useState(true);
+
   useEffect(() => {
+    const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
+    const licenseServer= `https://turing-machine-q3r2373qtq-uc.a.run.app/api/noveltySeeking`
+    const fetchLicenseData = async () => {
+      try {
+        const response = await fetch(licenseServer,{
+          method: 'GET',
+              headers: {
+            'Content-Type': 'application/json',
+                'license': licenseKey,
+                'machineId': "porfanidlicensekeymachine1",
+          },
+        });
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+        setLicenseValid(data.result)
+      } catch (error) {
+        console.error('Error fetching license data:', error.message);
+      }
+    };
+
+    fetchLicenseData();
+
     const fetchData = async () => {
       try {
         const response = await fetch(process.env.PUBLIC_URL+'/assets/questions.json');
@@ -125,7 +154,10 @@ function App() {
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="header-text">
-                <RouterProvider router={router} />
+                {
+                  (licenseValid)?<RouterProvider router={router} />:<NotLicensed/>
+                }
+
               </div>
             </div>
           </div>
