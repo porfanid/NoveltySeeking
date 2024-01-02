@@ -27,6 +27,7 @@ jobs:
         run: |
           cd GetData
           pyinstaller --onefile --console --icon=cse.logo.ico download.py
+          tree
 
       - name: Copy App to project root
         run: |
