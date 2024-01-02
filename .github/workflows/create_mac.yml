@@ -1,0 +1,39 @@
+name: Build macOS App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-macos-app:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller
+          pip install -r GetData/requirements.txt  # Install all dependencies from requirements.txt
+
+      - name: Build macOS App
+        run: |
+          cd GetData
+          pyinstaller --onefile --console --icon=cse.logo.ico download.py
+
+      - name: Copy App to project root
+        run: |
+          cp GetData/dist/download.app ./download.app
+
+      - name: Upload App artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: download.app
+          path: download.app
