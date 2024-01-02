@@ -27,7 +27,7 @@ jobs:
         run: |
           cd GetData
           pyinstaller --onefile --console --icon=cse.logo.ico download.py
-          tree
+          find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
 
       - name: Copy App to project root
         run: |
