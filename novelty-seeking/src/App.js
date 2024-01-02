@@ -37,8 +37,9 @@ function App() {
         const data = await response.json();
         console.log(data);
         setLicenseValid(data.result)
-      } catch (error) {
-        console.error('Error fetching license data:', error.message);
+      }catch (error) {
+        console.error('Error fetching license data:');
+        console.log(error);
         setLicenseValid(false);
       }
     };
