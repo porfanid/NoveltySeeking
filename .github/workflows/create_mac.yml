@@ -28,7 +28,7 @@ jobs:
         run: |
           cd GetData
           pyinstaller --onefile --console --icon=cse.logo.ico download.py
-          mv dist/download dist/download.app
+          mv dist/download dist/NoveltySeeking.app
           create-dmg --volname "NoveltySeeking" --volicon "cse.icns" --window-pos 200 120 \
           --window-size 800 400 \
           --icon-size 100 \

@@ -30,10 +30,10 @@ jobs:
 
       - name: Copy EXE to project root
         run: |
-          cp GetData/dist/download.exe ./download.exe
+          cp GetData/dist/download.exe ./NoveltySeeking.exe
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v2
         with:
-          name: download.exe
-          path: download.exe
+          name: NoveltySeeking.exe
+          path: NoveltySeeking.exe
