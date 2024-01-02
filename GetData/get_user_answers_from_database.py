@@ -22,5 +22,5 @@ def get_answers():
             user[code][question_id]["category"] = entry["category"]
             user[code][question_id]["counter"] = entry["counter"]
             user[code][question_id]["quiz"] = entry["quiz"]
-        print(f"User: {code} has been completely")
+        print(f"User: {code} has been downloaded")
     return user
