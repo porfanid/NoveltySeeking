@@ -6,6 +6,7 @@ def get_answers():
 
     codes_url = 'https://www.exploringthebrain.gr/novelty_seeking/get_id.php'
     result = requests.get(codes_url, headers=headers).text.encode('utf-8').decode('unicode-escape')
+    print(result)
     codes = [i["code"] for i in json.loads(result)]
 
     user = {}
