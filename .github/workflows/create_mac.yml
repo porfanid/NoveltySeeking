@@ -37,7 +37,7 @@ jobs:
 
       - name: Copy App to project root
         run: |
-          cp GetData/NoveltySeeking-*.dmg ./NoveltySeeking.dmg
+          cp GetData/NoveltySeeking.dmg ./NoveltySeeking.dmg
 
       - name: Upload App artifact
         uses: actions/upload-artifact@v2
