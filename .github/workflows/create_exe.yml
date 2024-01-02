@@ -26,7 +26,7 @@ jobs:
       - name: Build Windows EXE
         run: |
           cd GetData
-          pyinstaller --onefile --icon=cse.logo.ico download.py
+          pyinstaller --onefile --console --icon=cse.logo.ico download.py
 
       - name: Copy EXE to project root
         run: |
