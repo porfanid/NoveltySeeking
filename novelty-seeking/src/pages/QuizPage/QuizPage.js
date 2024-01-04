@@ -8,14 +8,9 @@ function QuizPage(props){
 
     const [answers, setAllAnswers] = useState([]);
 
-    const questions = props.questions
-    const setQuizCorrectAnswer = props.setQuizCorrectAnswer;
-
-    console.log(questions);
-
-    console.log("Choice"+ choice);
-
     useEffect(()=> {
+        const questions = props.questions
+        const setQuizCorrectAnswer = props.setQuizCorrectAnswer;
         const falseAnswers = questions[choice][category][counter]["false answers"];
         const correctAnswer = questions[choice][category][counter]["correct answer"];
         setQuizCorrectAnswer(correctAnswer);
@@ -28,7 +23,7 @@ function QuizPage(props){
         }
         setAllAnswers(allAnswers);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [questions, index, choice, setQuizCorrectAnswer])
+    }, [])
 
 
     const handleAnswerClick = (event, selectedAnswer) => {
