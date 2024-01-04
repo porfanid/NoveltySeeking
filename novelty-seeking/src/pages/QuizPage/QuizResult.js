@@ -51,14 +51,12 @@ function QuizResult(props){
                             onClick={repeat}
                             width={"100%"}
                             style={{
-                                width: '100%',
+                                width: '70%',
                                 top: 0,
                                 left: 0,
                                 filter: "blur(3px)"
                             }}
                         />
-                        <p></p>
-                        <h2 onClick={repeat}>Επανάληψη</h2>
                     </div>
 
 
