@@ -3,7 +3,7 @@ name: Build Windows EXE
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   build-windows-exe:
