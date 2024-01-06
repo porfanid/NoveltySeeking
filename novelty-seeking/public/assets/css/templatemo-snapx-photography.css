@@ -931,25 +931,33 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
-  opacity: 1;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding-top: 290px;
   padding-bottom: 240px;
   text-align: center;
-  background-color: #0a58ca;
+  filter: blur(0px); /* Remove the quotes around blur(5px) */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .main-banner::before {
   content: "";
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/background.avif); /* Fix the background-image property */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   padding-top: 290px;
   padding-bottom: 240px;
   text-align: center;
-  background-color: #000000;
-  z-index: -1; /* Place the pseudo-element behind the main content */
+  z-index: -1;
+  opacity: 0.2 /* Adjust the opacity (last parameter) as needed */
 }
 
 .main-banner h2 {
