@@ -144,150 +144,150 @@
   "City": {
     "1": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τι είναι το London Eye;",
+        "correct answer": "ρόδα λούνα παρκ",
         "false answers": [
-          "temp1",
-          "temp2"
+          "άγαλμα",
+          "γέφυρα"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πού βρίσκεται το London eye;",
+        "correct answer": "Στο Λονδίνο μεταξύ ουρανοξυστών και κλασικών κτιρίων",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Σε ένα χωριό της Αγγλίας",
+          "Σε μία μικρή πόλη της Αγγλίας"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το London Eye εντοπίζεται:",
+        "correct answer": "δίπλα από τον ποταμό Τάμεση",
         "false answers": [
-          "temp1",
-          "temp2"
+          "δίπλα από το παλάτι του Μπάκιγχαμ",
+          "έξω από την πόλη"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πόσες περίπου καμπίνες βρίσκονται στη ρόδα;",
+        "correct answer": "30",
         "false answers": [
-          "temp1",
-          "temp2"
+          "10",
+          "5"
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο τέλος του βίντεο φαίνονται:",
+        "correct answer": "ένας σταθμός μετρό και ένα άγαλμα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ένα πάρκο",
+          "χώρος στάθμευσης λεωφορείων"
         ]
       },
       "6": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το London Eye έχει ύψος:",
+        "correct answer": "135 μέτρα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "15 μέτρα",
+          "1500 μέτρα"
         ]
       },
       "7": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Οι καμπίνες:",
+        "correct answer": "είναι σχετικά μεγάλες, κλειστές και χωρούν έως 25 άτομα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "είναι ανοικτές από πάνω",
+          "έχουν χωρητικότητα μέχρι 5 άτομα"
         ]
       }
     },"2": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τι χρώμα είναι η γέφυρα;",
+        "correct answer": "κόκκινο",
         "false answers": [
-          "temp1",
-          "temp2"
+          "πράσινο",
+          "μπλε"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Την γέφυρα ΔΕΝ μπορούν να περάσουν:",
+        "correct answer": "τρένα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "αυτοκίνητα",
+          "πεζοί"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Η γέφυρα περνάει πάνω από:",
+        "correct answer": "την θάλασσα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "μια πεδιάδα",
+          "άλλους δρόμους"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο πόσα πλοία φαίνονται;",
+        "correct answer": "δύο",
         "false answers": [
-          "temp1",
-          "temp2"
+          "κανένα",
+          "δέκα"
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο ο καιρός φαίνεται να είναι:",
+        "correct answer": "συννεφιασμένος",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ηλιόλουστος",
+          "χιονισμένος"
         ]
       },
       "6": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πόσα μέτρα μήκος έχει η γέφυρα (Golden Gate Bridge)",
+        "correct answer": "2.737 μέτρα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "10 μέτρα",
+          "250 μέτρα"
         ]
       }
     },
     "3": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο φαίνεται:",
+        "correct answer": "ένα υδροηλεκτρικό εργοστάσιο",
         "false answers": [
-          "temp1",
-          "temp2"
+          "μια πόλη",
+          "ένα πάρκο με ανεμογεννήτριες"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πάνω στο φράγμα:",
+        "correct answer": "υπάρχει αυτοκινητόδρομος",
         "false answers": [
-          "temp1",
-          "temp2"
+          "δεν υπάρχει κάτι",
+          "υπάρχουν ηλεκτρικές κολώνες"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πόσοι πυλώνες υπάρχουν μέσα στο νερό;",
+        "correct answer": "4",
         "false answers": [
-          "temp1",
-          "temp2"
+          "2",
+          "1"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Εκατέρωθεν του φράγματος:",
+        "correct answer": "Υπάρχουν βραχώδη όρη στα οποία στηρίζεται",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Αυτό συνορεύει με δάσος",
+          "Βρίσκονται κατοικίες"
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το φράγμα:",
+        "correct answer": "έχει γκρι χρώμα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "είναι βαμμένο κόκκινο",
+          "είναι στολισμένο με ζωγραφιές"
         ]
       }
     },
