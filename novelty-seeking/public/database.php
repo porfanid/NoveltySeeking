@@ -11,12 +11,6 @@ require __DIR__ . '/vendor/autoload.php';
     'profiles_sample_rate' => 1.0,
   ]);
 
-  try {
-    $this->functionFailsForSure();
-  } catch (\Throwable $exception) {
-    \Sentry\captureException($exception);
-  }
-
 // Function to parse .env file
 function parseEnv($filePath)
 {
