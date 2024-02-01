@@ -1,5 +1,22 @@
 <?php
 
+// code to use sentry for error reporting
+require __DIR__ . '/vendor/autoload.php';
+
+\Sentry\init([
+    'dsn' => 'https://d80d7a680edc3c5b3d270c0ef958fe6b@o238115.ingest.sentry.io/4506672208084992',
+    // Specify a fixed sample rate
+    'traces_sample_rate' => 1.0,
+    // Set a sampling rate for profiling - this is relative to traces_sample_rate
+    'profiles_sample_rate' => 1.0,
+  ]);
+
+  try {
+    $this->functionFailsForSure();
+  } catch (\Throwable $exception) {
+    \Sentry\captureException($exception);
+  }
+
 // Function to parse .env file
 function parseEnv($filePath)
 {
