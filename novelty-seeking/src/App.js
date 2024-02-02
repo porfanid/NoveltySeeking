@@ -17,6 +17,8 @@ function App() {
 
   const [licenseValid, setLicenseValid] = useState(true);
 
+  const [previousChoices] = useState([]);
+
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
     const licenseServer= `https://turingmachine.pro/api/noveltySeeking`
@@ -120,7 +122,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",
-      element: <ChoicePage getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
+      element: <ChoicePage previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
@@ -140,7 +142,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizResult setCurrentAnswer={setCurrentAnswer}s currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
+      element: <QuizResult setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/complete",

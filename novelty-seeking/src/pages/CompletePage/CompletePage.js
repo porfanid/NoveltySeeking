@@ -1,10 +1,11 @@
 import Header from "../../GeneralComponents/Header";
 import {useEffect} from "react";
+import {number_of_questions} from "../../assets/settings";
 
 function CompletePage(props){
 
     useEffect(() => {
-        props.completeAnswerSet("7");
+        props.completeAnswerSet(number_of_questions.toString());
         console.log(JSON.stringify(props.answers))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

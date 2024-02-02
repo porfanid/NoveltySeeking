@@ -5,27 +5,39 @@ import image4 from "./images/3.jpg";
 import image3 from "./images/4.jpg";
 import {NavLink, useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
+import {remove_all_previous_values} from "../../assets/settings";
 
 function ChoicePage(props){
     const navigate = useNavigate();
 
-    let { index,choice,category, counter} = useParams();
+    let { index,category} = useParams();
+
+
+
     index=parseInt(index);
     const previousChoice=props.getLastChoice(index)
 
     useEffect(() => {
         const choices=["Ocean", "City", "Animals", "Space"];
         if(index>1) {
-            const isDifferentFromPrevious = (value) => {
-                return value !== previousChoice
+            let isDifferentFromPrevious = (value) => {
+                if(remove_all_previous_values){
+                    return !props.previousChoices.includes(value);
+                }else{
+                    return value!==previousChoice;
+                }
             }
             const randomArray = choices.filter(isDifferentFromPrevious)
+            console.log("Hello")
+            console.log("random available values: "+randomArray);
+            console.log("Previous Choices: "+props.previousChoices);
             const randomIndex = Math.floor(Math.random() * randomArray.length);
             props.setSelectedImage(randomArray[randomIndex])
+            props.previousChoices.push(randomArray[randomIndex]);
             navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+randomArray[randomIndex]+"/category/"+category+"/counter/1")
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    },[index])
 
     return(
         <>

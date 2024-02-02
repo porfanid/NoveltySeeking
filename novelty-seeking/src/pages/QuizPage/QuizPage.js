@@ -2,6 +2,7 @@ import Header from "../../GeneralComponents/Header";
 import {NavLink, useParams} from "react-router-dom";
 import "./answer.css";
 import {useEffect, useState} from "react";
+import {number_of_questions} from "../../assets/settings";
 
 function QuizPage(props){
     let {index,choice, category, counter} = useParams();
@@ -54,12 +55,9 @@ function QuizPage(props){
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <NavLink className="active" to={(index<7)?process.env.PUBLIC_URL+`/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}`:process.env.PUBLIC_URL+"/complete"}>
+                    <NavLink className="active" to={(index<number_of_questions)?process.env.PUBLIC_URL+`/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}`:process.env.PUBLIC_URL+"/complete"}>
                         Επόμενη Σελίδα
                     </NavLink>
-                </div>
-                <div className="icon-button">
-                    <a href="https://youtube.com/templatemo" target="_blank" rel={"noreferrer"}><i className="fa fa-play"></i> Watch Our Video Now</a>
                 </div>
             </div>
         </>

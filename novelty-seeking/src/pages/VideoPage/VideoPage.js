@@ -29,9 +29,6 @@ function VideoPage(props){
                         Επόμενη Σελίδα
                     </NavLink>):null}
                 </div>
-                <div className="icon-button">
-                    <a href="https://youtube.com/templatemo" target="_blank" rel={"noreferrer"}><i className="fa fa-play"></i> Watch Our Video Now</a>
-                </div>
             </div>
         </>
     )
