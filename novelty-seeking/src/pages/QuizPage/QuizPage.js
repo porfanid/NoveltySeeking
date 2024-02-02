@@ -39,27 +39,29 @@ function QuizPage(props){
     return(
         <>
             <Header/>
-            <h2>{props.questions[choice][category][counter].question}</h2>
+            <h2 className={"mt-5"}>{props.questions[choice][category][counter].question}</h2>
 
-            <div className="answer-container">
-                    {answers.map((answer, index) => (
-                        <div
-                            key={index}
-                            className={`answer-box`}
-                            onClick={(event) => handleAnswerClick(event, answer)}
-                        >
-                            {answer}
-                        </div>
-                    ))}
+            <div className="answer-container mt-3">
+                {answers.map((answer, index) => (
+                    <div
+                        key={index}
+                        className={`answer-box`}
+                        onClick={(event) => handleAnswerClick(event, answer)}
+                    >
+                        {answer}
+                    </div>
+                ))}
             </div>
 
-            <div className="buttons">
+            <div className="buttons mt-5">
                 <div className="big-border-button">
-                    <NavLink className="active" to={(index<number_of_questions)?process.env.PUBLIC_URL+`/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}`:process.env.PUBLIC_URL+"/complete"}>
+                    <NavLink className="active"
+                             to={(index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/complete"}>
                         Επόμενη Σελίδα
                     </NavLink>
                 </div>
             </div>
+            <div className={"mb-5 mt-5"}></div>
         </>
     )
 }
