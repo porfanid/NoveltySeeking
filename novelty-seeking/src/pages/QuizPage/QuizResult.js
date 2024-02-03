@@ -38,7 +38,7 @@ function QuizResult(props){
             <Header/>
             <h2>Απάντησες {answer}</h2>
             <p>
-                Επέλεξε με τί θα ήθελες να συνεχίσεις
+                Επίλεξε με τί θα ήθελες να συνεχίσεις
             </p>
 
             <div className={"center mx-auto text-center"}>

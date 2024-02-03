@@ -5,7 +5,7 @@ import image4 from "./images/3.jpg";
 import image3 from "./images/4.jpg";
 import {NavLink, useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
-import {remove_all_previous_values} from "../../assets/settings";
+import {first_choice_has_button, random_choices, remove_all_previous_values_from_choices} from "../../assets/settings";
 
 function ChoicePage(props){
     const navigate = useNavigate();
@@ -18,19 +18,16 @@ function ChoicePage(props){
     const previousChoice=props.getLastChoice(index)
 
     useEffect(() => {
-        const choices=["Ocean", "City", "Animals", "Space"];
+
         if(index>1) {
             let isDifferentFromPrevious = (value) => {
-                if(remove_all_previous_values){
+                if(remove_all_previous_values_from_choices){
                     return !props.previousChoices.includes(value);
                 }else{
                     return value!==previousChoice;
                 }
             }
-            const randomArray = choices.filter(isDifferentFromPrevious)
-            console.log("Hello")
-            console.log("random available values: "+randomArray);
-            console.log("Previous Choices: "+props.previousChoices);
+            const randomArray = random_choices.filter(isDifferentFromPrevious)
             const randomIndex = Math.floor(Math.random() * randomArray.length);
             props.setSelectedImage(randomArray[randomIndex])
             props.previousChoices.push(randomArray[randomIndex]);
@@ -42,8 +39,7 @@ function ChoicePage(props){
     return(
         <>
             <Header/>
-            <h2>Welcome</h2>
-            <p>{props.selectedImage ? (<>Έχετε επιλέξει: {props.selectedImage}</>):(<>Παρακαλώ επιλέξτε μια εικόνα από τις ακόλουθες</>)}</p>
+            <h2>Παρακαλώ επιλέξτε μια εικόνα</h2>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
                     <div className={"col-md-4 p-3"}>
@@ -52,7 +48,12 @@ function ChoicePage(props){
                             src={image1}
                             alt={"Ocean"}
                             style={{ border: props.selectedImage === 'Ocean' ? '10px solid red' : 'none' }}
-                            onClick={() => props.setSelectedImage("Ocean")}
+                            onClick={() => {
+                                props.setSelectedImage("Ocean")
+                                if(!first_choice_has_button){
+                                    navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Ocean")
+                                }
+                            }}
                             width={"640px"}
                             height={"240px"}
                         />
@@ -62,7 +63,12 @@ function ChoicePage(props){
                             name={"City"}
                             src={image2} alt={"City"}
                             style={{ border: props.selectedImage === 'City' ? '10px solid red' : 'none' }}
-                            onClick={() => props.setSelectedImage("City")}
+                            onClick={() => {
+                                props.setSelectedImage("City");
+                                if(!first_choice_has_button){
+                                    navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/City")
+                                }
+                            }}
                             width={"640px"}
                             height={"240px"}
                         />
@@ -74,7 +80,12 @@ function ChoicePage(props){
                             name={"Animals"}
                             src={image3}
                             alt={"Animals"}
-                            onClick={() => props.setSelectedImage("Animals")}
+                            onClick={() => {
+                                props.setSelectedImage("Animals")
+                                if(!first_choice_has_button){
+                                    navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Animals")
+                                }
+                            }}
                             style={{ border: props.selectedImage === 'Animals' ? '10px solid red' : 'none' }}
                             width={"640px"}
                             height={"240px"}
@@ -84,7 +95,12 @@ function ChoicePage(props){
                         <img name={"Space"}
                              src={image4}
                              alt={"Space"}
-                             onClick={() => props.setSelectedImage("Space")}
+                             onClick={() => {
+                                 props.setSelectedImage("Space")
+                                 if(!first_choice_has_button){
+                                     navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Space")
+                                 }
+                             }}
                              style={{ border: props.selectedImage === 'Space' ? '10px solid red' : 'none' }}
                              width={"640px"}
                              height={"240px"}
@@ -95,11 +111,13 @@ function ChoicePage(props){
 
 
             <div className="buttons">
+                {(first_choice_has_button)?
                 <div className="big-border-button">
                     <NavLink className="active" to={process.env.PUBLIC_URL+`/video/`+index+"/choice/"+props.selectedImage}>
                         Επόμενη Σελίδα
                     </NavLink>
-                </div>
+                </div>:null
+                }
                 {/*<div className="icon-button">
                     <a href="https://youtube.com/templatemo" target="_blank" rel={"noreferrer"}><i className="fa fa-play"></i> Watch Our Video Now</a>
                 </div>
