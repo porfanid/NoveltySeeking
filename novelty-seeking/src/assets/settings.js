@@ -17,5 +17,5 @@ export const show_next_button_to_quiz = false;
 // video configuration
 //---------------------------------------------------------------------------------
 export const show_next_button_to_video = false;
-export const delay_quiz_page = 5000;
+export const delay_quiz_page = 3000;
 export const show_countdown = true;

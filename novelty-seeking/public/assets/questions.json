@@ -293,89 +293,89 @@
     },
     "4": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το κτήριο που φαίνεται στο βίντεο βρίσκεται:",
+        "correct answer": "σε μεγαλούπολη της Αυστραλίας",
         "false answers": [
-          "temp1",
-          "temp2"
+          "σε χωριό των ΗΠΑ",
+          "σε ορεινή πόλη της Κίνας"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το κτήριο βρίσκεται:",
+        "correct answer": "δίπλα στην θάλασσα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "σε βουνό",
+          "δίπλα από ένα χωριό"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βάθος πίσω από την όπερα διακρίνεται",
+        "correct answer": "μία γέφυρα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ένας φάρος",
+          "ένα θέατρο"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τι από τα παρακάτω δεν φαίνονται στο βίντεο",
+        "correct answer": "ανεμογεννήτριες",
         "false answers": [
-          "temp1",
-          "temp2"
+          "πλοία",
+          "ουρανοξύστες"
         ]
       }
     },
     "5": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το κτήριο που δείχνει το βίντεο είναι:",
+        "correct answer": "το υψηλότερο κτήριο του κόσμου",
         "false answers": [
-          "temp1",
-          "temp2"
+          "η μεγαλύτερη γέφυρα του κόσμου",
+          "το αρχαιότερο διασωθέν άγαλμα του κόσμου"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στους πρόποδες του κτηρίου φαίνεται να υπάρχουν",
+        "correct answer": "πισίνες",
         "false answers": [
-          "temp1",
-          "temp2"
+          "τίποτα",
+          "τροπικό δάσος"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στην πόλη που φαίνεται στο βίντεο, ο συγκεκριμένος ουρανοξύστης είναι:",
+        "correct answer": "ο πιο ψηλός",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ο μοναδικός που υπάρχει",
+          "πιο κοντός σε σχέση με άλλους"
         ]
       }
     },
     "6": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο φαίνεται:",
+        "correct answer": "το άγαλμα της Ελευθερίας",
         "false answers": [
-          "temp1",
-          "temp2"
+          "η μεγάλη Σφίγγα της Γκίζας",
+          "ο Χριστός ο Λυτρωτής"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το συγκεκριμένο άγαλμα βρίσκεται:",
+        "correct answer": "στην πόλη της Νέας Υόρκης",
         "false answers": [
-          "temp1",
-          "temp2"
+          "σε δάσος της Βραζιλίας",
+          "στην έρημο της Αιγύπτου"
         ]
       }
     },
     "7": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο κτήριο που δείχνει το βίντεο φαίνεται να χρησιμοποιείται:",
+        "correct answer": "κυρίως οι υψηλότεροι όροφοι",
         "false answers": [
-          "temp1",
-          "temp2"
+          "μόνο το ισόγειο",
+          "όλο το κτήριο"
         ]
       }
     }
@@ -622,238 +622,238 @@
   "Space": {
     "1": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Ποιο πλανήτη παρουσιάζει το βίντεο;",
+        "correct answer": "Πλανήτης Γη",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Πλανήτης Άρης",
+          "Πλανήτης Ουρανός"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το βίντεο φαίνεται να τραβήχτηκε από:",
+        "correct answer": "έναν δορυφόρο",
         "false answers": [
-          "temp1",
-          "temp2"
+          "από την επιφάνεια του πλανήτη",
+          "από την σελήνη"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Αυτό που φαίνεται στο βίντεο πιθανόν να είναι:",
+        "correct answer": "σύννεφα από τυφώνα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "χιονισμένο βουνό",
+          "φουρτουνιασμένη θάλασσα"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο φαίνεται ο πλανήτης κατά την διάρκεια:",
+        "correct answer": "της ημέρας και της νύχτας",
         "false answers": [
-          "temp1",
-          "temp2"
+          "της ημέρας",
+          "της νύχτας"
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Από το διάστημα μπορούν να φανούν:",
+        "correct answer": "οι κινήσεις των σύννεφων",
         "false answers": [
-          "temp1",
-          "temp2"
+          "το σινικό τείχος",
+          "το κέντρο της Γης"
         ]
       },
       "6": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο ποια ήπειρος δεν φαίνεται;",
+        "correct answer": "Αφρική",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Αυστραλία",
+          "Ασία"
         ]
       },
       "7": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το συγκεκριμένο βίντεο από που φαίνεται να ξεκίνησε να δείχνει;",
+        "correct answer": "Μία κατοικημένη περιοχή της Ευρώπης",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Ένα σημείο του Ειρηνικού Ωκεανού",
+          "Την Ανταρκτική"
         ]
       }
     },"2": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο βίντεο φαίνεται:",
+        "correct answer": "εκτόξευση διαστημόπλοιου",
         "false answers": [
-          "temp1",
-          "temp2"
+          "προσγείωση διαστημόπλοιου",
+          "κατασκευή διαστημόπλοιου"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Η εκτόξευση του διαστημόπλοιου γίνεται:",
+        "correct answer": "από την Γη",
         "false answers": [
-          "temp1",
-          "temp2"
+          "από την σελήνη",
+          "από διαστημικό σταθμό"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τα στοιχεία της εκτόξευσης διακρίνονται στην εικόνα:",
+        "correct answer": "κάτω αριστερά",
         "false answers": [
-          "temp1",
-          "temp2"
+          "πάνω δεξιά",
+          "κάτω δεξιά"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Από το διάστημα στην Γη απεικονίζεται:",
+        "correct answer": "άγονη στεριά",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ωκεανός",
+          "πόλη"
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το διαστημόπλοιο:",
+        "correct answer": "διασπάται κατα την διαρκεια της πτήσης του",
         "false answers": [
-          "temp1",
-          "temp2"
+          "μένει ανέπαφο σε όλη την διάρκεια πτήσης",
+          "έχει την δυνατότητα να επαναπροσγειωθεί στη Γη"
         ]
       },
       "6": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το κατώτερο τμήμα που αποσπάται στο βίντεο:",
+        "correct answer": "Είναι κυλινδρικό με μπλε πτερύγια",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Είναι μία κόκκινη σφαίρα",
+          "Κατευθύνεται στο διάστημα"
         ]
       }
     },
     "3": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Ποιος πλανήτης απεικονίζεται;",
+        "correct answer": "ο Κρόνος",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ο Άρης",
+          "ο Δίας"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Ο δακτύλιος του Κρόνου:",
+        "correct answer": "αποτελείται από θραύσματα μετεωριτών",
         "false answers": [
-          "temp1",
-          "temp2"
+          "είναι οπτικό τεχνούργημα",
+          "δεν έχει δακτύλιο"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Ο Κρόνος είναι:",
+        "correct answer": "μεγαλύτερος από τη Γη",
         "false answers": [
-          "temp1",
-          "temp2"
+          "ο μεγαλύτερος πλανήτης του ηλιακού συστήματος",
+          "μικρότερος από τη Γη"
         ]
       },
       "4": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στο τέλος του βίντεο εμφανίζεται η εικόνα ενός",
+        "correct answer": "κομήτη",
         "false answers": [
-          "temp1",
-          "temp2"
+          "μικρού πλανήτη",
+          "δορυφόρου"
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στην αρχή του βίντεο οι λήψεις είναι:",
+        "correct answer": "ψεύτικες- εικονογραφημένες",
         "false answers": [
-          "temp1",
-          "temp2"
+          "από αστεροσκοπείο της Γης",
+          "από βίντεο από τεχνητό δορυφόρο"
         ]
       }
     },
     "4": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πόσους φυσικούς δορυφόρους (φεγγάρια) έχει η Γη;",
+        "correct answer": "ένα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "δύο",
+          "κανένα"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τί παρουσιάζει η σελήνη;",
+        "correct answer": "Κρατήρες",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Κόκκινο χρώμα",
+          "Θάλασσες"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Πότε έγινε η πρώτη προσελήνωση με πλήρωμα;",
+        "correct answer": "το 1969",
         "false answers": [
-          "temp1",
-          "temp2"
+          "το 1859",
+          "το 1999"
         ]
       },
       "4": {
         "question": "Hello",
-        "correct answer": "World",
+        "correct answer": "ένα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "κανένα",
+          "τέσσερα"
         ]
       }
     },
     "5": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τι δείχνει το βίντεο;",
+        "correct answer": "τον Ήλιο",
         "false answers": [
-          "temp1",
-          "temp2"
+          "την Αφροδίτη",
+          "μια μαύρη τρύπα"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Στον βίντεο φαίνονται",
+        "correct answer": "Οι ηλιακές καταιγίδες του Ήλιου που προβάλλουν τοξωτά στην επιφάνειά του",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Οι πλανήτες του ηλιακού συστήματος γύρω από τον Ήλιο",
+          "Η ζώνη μετεωριτών του ηλιακού συστήματος"
         ]
       },
       "3": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Η θέση του Ήλιου στο Ηλιακό μας Σύστημα είναι:",
+        "correct answer": "στο κέντρο",
         "false answers": [
-          "temp1",
-          "temp2"
+          "στην περιφέρεια",
+          "δίπλα από τη Γη"
         ]
       }
     },
     "6": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Τι νομίζετε ότι παρουσιάζει το βίντεο;",
+        "correct answer": "μια αστρική έκρηξη",
         "false answers": [
-          "temp1",
-          "temp2"
+          "την πρόσκρουση μεταξύ δύο μετεωριτών",
+          "την καταστροφή ενός πλανήτη"
         ]
       },
       "2": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Η έκρηξη στο βίντεο:",
+        "correct answer": "Ακτινοβολεί έντονα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "Δεν υποχωρεί",
+          "Έχει αποκλειστικά κόκκινο χρώμα"
         ]
       }
     },
     "7": {
       "1": {
-        "question": "Hello",
-        "correct answer": "World",
+        "question": "Το βίντεο δείχνει:",
+        "correct answer": "μια μαύρη τρύπα",
         "false answers": [
-          "temp1",
-          "temp2"
+          "το Ηλιακό μας Σύστημα",
+          "μια καταιγίδα μετεωριτών"
         ]
       }
     }
