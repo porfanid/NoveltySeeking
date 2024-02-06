@@ -1,3 +1,4 @@
+import * as OTPAuth from "otpauth";
 //---------------------------------------------------------------------------------
 // Questions configuration
 //---------------------------------------------------------------------------------
@@ -19,3 +20,8 @@ export const show_next_button_to_quiz = false;
 export const show_next_button_to_video = false;
 export const delay_quiz_page = 3000;
 export const show_countdown = true;
+
+export const show_auth = true;
+export const use_otp = true;
+export const otp_secret = "MZ3WK4TFMV2GK4MZ3WK4TFMV2GK4";
+export const correct_password = "MZ3WK4TFMV2GK4MZ3WK4TFMV2GK4";

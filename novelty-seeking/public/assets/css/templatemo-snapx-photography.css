@@ -1000,6 +1000,26 @@ Banner Style
   transition: all .3s;
 }
 
+.main-button {
+  font-size: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-right: 15px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all .3s;
+}
+
+.main-button:hover {
+  background-color: #fff;
+  color: #00bdfe;
+}
+
 .main-banner .big-border-button a:hover {
   background-color: #fff;
   color: #00bdfe;
