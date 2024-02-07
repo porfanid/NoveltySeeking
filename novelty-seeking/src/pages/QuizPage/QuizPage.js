@@ -2,16 +2,18 @@ import Header from "../../GeneralComponents/Header";
 import {NavLink, useNavigate, useParams} from "react-router-dom";
 import "./answer.css";
 import {useEffect, useState} from "react";
-import {number_of_questions, show_next_button_to_quiz} from "../../assets/settings";
+import {get_time_for_each_question, number_of_questions, show_next_button_to_quiz} from "../../assets/settings";
 
 function QuizPage(props){
     let {index,choice, category, counter} = useParams();
 
     const [answers, setAllAnswers] = useState([]);
+    const [startTime] = useState(Date.now());
 
     const navigate = useNavigate();
 
     useEffect(()=> {
+
         const questions = props.questions
         const setQuizCorrectAnswer = props.setQuizCorrectAnswer;
         const falseAnswers = questions[choice][category][counter]["false answers"];
@@ -35,6 +37,9 @@ function QuizPage(props){
             box.style.border = 'none';
         });
         event.target.style.border= "10px solid red";
+        if(get_time_for_each_question){
+            props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
+        }
         props.setSelectedQuiz(selectedAnswer);
     };
 

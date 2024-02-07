@@ -138,7 +138,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizPage currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} />,
+      element: <QuizPage currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />,
     },
     {
       path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",

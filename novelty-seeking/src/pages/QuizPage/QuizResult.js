@@ -1,5 +1,4 @@
 import Header from "../../GeneralComponents/Header";
-import repeatImage from "./images/repeat.jpg";
 import nextImage from "./images/next.jpg";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
