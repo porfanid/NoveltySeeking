@@ -14,10 +14,10 @@ import NotLicensed from "./pages/notLicensed/notLicensed";
 function App() {
 
   const [questions, setJsonData] = useState(null);
-
   const [licenseValid, setLicenseValid] = useState(true);
-
   const [previousChoices] = useState([]);
+  const [startTime, setStartTime] = useState(Date.now());
+  const [totalDuration, setTotalDuration] =  useState(0);
 
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
@@ -122,7 +122,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",
-      element: <ChoicePage previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
+      element: <ChoicePage setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
@@ -146,7 +146,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/complete",
-      element: <CompletePage answers={answers} completeAnswerSet={completeAnswerSet}/>,
+      element: <CompletePage totalDuration = {(endTime)=>setTotalDuration(endTime-startTime)} answers={answers} completeAnswerSet={completeAnswerSet}/>,
     },
   ])
 

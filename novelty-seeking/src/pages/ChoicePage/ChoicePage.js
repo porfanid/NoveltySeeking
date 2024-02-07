@@ -5,7 +5,12 @@ import image4 from "./images/3.jpg";
 import image3 from "./images/4.jpg";
 import {NavLink, useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
-import {first_choice_has_button, random_choices, remove_all_previous_values_from_choices} from "../../assets/settings";
+import {
+    first_choice_has_button,
+    get_time_for_entire_quiz,
+    random_choices,
+    remove_all_previous_values_from_choices
+} from "../../assets/settings";
 
 function ChoicePage(props){
     const navigate = useNavigate();
@@ -18,7 +23,9 @@ function ChoicePage(props){
     const previousChoice=props.getLastChoice(index)
 
     useEffect(() => {
-
+        if(get_time_for_entire_quiz) {
+            props.setStartTime(Date.now());
+        }
         if(index>1) {
             let isDifferentFromPrevious = (value) => {
                 if(remove_all_previous_values_from_choices){

@@ -1,10 +1,13 @@
 import Header from "../../GeneralComponents/Header";
 import {useEffect} from "react";
-import {number_of_questions} from "../../assets/settings";
+import {get_time_for_entire_quiz, number_of_questions} from "../../assets/settings";
 
 function CompletePage(props){
 
     useEffect(() => {
+        if(get_time_for_entire_quiz) {
+            props.totalDuration(Date.now());
+        }
         props.completeAnswerSet(number_of_questions.toString());
         console.log(JSON.stringify(props.answers))
         // eslint-disable-next-line react-hooks/exhaustive-deps

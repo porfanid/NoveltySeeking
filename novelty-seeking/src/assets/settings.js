@@ -31,3 +31,5 @@ export const correct_password = "MZ3WK4TFMV2GK4MZ3WK4TFMV2GK4";
 // time per question
 
 export const get_time_for_each_question = true;
+
+export const get_time_for_entire_quiz = true;
