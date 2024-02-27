@@ -53,20 +53,15 @@ try {
         $_POST = json_decode(file_get_contents("php://input"),true);
         // Assuming you have received the data in the POST request
         $code = $_POST['code'];
-        $id = $_POST['index'];
-        $choice = $_POST['choice'];
-        $category = $_POST['category'];
-        $counter = $_POST['counter'];
-        $quiz = $_POST['quiz'];
+        $year_of_birth = $_POST['year_of_birth'];
+        $sex = $_POST['sex'];
+
 
         // Prepare and execute the SQL query to insert data
-        $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz) VALUES (:code, :id, :choice, :category, :counter, :quiz)");
+        $stmt = $pdo->prepare("INSERT INTO user (code, year_of_birth, sex) VALUES (:code, :year_of_birth, :sex)");
         $stmt->bindParam(':code', $code);
-        $stmt->bindParam(':id', $id);
-        $stmt->bindParam(':choice', $choice);
-        $stmt->bindParam(':category', $category);
-        $stmt->bindParam(':counter', $counter);
-        $stmt->bindParam(':quiz', $quiz);
+        $stmt->bindParam(':year_of_birth', $year_of_birth);
+        $stmt->bindParam(':sex', $sex);
 
         $stmt->execute();
         // You can handle the success or provide a response as needed

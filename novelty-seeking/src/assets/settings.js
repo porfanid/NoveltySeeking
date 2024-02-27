@@ -11,7 +11,7 @@ export const remove_all_previous_values_from_choices = false;
 //---------------------------------------------------------------------------------
 // Quiz configuration
 //---------------------------------------------------------------------------------
-export const show_next_button_to_quiz = false;
+export const show_next_button_to_quiz = true;
 
 //---------------------------------------------------------------------------------
 // video configuration
@@ -24,7 +24,7 @@ export const show_countdown = true;
 // auth configuration
 //---------------------------------------------------------------------------------
 export const show_auth = true;
-export const use_otp = true;
+export const use_otp = false;
 export const otp_secret = "MZ3WK4TFMV2GK4MZ3WK4TFMV2GK4";
 export const correct_password = "MZ3WK4TFMV2GK4MZ3WK4TFMV2GK4";
 

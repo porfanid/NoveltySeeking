@@ -15,61 +15,82 @@ function VideoPage(props){
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return(
+    return (
         <>
-            <Header/>
+            <Header />
             <h2>Παρακαλώ παρακολουθήστε το παρακάτω video</h2>
 
-            {(show_countdown&&!show_next_button_to_video) ? (!videoFinished) ? (<video className={"img-fluid"} autoPlay={true} muted={true} onEnded={() => {
-                setVideoFinished(true);
-                if (!show_next_button_to_video) {
-                    const intervalId = setInterval(() => {
-                        setCountdown(prevCountdown => prevCountdown - 1);
-                    }, 1000);
+            {(show_countdown && !show_next_button_to_video) ? (!videoFinished) ? (
+
+                    <div className="row">
+                        <div className="col-1"></div>
+                        <div className="col-10">
 
 
-                    const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
 
-                    const timeoutId = setTimeout(() => {
-                        clearInterval(intervalId);
-                        // Navigate to the new page after the delay
-                        navigate(next_page);
-                    }, delay_quiz_page);
+                <video
+                    className="img-fluid"
+                    autoPlay={true}
+                    muted={true}
+                    onEnded={() => {
+                        setVideoFinished(true);
+                        if (!show_next_button_to_video) {
+                            const intervalId = setInterval(() => {
+                                setCountdown(prevCountdown => prevCountdown - 1);
+                            }, 1000);
 
-                }
-            }}>
-                <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
-                        type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>) :(<div className={"row"}>
-                <div className={"col-4"}></div>
-                <div className="card bg-dark col-4">
-                    <div className="card_body">
-                        <div className="countdown_section">
-                            <div id="seconds" className="value">{countdown}</div>
-                            <div className="countdown_label">SECONDS</div>
+                                        const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
+
+                                        const timeoutId = setTimeout(() => {
+                                            clearInterval(intervalId);
+                                            // Navigate to the new page after the delay
+                                            navigate(next_page);
+                                        }, delay_quiz_page);
+
+                                    }
+                                }}>
+                                <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
+                                        type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
+                ) : (<div className="row">
+                    <div className="col-4"></div>
+                    <div className="card bg-dark col-4">
+                        <div className="card_body">
+                            <div className="countdown_section">
+                                <div id="seconds" className="value">{countdown}</div>
+                                <div className="countdown_label">SECONDS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-4"></div>
                 </div>
-                <div className={"col-4"}></div>
-            </div>)
+            ):(
+                    <div className="row d-flex justify-content-center align-content-center">
+                        <div className="col-1"></div>
+                        <div className="col-10">
+                            <video className="img-fluid" autoPlay={true} muted={true} onEnded={() => {
+                                setVideoFinished(true);
+                                if (!show_next_button_to_video) {
+                                    const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
+                                    const timeoutId = setTimeout(() => {
+                                        // Navigate to the new page after the delay
+                                        navigate(next_page);
+                                    }, delay_quiz_page);
 
-                :
-                (<video className={"img-fluid"} autoPlay={true} muted={true} onEnded={() => {
-                    setVideoFinished(true);
-                    if (!show_next_button_to_video) {
-                        const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
-                        const timeoutId = setTimeout(() => {
-                            // Navigate to the new page after the delay
-                            navigate(next_page);
-                        }, delay_quiz_page);
-
-                    }
-                }}>
-                    <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
-                            type="video/mp4"/>
-                    Your browser does not support the video tag.
-                </video>)
+                                }
+                            }}>
+                                <source
+                                    src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
+                                    type="video/mp4"/>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div className="col-1"></div>
+                    </div>
+                )
             }
 
 

@@ -9,6 +9,7 @@ import {useEffect, useState} from "react";
 import QuizResult from "./pages/QuizPage/QuizResult";
 import axios from 'axios';
 import NotLicensed from "./pages/notLicensed/notLicensed";
+import CodePage from "./pages/CodePage";
 
 
 function App() {
@@ -64,13 +65,34 @@ function App() {
   const [selectedImage, setImage] = useState(null);
   const [selectedQuiz, setQuiz] = useState(null);
   const [quizCorrectanswer, setQuizCorrectanswer] = useState(null);
-  const [answers] = useState({});
+  const [answers, setAnswers] = useState({});
   const [currentAnswer, setAnswer] = useState({});
 
+
+  function resetAnswers(){
+    setAnswers({});
+  }
 
   function setCurrentAnswer(question, answer){
     currentAnswer[question] = answer
     console.log(JSON.stringify(currentAnswer))
+  }
+
+  function publishUser(sex, year_of_birth){
+    const data = {
+      'code': code,
+      'sex': sex,
+      'year_of_birth':JSON.stringify(year_of_birth)
+    };
+    axios.post(process.env.PUBLIC_URL+"/user.php", data)
+        .then(response => {
+          console.log(response.data);
+          // Handle the response data as needed
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          // Handle errors
+        });
   }
 
   function completeAnswerSet(index){
@@ -118,11 +140,15 @@ function App() {
   const router = createBrowserRouter([
     {
       path: process.env.PUBLIC_URL+"/",
-      element: <HomePage setCode = {setCode}/>,
+      element: <CodePage/>,
+    },
+      {
+      path: process.env.PUBLIC_URL+"/user_code",
+      element: <HomePage publishUser={publishUser} code={code} setCode = {setCode}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",
-      element: <ChoicePage setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
+      element: <ChoicePage code={code} setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
@@ -130,23 +156,23 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter",
-      element: <VideoPage setCategoryAndCounter={setCategoryAndCounter}/>,
+      element: <VideoPage code={code} setCategoryAndCounter={setCategoryAndCounter}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice",
-      element: <Navigate to="category/1/counter/1" replace/>
+      element: <Navigate code={code} to="category/1/counter/1" replace/>
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizPage currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />,
+      element: <QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />,
     },
     {
       path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizResult setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
+      element: <QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
     },
     {
       path: process.env.PUBLIC_URL+"/complete",
-      element: <CompletePage totalDuration = {(endTime)=>setTotalDuration(endTime-startTime)} answers={answers} completeAnswerSet={completeAnswerSet}/>,
+      element: <CompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>,
     },
   ])
 
@@ -154,14 +180,13 @@ function App() {
   return (
     <>
       <div className="main-banner">
-        <div className="container">
+        <div className="">
           <div className="row">
-            <div className="col-lg-10 offset-lg-1">
-              <div className="header-text">
+            <div className="col-lg-10">
+              <div className="m-auto">
                 {
                   (licenseValid)?<RouterProvider router={router} />:<NotLicensed/>
                 }
-
               </div>
             </div>
           </div>

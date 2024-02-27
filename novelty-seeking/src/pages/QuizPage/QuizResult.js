@@ -1,5 +1,5 @@
 import Header from "../../GeneralComponents/Header";
-import nextImage from "./images/next.jpg";
+import nextImage from "./images/next.png";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 
@@ -45,45 +45,51 @@ function QuizResult(props){
                     <div className={"col-md-5 p-3"}>
                         <img
                             name={"repeat"}
-                            src={process.env.PUBLIC_URL+`/assets/images/options/${choice}/repeat/${category}/${counter}.PNG`}
+                            src={process.env.PUBLIC_URL + `/assets/images/options/${choice}/repeat/${category}/${counter}.PNG`}
                             alt={"repeat"}
                             onClick={repeat}
-                            width={"100%"}
                             style={{
-                                width: '70%',
+                                width: '300px',
+                                height: '300px',
                                 top: 0,
                                 left: 0,
                                 filter: "blur(3px)"
                             }}
                         />
+                        <p></p>
+                        <h2 onClick={moveToNext}>Συνέχεια του ίδιου</h2>
                     </div>
 
 
                     <div className={"col-md-4 p-3"}>
-                        <img
+                    <img
                             name={"repeat"}
-                            src={process.env.PUBLIC_URL+`/assets/images/options/${choice}/category.png`}
+                            src={process.env.PUBLIC_URL + `/assets/images/options/${choice}/category.png`}
                             alt={"change category"}
                             onClick={changeCategory}
                             width={"100%"}
                             style={{
-                                width: '100%',
-                                height: '61%',
+                                width: '300px',
+                                height: '300px',
                                 top: 0,
                                 left: 0,
                             }}
                         />
+                        <p></p>
+                        <h2 onClick={moveToNext}>Ίδια κατηγορία</h2>
                     </div>
 
                     <div className={"col-md-3 p-3"}>
-                        <img
+                    <img
                             name={"next"}
                             src={nextImage}
                             alt={"next"}
                             onClick={moveToNext}
+                            style={{width: '300px',
+                                height: '300px',}}
                         />
                         <p></p>
-                        <h2 onClick={moveToNext}>Επόμενο</h2>
+                        <h2 onClick={moveToNext}>Άλλη κατηγορία</h2>
                     </div>
                 </div>
             </div>

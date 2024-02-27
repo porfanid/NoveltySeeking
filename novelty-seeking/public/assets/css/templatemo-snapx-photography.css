@@ -628,8 +628,34 @@ Header Style
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
+.code-1{
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 70px;
+  line-height: 70px;
+  border: transparent;
+  letter-spacing: 1px;
+}
+
+.code-1 .active {
+  color: #fff;
+}
+
+.code-1:hover {
+  background: #eee !important;
+  color: #00bdfe!important;
+}
+
   .header-area .main-nav .nav li a {
-    height: 50px !important;
+
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
@@ -744,75 +770,6 @@ a.btn_red {
 .one_half.last {
   width: 45%;
   margin-left: 5%;
-}
-
-.popupHeader {
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.popupHeader {
-  background: #F4F4F2;
-  position: relative;
-  padding: 10px 20px;
-  border-bottom: 1px solid #DDD;
-  font-weight: bold;
-}
-
-.popupHeader .modal_close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px 15px;
-  background: #00bdfe;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-}
-
-.popupBody {
-  padding: 20px;
-}
-
-.social_login .social_box {
-  display: block;
-  clear: both;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #F4F4F2;
-  overflow: hidden;
-}
-
-.social_login .icon {
-  display: inline-block;
-
-  padding: 5px 10px;
-  margin-right: 10px;
-  float: left;
-  color: #FFF;
-  font-size: 16px;
-  text-align: center;
-}
-
-.social_login .fb .icon {
-  background: #3B5998;
-}
-
-.social_login .google .icon {
-  background: #DD4B39;
-}
-
-.social_login .icon_title {
-  display: block;
-  padding: 5px 0;
-  float: left;
-  font-weight: bold;
-  font-size: 16px;
-  color: #777;
-}
-
-.social_login .social_box:hover {
-  background: #E4E4E2;
 }
 
 .centeredText {
@@ -932,11 +889,12 @@ Banner Style
 
 .main-banner {
   position: relative;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 290px;
-  padding-bottom: 240px;
+  padding-top: 50px;
+  padding-bottom: 0px;
   text-align: center;
   filter: blur(0px); /* Remove the quotes around blur(5px) */
   background-color: rgba(0, 0, 0, 0.6);
@@ -944,6 +902,7 @@ Banner Style
 
 .main-banner::before {
   content: "";
+  min-height: 90vh;
   position: absolute;
   top: 0;
   right: 0;
@@ -995,7 +954,6 @@ Banner Style
   border-radius: 10px;
   font-weight: 500;
   margin-right: 15px;
-  text-transform: capitalize;
   letter-spacing: 0.5px;
   transition: all .3s;
 }
@@ -1010,7 +968,6 @@ Banner Style
   border-radius: 10px;
   font-weight: 500;
   margin-right: 15px;
-  text-transform: capitalize;
   letter-spacing: 0.5px;
   transition: all .3s;
 }
@@ -2568,30 +2525,7 @@ Responsive Style
 
 body {
   overflow-x: hidden;
-}
-
-@media (max-width: 767px) {
-  .header-area .main-nav .nav li.has-sub ul.sub-menu {
-    display: none;
-  }
-  .testimonials .item .content {
-    display: inline-block;
-    text-align: center;
-  }
-  .testimonials .item .content .image {
-    margin-top: 30px;
-  }
-  .testimonials .item .content .left-content {
-    margin-right: 0px;
-  }
-  .featured-items .owl-nav .owl-next,
-  .closed-contests .owl-nav .owl-next {
-    right: -10px !important;
-  }
-  .featured-items .owl-nav .owl-prev,
-  .closed-contests .owl-nav .owl-prev {
-    left: -10px !important;
-  }
+  height: 100vh;
 }
 
 @media (max-width: 992px) {

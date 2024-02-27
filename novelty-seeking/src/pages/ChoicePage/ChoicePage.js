@@ -46,43 +46,39 @@ function ChoicePage(props){
     return(
         <>
             <Header/>
-            <h2>Παρακαλώ επιλέξτε μια εικόνα</h2>
-            <div className={"center mx-auto text-center"}>
-                <div className={"d-flex flex-row flex-wrap justify-content-center"}>
-                    <div className={"col-md-4 p-3"}>
+            <h2 className={"mt-0"}>Παρακαλώ επιλέξτε μια εικόνα</h2>
+            <div className={"justify-content-center"}>
+                <div className={"row mb-4 mt-5 justify-content-center align-content-center"}>
+                    <div className={"col-md-6"}>
                         <img
                             name={"Ocean"}
                             src={image1}
                             alt={"Ocean"}
-                            style={{ border: props.selectedImage === 'Ocean' ? '10px solid red' : 'none' }}
+                            style={{ border: props.selectedImage === 'Ocean' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
                             onClick={() => {
                                 props.setSelectedImage("Ocean")
                                 if(!first_choice_has_button){
                                     navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Ocean")
                                 }
                             }}
-                            width={"640px"}
-                            height={"240px"}
                         />
                     </div>
-                    <div className={"col-md-4 p-3"}>
+                    <div className={"col-md-6"}>
                         <img
                             name={"City"}
                             src={image2} alt={"City"}
-                            style={{ border: props.selectedImage === 'City' ? '10px solid red' : 'none' }}
+                            style={{ border: props.selectedImage === 'City' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
                             onClick={() => {
                                 props.setSelectedImage("City");
                                 if(!first_choice_has_button){
                                     navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/City")
                                 }
                             }}
-                            width={"640px"}
-                            height={"240px"}
                         />
                     </div>
                 </div>
-                <div className={"d-flex flex-row flex-wrap justify-content-center"}>
-                    <div className={"col-md-4 p-3"}>
+                <div className={"row mb-3"}>
+                    <div className={"col-md-6"}>
                         <img
                             name={"Animals"}
                             src={image3}
@@ -93,12 +89,11 @@ function ChoicePage(props){
                                     navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Animals")
                                 }
                             }}
-                            style={{ border: props.selectedImage === 'Animals' ? '10px solid red' : 'none' }}
-                            width={"640px"}
-                            height={"240px"}
+                            style={{ border: props.selectedImage === 'Animals' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
                         />
                     </div>
-                    <div className={"col-md-4 p-3"}>
+
+                    <div className={"col-md-6"}>
                         <img name={"Space"}
                              src={image4}
                              alt={"Space"}
@@ -108,9 +103,7 @@ function ChoicePage(props){
                                      navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Space")
                                  }
                              }}
-                             style={{ border: props.selectedImage === 'Space' ? '10px solid red' : 'none' }}
-                             width={"640px"}
-                             height={"240px"}
+                             style={{ border: props.selectedImage === 'Space' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
                         />
                     </div>
                 </div>

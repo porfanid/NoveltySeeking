@@ -1,8 +1,11 @@
 import {NavLink} from "react-router-dom";
 import image from "../assets/logo.png"
 
-function Header(){
-    return(
+function Header() {
+
+    //<img src={image} alt={"Logo image"}/>
+
+    return null; /*(
         <header className="header-area header-sticky">
             <div className="container">
                 <div className="row">
@@ -12,12 +15,13 @@ function Header(){
                                 //<!-- ***** Logo Start ***** -->
                             }
                             <NavLink className="logo" to="/">
-                                <img src={image} alt={"Logo image"}/>
+
+                                <h1 className={"text-primary text-muted"}>4134</h1>
                             </NavLink>
-                            {/*
-                            <!-- ***** Logo End ***** -->
-                            <!-- ***** Menu Start ***** -->
-                            */}
+                            {
+                            //<!-- ***** Logo End ***** -->
+                            //<!-- ***** Menu Start ***** -->
+                            }
                             <ul className="nav">
                                 <li>
                                     <NavLink className="active" to={"/"}>
@@ -35,17 +39,19 @@ function Header(){
                                 <li><a href="users.html">Users</a></li>
                             </ul>
                             <div className="border-button">
-                                <a id="modal_trigger" href="#modal" className="sign-in-up"><i className="fa fa-user"></i> Sign In/Up</a>
+                                <a id="modal_trigger" href="#modal" className="code-1"><i
+                                    className="fa fa-user"></i> Sign In/Up</a>
                             </div>
                             <a className='menu-trigger'>
                                 <span>Menu</span>
                             </a>
-                            {/*<!-- ***** Menu End ***** -->*/}
+                            {//<!-- ***** Menu End ***** -->}
                         </nav>
                     </div>
                 </div>
             </div>
         </header>
-    );
+    );*/
 }
+
 export default Header

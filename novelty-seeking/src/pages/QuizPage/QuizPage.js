@@ -37,15 +37,12 @@ function QuizPage(props){
             box.style.border = 'none';
         });
         event.target.style.border= "10px solid red";
-        if(get_time_for_each_question){
-            props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
-        }
         props.setSelectedQuiz(selectedAnswer);
     };
 
     return(
         <>
-            <Header/>
+            <Header code={props.code}/>
             <h2 className={"mt-5"}>{props.questions[choice][category][counter].question}</h2>
 
             <div className="answer-container mt-lg-5">
@@ -57,6 +54,9 @@ function QuizPage(props){
                             handleAnswerClick(event, answer);
                             if(!show_next_button_to_quiz) {
                                 const link = (index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/complete";
+                                if(get_time_for_each_question){
+                                    props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
+                                }
                                 navigate(link);
                             }
                         }}
@@ -70,7 +70,11 @@ function QuizPage(props){
                 <>
                 <div className="buttons mt-5">
                     <div className="big-border-button">
-                        <NavLink className="active"
+                        <NavLink onClick={()=>{
+                            if(get_time_for_each_question){
+                                props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
+                            }
+                        }} className="active"
                                  to={(index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/complete"}>
                             Επόμενη Σελίδα
                         </NavLink>
