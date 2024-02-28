@@ -68,6 +68,8 @@ function App() {
   const [answers, setAnswers] = useState({});
   const [currentAnswer, setAnswer] = useState({});
 
+  const [enteredPassword, hasEnteredPassword] = useState(false);
+
 
   function resetAnswers(){
     setAnswers({});
@@ -140,7 +142,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: process.env.PUBLIC_URL+"/",
-      element: <CodePage/>,
+      element: <CodePage hasEnteredPassword={hasEnteredPassword}/>,
     },
       {
       path: process.env.PUBLIC_URL+"/user_code",
@@ -185,7 +187,7 @@ function App() {
             <div className="col-lg-10">
               <div className="m-auto">
                 {
-                  (licenseValid)?<RouterProvider router={router} />:<NotLicensed/>
+                  (licenseValid)?(enteredPassword)?<RouterProvider router={router} />:<CodePage hasEnteredPassword={hasEnteredPassword}/>:<NotLicensed/>
                 }
               </div>
             </div>

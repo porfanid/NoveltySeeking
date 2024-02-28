@@ -1,8 +1,11 @@
 import Header from "../../GeneralComponents/Header";
 import {useEffect} from "react";
-import {get_time_for_entire_quiz, number_of_questions} from "../../assets/settings";
+import {get_time_for_entire_quiz, number_of_questions, show_auth, use_otp} from "../../assets/settings";
+import {useNavigate} from "react-router-dom";
 
 function CompletePage(props){
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if(get_time_for_entire_quiz) {
@@ -35,7 +38,11 @@ function CompletePage(props){
 
             <div className="buttons">
                 <div className="big-border-button">
-                    <p></p>
+                    <button className="main-button" onClick={() => {
+                        navigate(`${process.env.PUBLIC_URL}/user_code`);
+                    }}>
+                        Πίσω στην αρχή
+                    </button>
                 </div>
                 <div className="icon-button">
 
