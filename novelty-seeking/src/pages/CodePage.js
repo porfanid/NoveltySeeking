@@ -10,19 +10,7 @@ const CodePage = (props)=>{
     const [password, setPassword]=useState("");
 
     const [passwordCorrect, setPasswordCorrect]=useState(true);
-    let navigate;
-
-    // Check if useNavigate is available
-    if (typeof useReactNavigate === 'function') {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        navigate = useNavigate();
-    } else {
-        // Fallback navigation function for non-router contexts
-        navigate = (path) => {
-            console.log(`Navigating to ${path}`);
-            // You can implement your custom navigation logic here
-        };
-    }
+    const navigate = useNavigate();
 
 
     const validate_otp = (token)=> {

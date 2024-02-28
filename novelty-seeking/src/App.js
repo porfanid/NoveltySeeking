@@ -142,39 +142,39 @@ function App() {
   const router = createBrowserRouter([
     {
       path: process.env.PUBLIC_URL+"/",
-      element: <CodePage hasEnteredPassword={hasEnteredPassword}/>,
+      element: (!enteredPassword)?<CodePage hasEnteredPassword={hasEnteredPassword}/>:<Navigate to= {process.env.PUBLIC_URL+"/user_code"} replace/>,
     },
       {
       path: process.env.PUBLIC_URL+"/user_code",
-      element: <HomePage publishUser={publishUser} code={code} setCode = {setCode}/>,
+      element: (enteredPassword)?<HomePage publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
     },
     {
       path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",
-      element: <ChoicePage code={code} setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>,
+      element: (enteredPassword)?<ChoicePage code={code} setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
-      element: <Navigate to="category/1/counter/1" replace/>
+      element: (enteredPassword)?<Navigate to="/category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter",
-      element: <VideoPage code={code} setCategoryAndCounter={setCategoryAndCounter}/>,
+      element: (enteredPassword)?<VideoPage code={code} setCategoryAndCounter={setCategoryAndCounter}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice",
-      element: <Navigate code={code} to="category/1/counter/1" replace/>
+      element: (enteredPassword)?<Navigate code={code} to="/category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />,
+      element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
     },
     {
       path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",
-      element: <QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>,
+      element: (enteredPassword)?<QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
     },
     {
       path: process.env.PUBLIC_URL+"/complete",
-      element: <CompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>,
+      element: (enteredPassword)?<CompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
     },
   ])
 
@@ -187,7 +187,7 @@ function App() {
             <div className="col-lg-10">
               <div className="m-auto">
                 {
-                  (licenseValid)?(enteredPassword)?<RouterProvider router={router} />:<CodePage hasEnteredPassword={hasEnteredPassword}/>:<NotLicensed/>
+                  (licenseValid)?<RouterProvider router={router} />:<NotLicensed/>
                 }
               </div>
             </div>
