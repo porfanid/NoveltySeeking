@@ -154,7 +154,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
-      element: (enteredPassword)?<Navigate to="/category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
+      element: (enteredPassword)?<Navigate to="category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
     },
     {
       path: process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter",
@@ -162,7 +162,7 @@ function App() {
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice",
-      element: (enteredPassword)?<Navigate code={code} to="/category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
+      element: (enteredPassword)?<Navigate code={code} to="category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
     },
     {
       path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",
