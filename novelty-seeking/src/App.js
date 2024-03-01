@@ -10,6 +10,7 @@ import QuizResult from "./pages/QuizPage/QuizResult";
 import axios from 'axios';
 import NotLicensed from "./pages/notLicensed/notLicensed";
 import CodePage from "./pages/CodePage";
+import Questionaire from "./pages/questionaire/questionaire";
 
 
 function App() {
@@ -141,40 +142,33 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: process.env.PUBLIC_URL+"/",
-      element: (!enteredPassword)?<CodePage hasEnteredPassword={hasEnteredPassword}/>:<Navigate to= {process.env.PUBLIC_URL+"/user_code"} replace/>,
+      path:process.env.PUBLIC_URL+"/",element: (!enteredPassword)?<CodePage hasEnteredPassword={hasEnteredPassword}/>:<Navigate  to= {process.env.PUBLIC_URL+"/user_code"} state={{ previous: process.env.PUBLIC_URL+"/" }} replace/>,
     },
       {
-      path: process.env.PUBLIC_URL+"/user_code",
-      element: (enteredPassword)?<HomePage publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
+      path:process.env.PUBLIC_URL+"/user_code",element: (enteredPassword)?<HomePage publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/user_code" }} replace/>,
+    },{
+      path:process.env.PUBLIC_URL+"/questionnaire",element: (enteredPassword)?<Questionaire/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/questionnaire" }} replace/>,
     },
     {
-      path: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",
-      element: (enteredPassword)?<ChoicePage code={code} setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
+      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage code={code} setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter" }} replace/>,
     },
     {
-      path: process.env.PUBLIC_URL+"/video/:index/choice/:choice",
-      element: (enteredPassword)?<Navigate to="category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
+      path:process.env.PUBLIC_URL+"/video/:index/choice/:choice",element: (enteredPassword)?<Navigate to="category/1/counter/1" replace/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/video/:index/choice/:choice" }} replace/>
     },
     {
-      path: process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter",
-      element: (enteredPassword)?<VideoPage code={code} setCategoryAndCounter={setCategoryAndCounter}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
+      path:process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<VideoPage code={code} setCategoryAndCounter={setCategoryAndCounter}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/video/:index/choice/:choice/category/:category/counter/:counter" }} replace/>,
     },
     {
-      path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice",
-      element: (enteredPassword)?<Navigate code={code} to="category/1/counter/1" replace/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>
+      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice",element: (enteredPassword)?<Navigate code={code} to="category/1/counter/1" replace/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice" }} replace/>
     },
     {
-      path: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",
-      element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
+      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter" }} replace/>,
     },
     {
-      path: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",
-      element: (enteredPassword)?<QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
+      path:process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter" }} replace/>,
     },
     {
-      path: process.env.PUBLIC_URL+"/complete",
-      element: (enteredPassword)?<CompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} replace/>,
+      path:process.env.PUBLIC_URL+"/complete",element: (enteredPassword)?<CompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
     },
   ])
 

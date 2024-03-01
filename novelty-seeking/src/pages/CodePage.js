@@ -2,7 +2,7 @@ import Header from "../GeneralComponents/Header";
 import {correct_password, otp_secret, show_auth, use_otp} from "../assets/settings";
 import * as OTPAuth from "otpauth";
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const CodePage = (props)=>{
 
@@ -11,6 +11,10 @@ const CodePage = (props)=>{
 
     const [passwordCorrect, setPasswordCorrect]=useState(true);
     const navigate = useNavigate();
+    const location = useLocation();
+    const isMobile= window.innerWidth <= 991
+
+    console.log();
 
 
     const validate_otp = (token)=> {
@@ -48,7 +52,7 @@ const CodePage = (props)=>{
                     }
                     {/* Input field for entering a code */}
                     <div className="row">
-                    <div className="col-md-3 mt-5 mb-5"/>
+                        {isMobile&&<div className="col-md-3 mt-5 mb-5"/>}
 
                         <div className="col-md-6 mt-5 mb-5">
                             {(show_auth) ? <div className="input-group mt-5">
@@ -76,7 +80,11 @@ const CodePage = (props)=>{
                                 }
                                 props.hasEnteredPassword(true);
                                 setPasswordCorrect(true);
-                                navigate(`${process.env.PUBLIC_URL}/user_code`);
+                                if(location.state===null) {
+                                    navigate(`${process.env.PUBLIC_URL}/user_code`);
+                                }else{
+                                    navigate(location.state.previous)
+                                }
                             }}>
                                 Επόμενο βήμα
                             </button>
