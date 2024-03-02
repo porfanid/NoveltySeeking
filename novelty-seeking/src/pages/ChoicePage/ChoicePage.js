@@ -7,7 +7,7 @@ import {NavLink, useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 import {
     first_choice_has_button,
-    get_time_for_entire_quiz,
+    get_time_for_entire_quiz, is_next_option_random,
     random_choices,
     remove_all_previous_values_from_choices
 } from "../../assets/settings";
@@ -27,18 +27,22 @@ function ChoicePage(props){
             props.setStartTime(Date.now());
         }
         if(index>1) {
-            let isDifferentFromPrevious = (value) => {
-                if(remove_all_previous_values_from_choices){
-                    return !props.previousChoices.includes(value);
-                }else{
-                    return value!==previousChoice;
+            if(is_next_option_random) {
+                let isDifferentFromPrevious = (value) => {
+                    if (remove_all_previous_values_from_choices) {
+                        return !props.previousChoices.includes(value);
+                    } else {
+                        return value !== previousChoice;
+                    }
                 }
+                const randomArray = random_choices.filter(isDifferentFromPrevious)
+                const randomIndex = Math.floor(Math.random() * randomArray.length);
+                props.setSelectedImage(randomArray[randomIndex])
+                props.previousChoices.push(randomArray[randomIndex]);
+                navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+randomArray[randomIndex]+"/category/"+category+"/counter/1")
+            }else{
+                navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+random_choices[index-2]+"/category/"+category+"/counter/1")
             }
-            const randomArray = random_choices.filter(isDifferentFromPrevious)
-            const randomIndex = Math.floor(Math.random() * randomArray.length);
-            props.setSelectedImage(randomArray[randomIndex])
-            props.previousChoices.push(randomArray[randomIndex]);
-            navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+randomArray[randomIndex]+"/category/"+category+"/counter/1")
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[index])

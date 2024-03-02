@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------------
 // Questions configuration
 //---------------------------------------------------------------------------------
+export const is_next_option_random = false;
 export const number_of_questions = 7
 export const first_choice_has_button = false;
 export const random_choices=["Ocean", "City", "Animals", "Space"];
