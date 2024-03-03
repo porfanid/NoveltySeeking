@@ -57,13 +57,13 @@ function QuizResult(props){
                             }}
                         />
                         <p></p>
-                        <h2 onClick={moveToNext}>Συνέχεια του ίδιου</h2>
+                        <h2 onClick={repeat}>Συνέχεια του ίδιου</h2>
                     </div>
 
 
                     <div className={"col-md-4 p-3"}>
                     <img
-                            name={"repeat"}
+                            name={"changeCategory"}
                             src={process.env.PUBLIC_URL + `/assets/images/options/${choice}/category.png`}
                             alt={"change category"}
                             onClick={changeCategory}
@@ -76,7 +76,7 @@ function QuizResult(props){
                             }}
                         />
                         <p></p>
-                        <h2 onClick={moveToNext}>Ίδια κατηγορία</h2>
+                        <h2 onClick={changeCategory}>Ίδια κατηγορία</h2>
                     </div>
 
                     <div className={"col-md-3 p-3"}>
