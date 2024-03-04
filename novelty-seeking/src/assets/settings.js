@@ -4,7 +4,7 @@
 export const is_next_option_random = false;
 export const number_of_questions = 7
 export const first_choice_has_button = false;
-export const random_choices=["Ocean", "City", "Animals", "Space"];
+export const random_choices=["MICROWORLD", "ANCIENT_CIVILIZATION", "LANDSCAPES", "NATURE_BLOOMING", "FOOD", "FUTURISTIC_TRANSPORTATION"];
 
 // Προσοχή!! Αν αυτό γίνει true, έχουμε μόνο 4 ερωτήσεις(εκτός και αν προστεθούν και άλλες κατηγορίες στον επάνω πίνακα)
 export const remove_all_previous_values_from_choices = false;

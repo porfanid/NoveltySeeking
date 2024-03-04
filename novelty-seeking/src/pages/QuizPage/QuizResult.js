@@ -67,7 +67,6 @@ function QuizResult(props){
                             src={process.env.PUBLIC_URL + `/assets/images/options/${choice}/category.png`}
                             alt={"change category"}
                             onClick={changeCategory}
-                            width={"100%"}
                             style={{
                                 width: '300px',
                                 height: '300px',
