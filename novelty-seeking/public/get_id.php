@@ -53,7 +53,6 @@ try {
 
     // Prepare and execute the SQL query to retrieve data based on the code
     $stmt = $pdo->prepare("SELECT DISTINCT code FROM answer");
-    $stmt->bindParam(':code', $code);
     $stmt->execute();
 
     // Fetch the result as an associative array
