@@ -1132,11 +1132,11 @@
         ]
       },
       "5": {
-        "question": "Hello",
-        "correct answer": "world",
+        "question": "Η οροφή του Παρθενώνα",
+        "correct answer": "Έχει πλέον γκρεμιστεί",
         "false answers": [
-          "test1",
-          "test1"
+          "Είναι θολωτή",
+          "Είναι επενδυμένη με χρυσό"
         ]
       }
     },
