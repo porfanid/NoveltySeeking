@@ -5,9 +5,10 @@ const Questionnaire = () => {
     const [answers, setAnswers] = useState({});
 
     const questions = [
-        { id: 'q1', text: 'Is the sky blue?' },
-        { id: 'q2', text: 'Do humans breathe oxygen?' },
-        { id: 'q3', text: 'Is the Earth flat?' }
+        { id: '1', text: 'Is the sky blue?' },
+        { id: '2', text: 'Do humans breathe oxygen?' },
+        { id: '3', text: 'Is the Earth flat?' },
+        { id: '4', text: 'Is the Earth flat?' }
         // Add more questions here if necessary
     ];
 
@@ -23,21 +24,37 @@ const Questionnaire = () => {
 
     return (
         <div className="container mt-5">
-            <h2>Questionnaire</h2>
-            <form onSubmit={handleSubmit}>
-                <FormControl component="fieldset">
-                    {questions.map(question => (
-                        <div className="form-group" key={question.id}>
-                            <label>{question.text}</label>
-                            <RadioGroup name={question.id} value={answers[question.id]} onChange={handleChange}>
-                                <FormControlLabel value="true" control={<Radio />} label="True" />
-                                <FormControlLabel value="false" control={<Radio />} label="False" />
-                            </RadioGroup>
+            <h2>Ερωτηματολόγιο</h2>
+            <div className="row justify-content-center">
+                <div className={"card"}>
+                    <div className={"card-body"}>
+                        Hello world
+                    </div>
+                </div>
+            </div>
+            <div className="row justify-content-center">
+                <div className="col-8">
+                    <div className="">
+                        <div className="">
+                            <form onSubmit={handleSubmit}>
+                                <FormControl component="fieldset">
+                                    {questions.map(question => (
+                                        <div className="card form-group p-3" key={question.id}>
+                                            <label>{question.text}</label>
+                                            <RadioGroup name={question.id} value={answers[question.id]}
+                                                        onChange={handleChange}>
+                                                <FormControlLabel value="true" control={<Radio/>} label="Σωστό"/>
+                                                <FormControlLabel value="false" control={<Radio/>} label="Λάθος"/>
+                                            </RadioGroup>
+                                        </div>
+                                    ))}
+                                    <Button className={"mt-4"} type="submit" variant="contained" color="primary">Submit</Button>
+                                </FormControl>
+                            </form>
                         </div>
-                    ))}
-                    <Button type="submit" variant="contained" color="primary">Submit</Button>
-                </FormControl>
-            </form>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

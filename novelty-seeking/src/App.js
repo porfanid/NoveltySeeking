@@ -178,7 +178,7 @@ function App() {
       <div className="main-banner">
         <div className="">
           <div className="row">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="m-auto">
                 {
                   (licenseValid)?<RouterProvider router={router} />:<NotLicensed/>
