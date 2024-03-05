@@ -50,7 +50,7 @@ function ChoicePage(props){
     return(
         <>
             <Header/>
-            <h2 className={"mt-0"}>Παρακαλώ επιλέξτε μια εικόνα</h2>
+            <h2 className={"mt-0"}>Παρακαλώ επιλέξτε μια κατηγορία</h2>
             <div className={"justify-content-center"}>
                 <div className={"row mb-4 mt-5 justify-content-center align-content-center"}>
                     <div className={"col-md-6"}>

@@ -9,6 +9,19 @@ function QuizResult(props){
         props.completeAnswerSet(index)
     }
 
+    const correct_answers = [
+        "Μπράβο! Συνέχισε έτσι!",
+        "Πολύ καλά, συνέχισε!",
+        "Τέλεια! Συνέχισε!",
+        "Εξαιρετικά!"
+    ];
+
+    const wrong_answers = [
+        "Καλή προσπάθεια, συνέχισε!",
+        "Δεν πειράζει, Συνέχισε να προσπαθείς",
+        "Συνέχισε την προσπάθεια"
+    ];
+
     useEffect(() => {
         addToAnswerSet(index)
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,18 +39,19 @@ function QuizResult(props){
 
     function changeCategory(){
         props.setCurrentAnswer("choice", choice);
-        navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+(parseInt(category)+1)+"/counter/1")
+        navigate(process.env.PUBLIC_URL+"/video/"+(index+1)+"/choice/"+choice+"/category/"+(parseInt(category)+parseInt(counter))+"/counter/1")
     }
 
     function moveToNext(){
-        navigate(process.env.PUBLIC_URL+"/choice/"+(index+1)+"/category/"+(parseInt(category)+1)+"/counter/1")
+        navigate(process.env.PUBLIC_URL+"/choice/"+(index+1)+"/category/"+(parseInt(category)+parseInt(counter))+"/counter/1")
     }
     return(
         <>
             <Header/>
-            <h2>Απάντησες {answer}</h2>
-            <p>
-                Επίλεξε με τί θα ήθελες να συνεχίσεις
+            {/**<h2>Απάντησες {answer}</h2>**/}
+            {(props.isAnswerCorrect) ? <h2>{correct_answers[(index%correct_answers.length)]}</h2> : <h2>{wrong_answers[(index%wrong_answers.length)]}</h2>}
+            <p style={{fontSize: 32}}>
+            Επίλεξε με τι θα ήθελες να συνεχίσεις:
             </p>
 
             <div className={"center mx-auto text-center"}>
@@ -57,12 +71,12 @@ function QuizResult(props){
                             }}
                         />
                         <p></p>
-                        <h2 onClick={repeat}>Συνέχεια του ίδιου</h2>
+                        <h2 style={{fontSize: 37}} onClick={repeat}>Συνέχεια του ίδιου βίντεο</h2>
                     </div>
 
 
                     <div className={"col-md-4 p-3"}>
-                    <img
+                        <img
                             name={"changeCategory"}
                             src={process.env.PUBLIC_URL + `/assets/images/options/${choice}/category.png`}
                             alt={"change category"}
@@ -75,20 +89,22 @@ function QuizResult(props){
                             }}
                         />
                         <p></p>
-                        <h2 onClick={changeCategory}>Ίδια κατηγορία</h2>
+                        <h2 style={{fontSize: 37}} onClick={changeCategory}>Άλλο βίντεο ίδιας κατηγορίας</h2>
                     </div>
 
                     <div className={"col-md-3 p-3"}>
-                    <img
+                        <img
                             name={"next"}
                             src={nextImage}
                             alt={"next"}
                             onClick={moveToNext}
-                            style={{width: '300px',
-                                height: '300px',}}
+                            style={{
+                                width: '300px',
+                                height: '300px',
+                            }}
                         />
                         <p></p>
-                        <h2 onClick={moveToNext}>Άλλη κατηγορία</h2>
+                        <h2 style={{fontSize: 37}} onClick={moveToNext}>Βίντεο άλλης κατηγορίας</h2>
                     </div>
                 </div>
             </div>

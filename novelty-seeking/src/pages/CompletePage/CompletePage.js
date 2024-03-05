@@ -19,9 +19,9 @@ function CompletePage(props){
     return(
         <>
             <Header/>
-            <h2>Συγχαρητήρια</h2>
+            <h2>Συγχαρητήρια!!!</h2>
             <p>
-                <h3 className={"text-white"}>Απάντησες σωστά και κέρδισες το δώρο</h3>
+                <h3 className={"text-white"}>Απάντησες σωστά και κέρδισες το δώρο!</h3>
             </p>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
@@ -31,7 +31,7 @@ function CompletePage(props){
                 </div>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
                     <div className={"col-md-4 p-3"}>
-                        <h5 className={"text-white"}>Μπορείτε να κλείσετε αυτό το παράθυρο</h5>
+                        <h5 className={"text-white"}>Μπορείς να κλείσεις αυτό το παράθυρο.</h5>
                     </div>
                 </div>
             </div>

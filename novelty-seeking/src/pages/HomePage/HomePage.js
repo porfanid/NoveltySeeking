@@ -1,3 +1,4 @@
+//TODO:  Change the DD/MM/YYYY
 import Header from "../../GeneralComponents/Header";
 import {useNavigate} from "react-router-dom";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -5,6 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Button from '@mui/material/Button';
 import {useState} from "react";
+import {TextField} from "@mui/material";
 
 function HomePage(props) {
     const navigate = useNavigate();
@@ -55,6 +57,12 @@ function HomePage(props) {
                                         <DatePicker
                                             value={selectedDate} // Pass the selected date as a value
                                             onChange={handleDateChange} // Handle date change event
+                                            renderInput={(props) => (
+                                                <TextField
+                                                    {...props}
+                                                    // Format the date in the desired format ('DD/MM/YYYY') before rendering it in the input field
+                                                    value={selectedDate ? AdapterDayjs.format(selectedDate, 'DD/MM/YYYY') : ''}
+                                                />)}
                                         />
                                     </LocalizationProvider>
                                 </div>
@@ -73,7 +81,7 @@ function HomePage(props) {
                                         onClick={() => handleGenderSelect('female')}
                                         className={"active"}
                                     >
-                                        Female
+                                        Κοριτσι
                                     </Button>
                                     <Button
                                         variant="contained"
@@ -84,7 +92,7 @@ function HomePage(props) {
                                         onClick={() => handleGenderSelect('male')}
                                         className={"active"}
                                     >
-                                        Male
+                                        Αγορι
                                     </Button>
                                 </div>
                             </div>

@@ -10,6 +10,20 @@ function VideoPage(props){
     const [videoFinished, setVideoFinished] = useState(false);
     const [countdown, setCountdown] = useState(delay_quiz_page/1000);
 
+
+    const greek_translation={
+        "Ocean": "Ωκεανός",
+        "City":"Αρχιτεκτονική",
+        "Animals":"Ζώα Αφρικής",
+        "ANCIENT_CIVILIZATION":"Αρχαίοι Πολιτισμοί",
+        "FOOD": "Μαγειρική",
+        "FUTURISTIC_TRANSPORTATION": "Υπερσύγχρονα μέσα μεταφοράς",
+        "LANDSCAPES": "Κλίματα",
+        "MICROWORLD": "Μικρόκοσμος",
+        "NATURE_BLOOMING": "Ανάπτυξη φυτών",
+        "Space": "Διάστημα"
+    }
+
     useEffect(() => {
         props.setCategoryAndCounter(category, counter);
 
@@ -19,7 +33,7 @@ function VideoPage(props){
     return (
         <>
             <Header />
-            <h2>Παρακαλώ παρακολουθήστε το παρακάτω video</h2>
+            <h2>{greek_translation[choice]}</h2>
 
             {(show_countdown && !show_next_button_to_video) ? (!videoFinished) ? (
 
