@@ -12,6 +12,7 @@ function VideoPage(props){
 
     useEffect(() => {
         props.setCategoryAndCounter(category, counter);
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -29,9 +30,11 @@ function VideoPage(props){
 
 
                 <video
-                    className="img-fluid"
-                    autoPlay={true}
                     muted={true}
+                    preload="auto"
+                    className={"img-fluid"}
+                    autoPlay={true}
+
                     onEnded={() => {
                         setVideoFinished(true);
                         if (!show_next_button_to_video) {
@@ -39,16 +42,16 @@ function VideoPage(props){
                                 setCountdown(prevCountdown => prevCountdown - 1);
                             }, 1000);
 
-                                        const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
+                            const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
 
-                                        const timeoutId = setTimeout(() => {
-                                            clearInterval(intervalId);
-                                            // Navigate to the new page after the delay
-                                            navigate(next_page);
-                                        }, delay_quiz_page);
+                            const timeoutId = setTimeout(() => {
+                                clearInterval(intervalId);
+                                // Navigate to the new page after the delay
+                                navigate(next_page);
+                            }, delay_quiz_page);
 
-                                    }
-                                }}>
+                        }
+                    }}>
                                 <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
                                         type="video/mp4" />
                                 Your browser does not support the video tag.
@@ -71,7 +74,7 @@ function VideoPage(props){
                     <div className="row d-flex justify-content-center align-content-center">
                         <div className="col-1"></div>
                         <div className="col-10">
-                            <video className="img-fluid" autoPlay={true} muted={true} onEnded={() => {
+                            <video className="img-fluid" autoPlay={true} muted={true} preload={"auto"} onEnded={() => {
                                 setVideoFinished(true);
                                 if (!show_next_button_to_video) {
                                     const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;

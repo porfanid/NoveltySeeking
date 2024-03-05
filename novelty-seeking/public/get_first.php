@@ -43,6 +43,8 @@ $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
 $password = $envVars['DB_PASSWORD'];
 
+error_reporting(E_ALL);
+
 try {
     // Get the code from the URL parameters
     $code = $_GET['code'];
@@ -54,7 +56,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Prepare and execute the SQL query to retrieve data based on the code
-    $stmt = $pdo->prepare(`SELECT code, choice FROM \`answer\` WHERE id="1";`);
+    $stmt = $pdo->prepare("SELECT code, choice FROM `answer` WHERE id = '1'");
     $stmt->execute();
 
     // Fetch the result as an associative array
