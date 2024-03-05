@@ -95,7 +95,12 @@ function HomePage(props) {
                                 <div className="bigborder-button">
                                     <button className="main-button" onClick={() => {
                                         props.publishUser(gender, selectedDate);
-                                        navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
+                                        console.log(process.env.NODE_ENV)
+                                        if(false) {
+                                            navigate(`${process.env.PUBLIC_URL}/questionnaire`)
+                                        }else{
+                                            navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
+                                        }
                                     }}>
                                         Ξεκινήστε τις Ερωτήσεις
                                     </button>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { FormControl, FormControlLabel, Radio, RadioGroup, Button } from '@mui/material';
+import axios from "axios";
 
-const Questionnaire = () => {
+const Questionnaire = (props) => {
     const [answers, setAnswers] = useState({});
 
     const questions = [
@@ -19,16 +20,41 @@ const Questionnaire = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         // You can handle form submission logic here
-        console.log('Form submitted with answers:', answers);
+
+
+        Object.entries(answers).forEach(([questionId, answer])=>{
+            console.log(props.code+": "+questionId+": "+answer);
+
+            const data={
+                "code": props.code,
+                "index": questionId,
+                "answer": answer
+            }
+
+
+            axios.post(process.env.PUBLIC_URL+"/questionaire.php", data)
+                .then(response => {
+                    console.log(response.data);
+                    // Handle the response data as needed
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Handle errors
+                });
+
+
+        })
     };
 
     return (
         <div className="container mt-5">
             <h2>Ερωτηματολόγιο</h2>
             <div className="row justify-content-center">
-                <div className={"card"}>
+                <div className={"card col-7"}>
                     <div className={"card-body"}>
-                        Hello world
+                        Hello world<br/>
+                        Hello world<br/>
+                        Hello world<br/>
                     </div>
                 </div>
             </div>
@@ -41,14 +67,14 @@ const Questionnaire = () => {
                                     {questions.map(question => (
                                         <div className="card form-group p-3" key={question.id}>
                                             <label>{question.text}</label>
-                                            <RadioGroup name={question.id} value={answers[question.id]}
+                                            <RadioGroup name={question.id} value={(answers.hasOwnProperty(question.id))?answers[question.id]:"undefined"}
                                                         onChange={handleChange}>
                                                 <FormControlLabel value="true" control={<Radio/>} label="Σωστό"/>
                                                 <FormControlLabel value="false" control={<Radio/>} label="Λάθος"/>
                                             </RadioGroup>
                                         </div>
                                     ))}
-                                    <Button className={"mt-4"} type="submit" variant="contained" color="primary">Submit</Button>
+                                    <Button className={"m-4"} type="submit" variant="contained" color="primary">Submit</Button>
                                 </FormControl>
                             </form>
                         </div>
