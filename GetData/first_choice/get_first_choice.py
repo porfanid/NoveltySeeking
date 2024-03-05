@@ -6,10 +6,9 @@ def get_first_answer():
 
     first_answers_url = 'https://www.exploringthebrain.gr/novelty_seeking/get_first.php'
     result = requests.get(first_answers_url, headers=headers).text.encode('utf-8').decode('unicode-escape')
-    print(result)
     codes = [i for i in json.loads(result)]
     return codes
 
 
 if __name__ == '__main__':
-    print(get_first_answer())
+    print("\n".join([f"Το παιδί {i['code']} επέλεξε την {i['choice']} ώς πρώτη κατηγορία" for i in get_first_answer()]))
