@@ -36,7 +36,7 @@ function HomePage(props) {
                 <div className="container d-flex align-items-center justify-content-center">
 
                     <div className="row">
-                        <div className="col-md-12 offset-md-0">
+                        <div className="col-md-12">
 
                             {/* Input field for entering a code */}
                             <div className="row">
@@ -96,7 +96,7 @@ function HomePage(props) {
                                     <button className="main-button" onClick={() => {
                                         props.publishUser(gender, selectedDate);
                                         console.log(process.env.NODE_ENV)
-                                        if(true) {
+                                        if(false) {
                                             navigate(`${process.env.PUBLIC_URL}/questionnaire`)
                                         }else{
                                             navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)

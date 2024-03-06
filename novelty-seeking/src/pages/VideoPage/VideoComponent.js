@@ -1,0 +1,41 @@
+import React, { useState } from 'react';
+import { useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
+
+export default function VideoComponent(props) {
+    const [isLoading, setIsLoading] = useState(true);
+    let { choice, category, counter } = useParams();
+
+    const handleVideoLoaded = () => {
+        setIsLoading(false);
+    };
+
+    return (
+        <>
+            <Helmet>
+                <link rel="prefetch" href={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`} />
+            </Helmet>
+            <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                {isLoading? (
+                    <div className={"img-fluid"} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+                        Loading...
+                    </div>
+                ):
+                <video
+                    muted={true}
+                    preload="auto"
+                    className={"img-fluid"}
+                    autoPlay={true}
+                    onEnded={props.end}
+                    onError={console.error}
+                    onLoadedData={handleVideoLoaded}
+                >
+                    <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
+                            type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>}
+            </div>
+        </>
+    )
+}
