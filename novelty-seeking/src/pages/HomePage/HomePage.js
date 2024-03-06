@@ -96,7 +96,7 @@ function HomePage(props) {
                                     <button className="main-button" onClick={() => {
                                         props.publishUser(gender, selectedDate);
                                         console.log(process.env.NODE_ENV)
-                                        if(false) {
+                                        if(true) {
                                             navigate(`${process.env.PUBLIC_URL}/questionnaire`)
                                         }else{
                                             navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
