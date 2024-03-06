@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import { FormControl, FormControlLabel, Radio, RadioGroup, Button } from '@mui/material';
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const Questionnaire = (props) => {
     const [answers, setAnswers] = useState({});
+    const navigate = useNavigate();
 
     const questions = [
         { id: '1', text: 'Is the sky blue?' },
@@ -21,7 +23,7 @@ const Questionnaire = (props) => {
         event.preventDefault();
         // You can handle form submission logic here
 
-
+        let error = false;
         Object.entries(answers).forEach(([questionId, answer])=>{
             console.log(props.code+": "+questionId+": "+answer);
 
@@ -37,13 +39,20 @@ const Questionnaire = (props) => {
                     console.log(response.data);
                     // Handle the response data as needed
                 })
-                .catch(error => {
-                    console.error('Error:', error);
+                .catch(errorMessage => {
+                    error = true;
+                    console.error('Error:', errorMessage);
+                    alert(errorMessage);
                     // Handle errors
                 });
 
 
-        })
+        });
+
+        if(!error) {
+            setAnswers({});
+            navigate(process.env.PUBLIC_URL+"/Complete");
+        }
     };
 
     return (

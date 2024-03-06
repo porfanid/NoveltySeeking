@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import "./loading.css";
 
 
 export default function VideoComponent(props) {
@@ -17,11 +18,27 @@ export default function VideoComponent(props) {
                 <link rel="prefetch" href={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`} />
             </Helmet>
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                {isLoading? (
-                    <div className={"img-fluid"} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-                        Loading...
+                {isLoading&& (
+                    <div className={"img-fluid"}
+                         style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                        <div className="loadingio-spinner-spinner-w2t6013t4v">
+                            <div className="ldio-e1jr8bcoslt">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                ):
+                )}
                 <video
                     muted={true}
                     preload="auto"
@@ -34,7 +51,7 @@ export default function VideoComponent(props) {
                     <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
                             type="video/mp4"/>
                     Your browser does not support the video tag.
-                </video>}
+                </video>
             </div>
         </>
     )

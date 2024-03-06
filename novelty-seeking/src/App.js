@@ -4,14 +4,14 @@ import HomePage from "./pages/HomePage/HomePage";
 import ChoicePage from "./pages/ChoicePage/ChoicePage";
 import VideoPage from "./pages/VideoPage/VideoPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
-import CompletePage from "./pages/CompletePage/CompletePage";
+import QuizCompletePage from "./pages/QuizPage/CompletePage/CompletePage";
 import {useEffect, useState} from "react";
 import QuizResult from "./pages/QuizPage/QuizResult";
 import axios from 'axios';
 import NotLicensed from "./pages/notLicensed/notLicensed";
 import CodePage from "./pages/CodePage";
 import Questionaire from "./pages/questionaire/questionaire";
-
+import CompletePage from "./pages/CompletePage/CompletePage"
 
 function App() {
 
@@ -168,7 +168,9 @@ function App() {
       path:process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter" }} replace/>,
     },
     {
-      path:process.env.PUBLIC_URL+"/complete",element: (enteredPassword)?<CompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
+      path:process.env.PUBLIC_URL+"/quizComplete",element: (enteredPassword)?<QuizCompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
+    },{
+      path:process.env.PUBLIC_URL+"/Complete",element: (enteredPassword)?<CompletePage/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
     },
   ])
 

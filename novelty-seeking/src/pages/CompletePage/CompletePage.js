@@ -1,37 +1,24 @@
 import Header from "../../GeneralComponents/Header";
-import {useEffect} from "react";
-import {get_time_for_entire_quiz, number_of_questions, show_auth, use_otp} from "../../assets/settings";
 import {useNavigate} from "react-router-dom";
 
-function CompletePage(props){
-
+export default function CompletePage(){
     const navigate = useNavigate();
-
-    useEffect(() => {
-        if(get_time_for_entire_quiz) {
-            props.totalDuration(Date.now());
-        }
-        props.completeAnswerSet(number_of_questions.toString());
-        console.log(JSON.stringify(props.answers))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
     return(
         <>
             <Header/>
-            <h2>Συγχαρητήρια!!!</h2>
+            <h2>Ευχαριστούμε</h2>
             <p>
-                <h3 className={"text-white"}>Απάντησες σωστά και κέρδισες το δώρο!</h3>
+                <h3 className={"text-white"}>Σε ευχαριστούμε που απάντησες στις ερωτήσεις μας.</h3>
             </p>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
                     <div className={"col-md-4 p-3"}>
-                    <h5 className={"text-white"}>Το τεστ ολοκληρώθηκε.</h5>
+                        <h5 className={"text-white"}>Το τεστ ολοκληρώθηκε.</h5>
                     </div>
                 </div>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
                     <div className={"col-md-4 p-3"}>
-                        <h5 className={"text-white"}>Μπορείς να κλείσεις αυτό το παράθυρο.</h5>
+                        <h5 className={"text-white"}>Καλή συνέχεια</h5>
                     </div>
                 </div>
             </div>
@@ -41,16 +28,13 @@ function CompletePage(props){
                     <button className="main-button" onClick={() => {
                         navigate(`${process.env.PUBLIC_URL}/user_code`);
                     }}>
-                        Πίσω στην αρχή
+                        Πίσω στην Αρχή
                     </button>
                 </div>
                 <div className="icon-button">
-
                 </div>
             </div>
 
         </>
     )
 }
-
-export default CompletePage

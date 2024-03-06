@@ -53,7 +53,7 @@ function QuizPage(props){
                         onClick={(event) => {
                             handleAnswerClick(event, answer);
                             if(!show_next_button_to_quiz) {
-                                const link = (index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/complete";
+                                const link = (index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/quizComplete";
                                 if(get_time_for_each_question){
                                     props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
                                 }
@@ -75,7 +75,7 @@ function QuizPage(props){
                                 props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
                             }
                         }} className="active"
-                                 to={(index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/complete"}>
+                                 to={(index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/quizComplete"}>
                             Επόμενη Σελίδα
                         </NavLink>
                     </div>
