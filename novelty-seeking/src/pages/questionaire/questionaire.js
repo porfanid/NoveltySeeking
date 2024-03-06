@@ -69,8 +69,8 @@ const Questionnaire = (props) => {
                                             <label>{question.text}</label>
                                             <RadioGroup name={question.id} value={(answers.hasOwnProperty(question.id))?answers[question.id]:"undefined"}
                                                         onChange={handleChange}>
-                                                <FormControlLabel value="true" control={<Radio/>} label="Σωστό"/>
-                                                <FormControlLabel value="false" control={<Radio/>} label="Λάθος"/>
+                                                <FormControlLabel value="1" control={<Radio/>} label="Σωστό"/>
+                                                <FormControlLabel value="0" control={<Radio/>} label="Λάθος"/>
                                             </RadioGroup>
                                         </div>
                                     ))}
