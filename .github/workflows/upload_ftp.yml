@@ -24,8 +24,8 @@ jobs:
     - name: Build React app
       run: cd novelty-seeking&&CI=false npm run build
 
-    - name: Copy videos to Build folder
-      run: cd novelty-seeking&&CI=false npm run videos
+#    - name: Copy videos to Build folder
+#      run: cd novelty-seeking&&CI=false npm run videos
     
     - name: Set up Environment
       run: echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/build/.env
