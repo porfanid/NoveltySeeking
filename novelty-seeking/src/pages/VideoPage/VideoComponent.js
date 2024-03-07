@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import "./loading.css";
@@ -11,6 +11,14 @@ export default function VideoComponent(props) {
     const handleVideoLoaded = () => {
         setIsLoading(false);
     };
+
+    useEffect(() => {
+
+        const videos={
+
+        }
+
+    }, [choice, category, counter]);
 
     return (
         <>
