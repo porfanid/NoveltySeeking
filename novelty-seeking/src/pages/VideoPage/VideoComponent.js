@@ -15,7 +15,7 @@ export default function VideoComponent(props) {
     return (
         <>
             <Helmet>
-                <link rel="prefetch" href={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`} />
+                <link rel="prefetch" href={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/${counter}.mp4`} />
             </Helmet>
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                 {isLoading&& (
