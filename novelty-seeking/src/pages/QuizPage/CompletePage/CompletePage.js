@@ -20,18 +20,10 @@ function QuizCompletePage(props){
         <>
             <Header/>
             <h2>Συγχαρητήρια!!!</h2>
-            <p>
-                <h3 className={"text-white"}>Απάντησες σωστά και κέρδισες το δώρο!</h3>
-            </p>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
                     <div className={"col-md-4 p-3"}>
                     <h5 className={"text-white"}>Το τεστ ολοκληρώθηκε.</h5>
-                    </div>
-                </div>
-                <div className={"d-flex flex-row flex-wrap justify-content-center"}>
-                    <div className={"col-md-4 p-3"}>
-                        <h5 className={"text-white"}>Μπορείς να κλείσεις αυτό το παράθυρο.</h5>
                     </div>
                 </div>
             </div>

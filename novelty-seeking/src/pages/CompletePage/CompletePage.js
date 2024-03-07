@@ -8,7 +8,7 @@ export default function CompletePage(){
             <Header/>
             <h2>Ευχαριστούμε</h2>
             <p>
-                <h3 className={"text-white"}>Σε ευχαριστούμε που απάντησες στις ερωτήσεις μας.</h3>
+                <h3 className={"text-white"}>Aπάντησες στις ερωτήσεις μας και μπήκες στην κλήρωση για το δώρο!</h3>
             </p>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
