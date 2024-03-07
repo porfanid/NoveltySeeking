@@ -27,7 +27,7 @@ export const show_countdown = true;
 export const show_auth = true;
 export const use_otp = false;
 export const otp_secret = "MZ3WK4TFMV2GK4MZ3WK4TFMV2GK4";
-export const correct_password = "brain1024";
+export const correct_password = "brain2024";
 
 // time per question
 
