@@ -12,14 +12,6 @@ export default function VideoComponent(props) {
         setIsLoading(false);
     };
 
-    useEffect(() => {
-
-        const videos={
-
-        }
-
-    }, [choice, category, counter]);
-
     return (
         <>
             <Helmet>
@@ -56,7 +48,7 @@ export default function VideoComponent(props) {
                     onError={console.error}
                     onLoadedData={handleVideoLoaded}
                 >
-                    <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/${counter}.mp4`}
+                    <source src={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/${counter}.mp4`}
                             type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
