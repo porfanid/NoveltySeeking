@@ -65,6 +65,7 @@ for user, answers in users.items():
                 
                 count_final_choice[final_choice]+=1
                 row.append(final_choice)
+            print(answer)
             has_answered_correctly=answer["quiz"]==questions[answer["choice"]][answer["category"]][answer["counter"]]["correct answer"]
             if has_answered_correctly:
                 correct_answers+=1

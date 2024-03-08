@@ -52,7 +52,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Prepare and execute the SQL query to retrieve data based on the code
-    $stmt = $pdo->prepare("SELECT * FROM answer WHERE code = :code");
+    $stmt = $pdo->prepare("SELECT * FROM answer WHERE code = :code and choice is not NULL");
     $stmt->bindParam(':code', $code);
     $stmt->execute();
 
