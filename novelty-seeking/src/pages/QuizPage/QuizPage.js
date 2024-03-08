@@ -36,7 +36,7 @@ function QuizPage(props){
         answerBoxes.forEach((box) => {
             box.style.border = 'none';
         });
-        event.target.style.border= "10px solid red";
+        event.target.style.border = "10px solid #ADD8E6";
         props.setSelectedQuiz(selectedAnswer);
     };
 
