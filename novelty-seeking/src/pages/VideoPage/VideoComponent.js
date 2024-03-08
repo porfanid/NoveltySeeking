@@ -47,6 +47,7 @@ export default function VideoComponent(props) {
                     onEnded={props.end}
                     onError={console.error}
                     onLoadedData={handleVideoLoaded}
+                    controls={true}
                 >
                     <source src={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/${counter}.mp4`}
                             type="video/mp4"/>
