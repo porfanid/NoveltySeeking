@@ -100,7 +100,7 @@ const Questionnaire = (props) => {
                                             </RadioGroup>
                                         </div>
                                     ))}
-                                    <Button className={"m-4"} type="submit" variant="contained" color="primary">Submit</Button>
+                                    <Button className={"m-4"} type="submit" variant="contained" color="primary">Υποβολή</Button>
                                 </FormControl>
                             </form>
                         </div>
