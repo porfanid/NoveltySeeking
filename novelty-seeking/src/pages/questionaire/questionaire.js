@@ -26,7 +26,22 @@ const Questionnaire = (props) => {
         { id: '16', text: 'Σε άγνωστες καταστάσεις νιώθω άβολα και νευρικά.' },
         { id: '17', text: 'Μου αρέσει όταν τα πράγματα γίνονται με αυστηρό και τακτικό τρόπο.' },
         { id: '18', text: 'Συνήθως δεν ολοκληρώνω μία εργασία/δουλειά που χρειάζεται πολύ χρόνο. ' },
-        // Add more questions here if necessary
+        { id: '19', text: 'Συνήθως όταν θέλω να έχω κάτι, το θέλω άμεσα.' },
+        { id: '20', text: 'Συχνά λέω αυτό που μου έρχεται πρώτο στο μυαλό.' },
+        { id: '21', text: 'Προτιμώ να σκέφτομαι προσεκτικά πριν πάρω μία απόφαση.' },
+        { id: '22', text: 'Συχνά κάνω κάτι χωρίς πρώτα να έχω σκεφτεί αν θα λειτουργήσει.' },
+        { id: '23', text: 'Συχνά ενθουσιάζομαι με νέα πράγματα και θέλω να τα δοκιμάσω αμέσως.' },
+        { id: '24', text: 'Μου αρέσουν πολύ τα πάρτυ-έκπληξη και οι αυθόρμητες πράξεις.' },
+        { id: '25', text: 'Προτιμώ να αποταμιεύω, παρά να ξοδεύω τα χρήματά μου αμέσως.' },
+        { id: '26', text: 'Μου αρέσει να παίρνω γρήγορες αποφάσεις.' },
+        { id: '27', text: 'Όταν έχω χρήματα, τα ξοδεύω αμέσως σε κάτι.' },
+        { id: '28', text: 'Συχνά έχω διάθεση να κάνω κάτι καινούργιο ή τρελό.' },
+        { id: '29', text: 'Όταν κάτι μου κινεί την περιέργεια, τότε αδιαφορώ για τους κινδύνους και τις απαγορεύσεις.' },
+        { id: '30', text: 'Μου αρέσει να ακολουθώ κανόνες.' },
+        { id: '31', text: 'Ενθουσιάζομαι εύκολα με νέες ιδέες ή δραστηριότητες.' },
+        { id: '32', text: 'Προτιμώ δραστηριότητες χωρίς κανόνες.' },
+        { id: '33', text: 'Συχνά κάνω πράγματα που στην πραγματικότητα δεν μου επιτρέπεται να κάνω.' },
+        // Add more new questions here if necessary
     ];
 
     const handleChange = (event) => {
@@ -74,6 +89,7 @@ const Questionnaire = (props) => {
             <h2>Ερωτηματολόγιο</h2>
             <div className="row justify-content-center">
                 <div className={"card col-7"}>
+
                     <div className={"card-body"}>
                         → Διάβασε προσεκτικά κάθε δήλωση, αλλά μην αφιερώνεις πολύ χρόνο μέχρι να αποφασίσεις την
                         απάντηση!<br/><br/>
@@ -90,17 +106,136 @@ const Questionnaire = (props) => {
                         <div className="">
                             <form onSubmit={handleSubmit}>
                                 <FormControl component="fieldset">
-                                    {questions.map(question => (
+
+
+
+
+
+                                    {questions.map(question => (question.id > 18) ? (
                                         <div className="card form-group p-3" key={question.id}>
-                                            <label>{question.text}</label>
-                                            <RadioGroup name={question.id} value={(answers.hasOwnProperty(question.id))?answers[question.id]:"undefined"}
-                                                        onChange={handleChange}>
-                                                <FormControlLabel value="1" control={<Radio/>} label="Σωστό"/>
-                                                <FormControlLabel value="0" control={<Radio/>} label="Λάθος"/>
+                                            <label><b>{question.id - 18} - {question.text}</b></label>
+                                            <hr/>
+                                            <RadioGroup
+                                                name={question.id}
+                                                value={(answers.hasOwnProperty(question.id)) ? answers[question.id] : "undefined"}
+                                                onChange={handleChange}
+                                                className="radio-group"
+                                            >
+                                                <FormControlLabel value="0" control={<Radio color="primary"/>}
+                                                                  label="0 - ΟΧΙ"/>
+                                                <FormControlLabel value="1" control={<Radio color="primary"/>}
+                                                                  label="1 - ΜΑΛΛΟΝ ΟΧΙ"/>
+                                                <FormControlLabel value="2" control={<Radio color="primary"/>}
+                                                                  label="2 - ΕΝ ΜΕΡΕΙ"/>
+                                                <FormControlLabel value="3" control={<Radio color="primary"/>}
+                                                                  label="3 - ΜΑΛΛΟΝ ΝΑΙ"/>
+                                                <FormControlLabel value="4" control={<Radio color="primary"/>}
+                                                                  label="4 - ΝΑΙ"/>
                                             </RadioGroup>
                                         </div>
-                                    ))}
-                                    <Button className={"m-4"} type="submit" variant="contained" color="primary">Υποβολή</Button>
+                                    ) : null)}
+
+
+
+
+
+
+
+
+
+                                    <div className="card form-group p-3" key={questions.length + 1}>
+                                        <div className={"card-header-pills"}>
+                                            <b>
+                                                {(questions.length - 17)} - Σημείωσε τον βαθμό που παίρνεις πιο συχνά
+                                                στο σχολείο:
+                                            </b>
+                                        </div>
+                                        <hr/>
+                                        <div className={"card-body"}>
+                                            <RadioGroup
+                                                name={(questions.length + 1).toString()}
+                                                value={(answers.hasOwnProperty((questions.length + 1))) ? answers[(questions.length + 1)] : "undefined"}
+                                                onChange={handleChange}
+                                                className="radio-group"
+                                            >
+                                                <div className={"row"}>
+                                                    <div className={"col-2"}
+                                                         style={{border: "2px solid black"}}><b>Δημοτικό</b>
+                                                    </div>
+                                                    {
+                                                        Array.from({length: 10}).map((_, index) => (
+                                                            <div className={"col-1"}
+                                                                 style={{border: "1px solid black"}}>
+                                                                <FormControlLabel value={index + 1} control={<Radio
+                                                                    color="primary"/>} label={index + 1}/>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </RadioGroup>
+                                        </div>
+
+
+                                        <div className={"card-body"}>
+                                            <RadioGroup
+                                                name={(questions.length + 2).toString()}
+                                                value={(answers.hasOwnProperty((questions.length + 2))) ? answers[(questions.length + 2)] : "undefined"}
+                                                onChange={handleChange}
+                                                className="radio-group"
+                                            >
+                                                <div className={"row"}>
+                                                    <div className={"col-2"}
+                                                         style={{border: "2px solid black"}}><b>Γυμνάσιο/Λύκειο</b>
+                                                    </div>
+                                                    <div className={"col-10"}>
+                                                        <div className={"row p-0"}>
+                                                            {
+                                                                Array.from({length: 20}).map((_, index) => (
+                                                                    <div className={"col-md"}
+                                                                         style={{border: "1px solid black"}}>
+                                                                        <FormControlLabel value={index + 1}
+                                                                                          control={<Radio
+                                                                                              color="primary"/>}
+                                                                                          label={index + 1}/>
+                                                                    </div>
+                                                                ))
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </RadioGroup>
+                                        </div>
+                                    </div>
+
+
+                                    <div className="card form-group p-3" key={questions.length + 3}>
+                                        <label><b>{questions.length - 16} - Σημείωσε πόσο καλά
+                                            καταλαβαίνεις ένα κείμενο όταν το διαβάζεις:</b></label>
+                                        <hr/>
+                                        <RadioGroup
+                                            name={(questions.length + 3).toString()}
+                                            value={(answers.hasOwnProperty(questions.length + 3)) ? answers[questions.length + 3] : "undefined"}
+                                            onChange={handleChange}
+                                            className={"radio-group"}
+                                        >
+                                            <FormControlLabel value="0"
+                                                              control={<Radio color="primary"/>}
+                                                              label="Κακά"/>
+                                            <FormControlLabel value="1"
+                                                              control={<Radio color="primary"/>}
+                                                              label="Μέτρια"/>
+                                            <FormControlLabel value="2"
+                                                              control={<Radio color="primary"/>}
+                                                              label="Πολύ καλά"/>
+                                            <FormControlLabel value="3"
+                                                              control={<Radio color="primary"/>}
+                                                              label="Τέλεια"/>
+                                        </RadioGroup>
+                                    </div>
+
+
+                                    <Button className="m-4" type="submit" variant="contained"
+                                            color="primary">Υποβολή</Button>
                                 </FormControl>
                             </form>
                         </div>
