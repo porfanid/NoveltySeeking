@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 import "./loading.css";
 
 
@@ -14,9 +13,6 @@ export default function VideoComponent(props) {
 
     return (
         <>
-            <Helmet>
-                <link rel="prefetch" href={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/${counter}.mp4`} />
-            </Helmet>
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                 {isLoading&& (
                     <div className={"img-fluid"}
@@ -49,7 +45,7 @@ export default function VideoComponent(props) {
                     onLoadedData={handleVideoLoaded}
                     controls={true}
                 >
-                    <source src={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/${counter}.mp4`}
+                    <source src={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/output${counter}.mp4`}
                             type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
