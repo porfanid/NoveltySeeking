@@ -85,164 +85,254 @@ const Questionnaire = (props) => {
     };
 
     return (
-        <div className="container mt-5">
-            <h2>Ερωτηματολόγιο</h2>
-            <div className="row justify-content-center">
-                <div className={"card col-7"}>
-
-                    <div className={"card-body"}>
-                        → Διάβασε προσεκτικά κάθε δήλωση, αλλά μην αφιερώνεις πολύ χρόνο μέχρι να αποφασίσεις την
-                        απάντηση!<br/><br/>
-                        → Απάντησε σε κάθε ερώτηση, ακόμη και αν δεν είσαι απόλυτα σίγουρος/η για την
-                        απάντηση!<br/><br/>
-                        → Δεν υπάρχουν σωστές και λάθος απαντήσεις- απλώς προσπάθησε να αποδώσεις με μεγαλύτερη ακρίβεια
-                        τις προτιμήσεις και τις συμπεριφορές σου!<br/><br/>
-                    </div>
+        <>
+            <div className="d-flex flex-row">
+                <div className="flex-column-reverse flex-fill d-flex justify-content-center">
+                    <h2>Ερωτηματολόγιο</h2>
+                </div>
+                <div className="flex-column-reverse d-flex pe-3" style={{
+                    fontSize: "50px",
+                    fontWeight: "bold",
+                    fontFamily: "Arial, sans-serif",
+                    color: "black",
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)"
+                }}>
+                    JTCI 12-18
                 </div>
             </div>
-            <div className="row justify-content-center">
-                <div className="col-8">
-                    <div className="">
+
+
+            <div className="container mt-5">
+
+
+                <div className="row justify-content-center">
+                    <div className={"card col-7"}>
+
+                        <div className={"card-body"}>
+                            Στο ερωτηματολόγιο αυτό θα βρεις δηλώσεις που θα μπορούσαν να περιγράψουν τις στάσεις, τις
+                            απόψεις,
+                            τα ενδιαφέροντα και τα συναισθήματά σου. Κάθε δήλωση μπορεί να απαντηθεί με την επιλογή <b>«όχι,
+                            δεν
+                            ισχύει», «μάλλον δεν ισχύει», «ισχύει εν μέρει», «μάλλον ισχύει», «ναι, ισχύει»</b>. Διάβασε
+                            κάθε δήλωση
+                            και σημείωσε <u>ποια ισχύει περισσότερο για εσένα</u>. Απάντησε σε <u>όλες</u> τις δηλώσεις
+                            ακόμα κι αν δεν είσαι
+                            σίγουρος/η για την απάντηση. Διάβασε προσεκτικά κάθε πρόταση, αλλά μην αφιερώνεις πολύ χρόνο
+                            για
+                            να αποφασίσεις την απάντηση. Δεν υπάρχουν «σωστές» ή «λανθασμένες» απαντήσεις∙ περίγραψε
+                            απλώς
+                            τις <u>προσωπικές σου</u> απόψεις και συναισθήματα. Αν κάποιες προτάσεις σου φαίνονται
+                            παρόμοιες, αυτό
+                            είναι για να περιγράψεις τον εαυτό σου με ακρίβεια. Προσπάθησε να περιγράψετε τον εαυτό σου
+                            όπως
+                            <u>συνήθως ή ως επί το πλείστον</u> αισθάνεσαι ή ενεργείς, κι όχι μόνο όπως αισθάνεσαι αυτή
+                            τη στιγμή.
+                        </div>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-8">
                         <div className="">
-                            <form onSubmit={handleSubmit}>
-                                <FormControl component="fieldset">
+                            <div className="">
+                                <form onSubmit={handleSubmit}>
+                                    <FormControl component="fieldset">
 
-
-
-
-
-                                    {questions.map(question => (question.id > 18) ? (
-                                        <div className="card form-group p-3" key={question.id}>
-                                            <label><b>{question.id - 18} - {question.text}</b></label>
+                                        <div className="card form-group p-3" key={questions.length + 4}>
+                                            <label><b>1 - Τάξη:</b></label>
                                             <hr/>
                                             <RadioGroup
-                                                name={question.id}
-                                                value={(answers.hasOwnProperty(question.id)) ? answers[question.id] : "undefined"}
+                                                name={(questions.length + 4).toString()}
+                                                value={(answers.hasOwnProperty(questions.length + 4)) ? answers[questions.length + 4] : "undefined"}
                                                 onChange={handleChange}
-                                                className="radio-group"
-                                            >
-                                                <FormControlLabel value="0" control={<Radio color="primary"/>}
-                                                                  label="0 - ΟΧΙ"/>
-                                                <FormControlLabel value="1" control={<Radio color="primary"/>}
-                                                                  label="1 - ΜΑΛΛΟΝ ΟΧΙ"/>
-                                                <FormControlLabel value="2" control={<Radio color="primary"/>}
-                                                                  label="2 - ΕΝ ΜΕΡΕΙ"/>
-                                                <FormControlLabel value="3" control={<Radio color="primary"/>}
-                                                                  label="3 - ΜΑΛΛΟΝ ΝΑΙ"/>
-                                                <FormControlLabel value="4" control={<Radio color="primary"/>}
-                                                                  label="4 - ΝΑΙ"/>
-                                            </RadioGroup>
-                                        </div>
-                                    ) : null)}
-
-
-
-
-
-
-
-
-
-                                    <div className="card form-group p-3" key={questions.length + 1}>
-                                        <div className={"card-header-pills"}>
-                                            <b>
-                                                {(questions.length - 17)} - Σημείωσε τον βαθμό που παίρνεις πιο συχνά
-                                                στο σχολείο:
-                                            </b>
-                                        </div>
-                                        <hr/>
-                                        <div className={"card-body"}>
-                                            <RadioGroup
-                                                name={(questions.length + 1).toString()}
-                                                value={(answers.hasOwnProperty((questions.length + 1))) ? answers[(questions.length + 1)] : "undefined"}
-                                                onChange={handleChange}
-                                                className="radio-group"
+                                                className={"radio-group"}
                                             >
                                                 <div className={"row"}>
-                                                    <div className={"col-2"}
-                                                         style={{border: "2px solid black"}}><b>Δημοτικό</b>
+                                                    <div className={"col-auto justify-content-center"}>Δημοτικό</div>
+                                                    <div className={"col-auto"}>
+
+                                                        <FormControlLabel value="10"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="E"/>
                                                     </div>
-                                                    {
-                                                        Array.from({length: 10}).map((_, index) => (
-                                                            <div className={"col-1"}
-                                                                 style={{border: "1px solid black"}}>
-                                                                <FormControlLabel value={index + 1} control={<Radio
-                                                                    color="primary"/>} label={index + 1}/>
-                                                            </div>
-                                                        ))
-                                                    }
+                                                    <div className={"col-auto"}>
+                                                        <FormControlLabel value="11"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="ΣΤ"/>
+                                                    </div>
+                                                </div>
+
+                                                <hr/>
+                                                <div className={"row"}>
+                                                    <div className={"col-auto "}>Γυμνάσιο</div>
+                                                    <div className={"col-auto"}>
+
+                                                        <FormControlLabel value="20"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="A"/>
+                                                    </div>
+                                                    <div className={"col-auto"}>
+                                                        <FormControlLabel value="21"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="Β"/>
+                                                    </div>
+                                                    <div className={"col-auto"}>
+                                                        <FormControlLabel value="22"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="Γ"/>
+                                                    </div>
+                                                </div>
+
+                                                <hr/>
+                                                <div className={"row"}>
+                                                    <div className={"col-auto "}>Λύκειο</div>
+                                                    <div className={"col-auto"}>
+
+                                                        <FormControlLabel value="30"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="A"/>
+                                                    </div>
+                                                    <div className={"col-auto"}>
+                                                        <FormControlLabel value="31"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="Β"/>
+                                                    </div>
+                                                    <div className={"col-auto"}>
+                                                        <FormControlLabel value="32"
+                                                                          control={<Radio color="primary"/>}
+                                                                          label="Γ"/>
+                                                    </div>
                                                 </div>
                                             </RadioGroup>
                                         </div>
 
 
-                                        <div className={"card-body"}>
-                                            <RadioGroup
-                                                name={(questions.length + 2).toString()}
-                                                value={(answers.hasOwnProperty((questions.length + 2))) ? answers[(questions.length + 2)] : "undefined"}
-                                                onChange={handleChange}
-                                                className="radio-group"
-                                            >
-                                                <div className={"row"}>
-                                                    <div className={"col-2"}
-                                                         style={{border: "2px solid black"}}><b>Γυμνάσιο/Λύκειο</b>
+                                        {questions.map(question => (question.id > 18) ? (
+                                            <div className="card form-group p-3" key={question.id}>
+                                                <label><b>{question.id - 17} - {question.text}</b></label>
+                                                <hr/>
+                                                <RadioGroup
+                                                    name={question.id}
+                                                    value={(answers.hasOwnProperty(question.id)) ? answers[question.id] : "undefined"}
+                                                    onChange={handleChange}
+                                                    className="radio-group"
+                                                >
+                                                    <FormControlLabel value="0" control={<Radio color="primary"/>}
+                                                                      label="0 - ΟΧΙ"/>
+                                                    <FormControlLabel value="1" control={<Radio color="primary"/>}
+                                                                      label="1 - ΜΑΛΛΟΝ ΟΧΙ"/>
+                                                    <FormControlLabel value="2" control={<Radio color="primary"/>}
+                                                                      label="2 - ΕΝ ΜΕΡΕΙ"/>
+                                                    <FormControlLabel value="3" control={<Radio color="primary"/>}
+                                                                      label="3 - ΜΑΛΛΟΝ ΝΑΙ"/>
+                                                    <FormControlLabel value="4" control={<Radio color="primary"/>}
+                                                                      label="4 - ΝΑΙ"/>
+                                                </RadioGroup>
+                                            </div>
+                                        ) : null)}
+
+
+                                        <div className="card form-group p-3" key={questions.length + 1}>
+                                            <div className={"card-header-pills"}>
+                                                <b>
+                                                    {(questions.length - 16)} - Σημείωσε τον βαθμό που παίρνεις πιο
+                                                    συχνά
+                                                    στο σχολείο:
+                                                </b>
+                                            </div>
+                                            <hr/>
+                                            <div className={"card-body"}>
+                                                <RadioGroup
+                                                    name={(questions.length + 1).toString()}
+                                                    value={(answers.hasOwnProperty((questions.length + 1))) ? answers[(questions.length + 1)] : "undefined"}
+                                                    onChange={handleChange}
+                                                    className="radio-group"
+                                                >
+                                                    <div className={"row"}>
+                                                        <div className={"col-2"}
+                                                             style={{border: "2px solid black"}}><b>Δημοτικό</b>
+                                                        </div>
+                                                        {
+                                                            Array.from({length: 10}).map((_, index) => (
+                                                                <div className={"col-1"}
+                                                                     style={{border: "1px solid black"}}>
+                                                                    <FormControlLabel value={index + 1} control={<Radio
+                                                                        color="primary"/>} label={index + 1}/>
+                                                                </div>
+                                                            ))
+                                                        }
                                                     </div>
-                                                    <div className={"col-10"}>
-                                                        <div className={"row p-0"}>
-                                                            {
-                                                                Array.from({length: 20}).map((_, index) => (
-                                                                    <div className={"col-md"}
-                                                                         style={{border: "1px solid black"}}>
-                                                                        <FormControlLabel value={index + 1}
-                                                                                          control={<Radio
-                                                                                              color="primary"/>}
-                                                                                          label={index + 1}/>
-                                                                    </div>
-                                                                ))
-                                                            }
+                                                </RadioGroup>
+                                            </div>
+
+
+                                            <div className={"card-body"}>
+                                                <RadioGroup
+                                                    name={(questions.length + 2).toString()}
+                                                    value={(answers.hasOwnProperty((questions.length + 2))) ? answers[(questions.length + 2)] : "undefined"}
+                                                    onChange={handleChange}
+                                                    className="radio-group"
+                                                >
+                                                    <div className={"row"}>
+                                                        <div className={"col-2"}
+                                                             style={{border: "2px solid black"}}><b>Γυμνάσιο/Λύκειο</b>
+                                                        </div>
+                                                        <div className={"col-10"}>
+                                                            <div className={"row p-0"}>
+                                                                {
+                                                                    Array.from({length: 20}).map((_, index) => (
+                                                                        <div className={"col-md"}
+                                                                             style={{border: "1px solid black"}}>
+                                                                            <FormControlLabel value={index + 1}
+                                                                                              control={<Radio
+                                                                                                  color="primary"/>}
+                                                                                              label={index + 1}/>
+                                                                        </div>
+                                                                    ))
+                                                                }
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </RadioGroup>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="card form-group p-3" key={questions.length + 3}>
+                                            <label><b>{questions.length - 15} - Σημείωσε πόσο καλά
+                                                καταλαβαίνεις ένα κείμενο όταν το διαβάζεις:</b></label>
+                                            <hr/>
+                                            <RadioGroup
+                                                name={(questions.length + 3).toString()}
+                                                value={(answers.hasOwnProperty(questions.length + 3)) ? answers[questions.length + 3] : "undefined"}
+                                                onChange={handleChange}
+                                                className={"radio-group"}
+                                            >
+                                                <FormControlLabel value="0"
+                                                                  control={<Radio color="primary"/>}
+                                                                  label="Κακά"/>
+                                                <FormControlLabel value="1"
+                                                                  control={<Radio color="primary"/>}
+                                                                  label="Μέτρια"/>
+                                                <FormControlLabel value="2"
+                                                                  control={<Radio color="primary"/>}
+                                                                  label="Πολύ καλά"/>
+                                                <FormControlLabel value="3"
+                                                                  control={<Radio color="primary"/>}
+                                                                  label="Τέλεια"/>
                                             </RadioGroup>
                                         </div>
-                                    </div>
 
 
-                                    <div className="card form-group p-3" key={questions.length + 3}>
-                                        <label><b>{questions.length - 16} - Σημείωσε πόσο καλά
-                                            καταλαβαίνεις ένα κείμενο όταν το διαβάζεις:</b></label>
-                                        <hr/>
-                                        <RadioGroup
-                                            name={(questions.length + 3).toString()}
-                                            value={(answers.hasOwnProperty(questions.length + 3)) ? answers[questions.length + 3] : "undefined"}
-                                            onChange={handleChange}
-                                            className={"radio-group"}
-                                        >
-                                            <FormControlLabel value="0"
-                                                              control={<Radio color="primary"/>}
-                                                              label="Κακά"/>
-                                            <FormControlLabel value="1"
-                                                              control={<Radio color="primary"/>}
-                                                              label="Μέτρια"/>
-                                            <FormControlLabel value="2"
-                                                              control={<Radio color="primary"/>}
-                                                              label="Πολύ καλά"/>
-                                            <FormControlLabel value="3"
-                                                              control={<Radio color="primary"/>}
-                                                              label="Τέλεια"/>
-                                        </RadioGroup>
-                                    </div>
-
-
-                                    <Button className="m-4" type="submit" variant="contained"
-                                            color="primary">Υποβολή</Button>
-                                </FormControl>
-                            </form>
+                                        <Button className="m-4" type="submit" variant="contained"
+                                                color="primary">Υποβολη</Button>
+                                    </FormControl>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
