@@ -45,7 +45,7 @@ export default function VideoComponent(props) {
                     onLoadedData={handleVideoLoaded}
                     controls={true}
                 >
-                    <source src={`https://github.com/porfanid/NoveltySeeking/raw/main/novelty-seeking/videos/${choice}/${category}/output${counter}.mp4`}
+                    <source src={ process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/output${counter}.mp4`}
                             type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
