@@ -43,7 +43,7 @@ export default function VideoComponent(props) {
                     onEnded={props.end}
                     onError={console.error}
                     onLoadedData={handleVideoLoaded}
-                    controls={true}
+                    controls={false}
                 >
                     <source src={ process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/output${counter}.mp4`}
                             type="video/mp4"/>
