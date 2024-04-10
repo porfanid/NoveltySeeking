@@ -1,0 +1,183 @@
+Κωδικός,Τμήμα,ημερομηνία γέννησης,Φύλο,Ηλικία,Επιλογή 1,Επιλογή 2,Επιλογή 3,Επιλογή 4,Επιλογή 5,Επιλογή 6,Επιλογή 7,Απαντημένες Ερωτήσεις,Ερωτήσεις που απαντήθηκαν σωστά,Θέσεις λανθασμένων απαντήσεων,Παρατηρήσεις,"Τρόπος απάντησης(Έντυπα, ψηφιακά)",Ερώτηση 1,Ερώτηση 2,Ερώτηση 3,Ερώτηση 4,Ερώτηση 5,Ερώτηση 6,Ερώτηση 7,Ερώτηση 8,Ερώτηση 9,Ερώτηση 10,Ερώτηση 11,Ερώτηση 12,Ερώτηση 13,Ερώτηση 14,Ερώτηση 15,Ερώτηση 16,Ερώτηση 17,Ερώτηση 18,Ερώτηση 1,Ερώτηση 2,Ερώτηση 3,Ερώτηση 4,Ερώτηση 5,Ερώτηση 6,Ερώτηση 7,Ερώτηση 8,Ερώτηση 9,Ερώτηση 10,Ερώτηση 11,Ερώτηση 12,Ερώτηση 13,Ερώτηση 14,Ερώτηση 15,Ερώτηση 16,Ερώτηση 17,Ερώτηση 18
+10,,2010,Αγόρι,14,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11,,2010,Αγόρι,14,Ocean,Ocean,,,,,,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12,,2013,Κορίτσι,11,City,City,City,City,City,City,City,7,3,"1, 4, 5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,,2014,Αγόρι,10,Space,MICROWORLD,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,5,"5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15,Πρώτη Δημοτικού,2013,Αγόρι,11,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,7,,,,0,1,4,1,2,,4,,1,2,0,,3,0,1,10,,3,0,1,4,1,2,,4,,1,2,0,,3,0,1,10,,3
+16,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,7,,,,1,1,2,1,0,2,3,1,0,2,0,2,4,2,1,10,19,3,1,1,2,1,0,2,3,1,0,2,0,2,4,2,1,10,19,3
+17,Δευτέρα Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,6,3,,,1,3,4,1,2,2,2,2,2,4,3,1,4,4,4,10,17,2,1,3,4,1,2,2,2,2,2,4,3,1,4,4,4,10,17,2
+18,,2011,Κορίτσι,13,City,City,City,LANDSCAPES,LANDSCAPES,LANDSCAPES,FUTURISTIC_TRANSPORTATION,7,5,"5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19,Πρώτη Δημοτικού,2013,Κορίτσι,11,Space,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,FOOD,FUTURISTIC_TRANSPORTATION,7,4,"4, 5, 7",,,0,2,3,1,2,1,4,2,0,1,1,4,4,0,0,9,,2,0,2,3,1,2,1,4,2,0,1,1,4,4,0,0,9,,2
+20,,2008,Κορίτσι,16,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22,,2012,Αγόρι,12,Animals,Animals,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23,,2014,Αγόρι,10,City,,,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+30,,2010,Αγόρι,14,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+31,,2010,Αγόρι,14,Animals,Animals,Animals,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+34,,2014,Αγόρι,10,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+35,Πρώτη Δημοτικού,2013,Αγόρι,11,City,City,City,City,City,City,City,7,7,,,,2,1,4,4,4,2,0,4,2,3,0,4,4,0,0,10,,2,2,1,4,4,4,2,0,4,2,3,0,4,4,0,0,10,,2
+36,Πρώτη Γυμνασίου,2011,Αγόρι,13,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,7,7,,,,2,3,2,1,4,3,4,2,0,2,2,1,2,1,2,,18,3,2,3,2,1,4,3,4,2,0,2,2,1,2,1,2,,18,3
+37,Πρώτη Γυμνασίου,2011,Αγόρι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,5,"3, 4",,,2,0,3,1,2,2,3,2,1,4,4,2,2,1,4,10,19,3,2,0,3,1,2,2,3,2,1,4,4,2,2,1,4,10,19,3
+39,,2013,Κορίτσι,11,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+40,,2008,Αγόρι,16,Animals,Animals,Animals,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+41,,2012,Αγόρι,12,Space,Space,Space,Space,Space,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+42,,2012,Κορίτσι,12,Ocean,Ocean,,,,,,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+45,,2013,Κορίτσι,11,Animals,MICROWORLD,MICROWORLD,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,5,"3, 4",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+46,,2014,Κορίτσι,10,Space,Space,Space,Space,Space,Space,Space,7,6,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+50,,2010,Αγόρι,14,City,City,ANCIENT_CIVILIZATION,LANDSCAPES,LANDSCAPES,FOOD,FUTURISTIC_TRANSPORTATION,7,6,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+51,,2010,Κορίτσι,14,Space,Space,Space,Space,Space,Space,Space,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+53,,2014,Κορίτσι,10,Space,Space,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,FOOD,FOOD,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+54,Πρώτη Γυμνασίου,2011,Κορίτσι,13,City,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,5,"1, 4",,,1,3,2,2,4,4,4,2,1,4,2,2,4,3,2,,19,2,1,3,2,2,4,4,4,2,1,4,2,2,4,3,2,,19,2
+55,Πρώτη Δημοτικού,2013,Αγόρι,11,Space,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,4,"4, 5, 7",,,2,3,1,4,2,3,4,1,0,3,4,0,3,3,0,10,,2,2,3,1,4,2,3,4,1,0,3,4,0,3,3,0,10,,2
+57,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Space,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,5,"4, 5",,,3,4,4,3,4,4,1,1,1,4,3,2,4,1,1,,18,2,3,4,4,3,4,4,1,1,1,4,3,2,4,1,1,,18,2
+59,,2013,Κορίτσι,11,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+60,,2008,Αγόρι,16,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+61,,2012,Αγόρι,12,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,FUTURISTIC_TRANSPORTATION,7,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+62,,,Κορίτσι,,City,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,5,"3, 5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+65,,2013,Κορίτσι,11,Animals,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,4,"4, 5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+71,,2010,Κορίτσι,14,Space,Space,Space,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+74,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Space,Space,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,FUTURISTIC_TRANSPORTATION,7,7,,,,2,3,2,3,2,4,3,3,1,2,2,2,2,3,1,,18,2,2,3,2,3,2,4,3,3,1,2,2,2,2,3,1,,18,2
+75,Πρώτη Δημοτικού,2013,Αγόρι,11,City,City,City,City,City,City,City,7,7,,,,2,3,2,3,3,3,4,3,0,2,3,3,3,1,1,10,,2,2,3,2,3,3,3,4,3,0,2,3,3,3,1,1,10,,2
+77,,2011,Αγόρι,13,Space,Space,Space,Space,Space,Space,Space,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+80,,2008,Αγόρι,16,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,3,"4, 5, 6, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+81,,2012,Κορίτσι,12,Space,Space,Space,Space,Space,Space,Space,7,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+82,,2012,Αγόρι,12,Animals,MICROWORLD,ANCIENT_CIVILIZATION,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+93,,2014,Κορίτσι,10,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+94,,2011,Αγόρι,13,City,City,City,City,City,City,City,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+95,Πρώτη Δημοτικού,2013,Αγόρι,11,Space,Space,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,NATURE_BLOOMING,FUTURISTIC_TRANSPORTATION,7,5,"4, 7",,,3,1,4,2,2,4,4,1,0,3,0,4,3,0,0,10,,3,3,1,4,2,2,4,4,1,0,3,0,4,3,0,0,10,,3
+96,Πρώτη Γυμνασίου,2011,Αγόρι,13,Space,Space,Space,Space,Space,Space,Space,7,6,6,,,2,0,4,0,3,2,4,0,0,1,1,4,1,0,0,,20,3,2,0,4,0,3,2,4,0,0,1,1,4,1,0,0,,20,3
+97,,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+100,,2008,Αγόρι,16,,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+101,,,Κορίτσι,,City,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,LANDSCAPES,LANDSCAPES,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+102,,2012,Αγόρι,12,City,,,,,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+111,,2010,Κορίτσι,14,City,City,City,City,City,FOOD,,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+112,,2013,Κορίτσι,11,Space,Space,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,FOOD,FOOD,7,6,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+114,,2011,Αγόρι,13,Animals,Animals,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+115,,2013,Αγόρι,11,City,City,City,City,City,City,City,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+116,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,6,1,,,2,1,4,1,4,4,2,1,1,4,1,1,4,2,1,10,18,2,2,1,4,1,4,4,2,1,1,4,1,1,4,2,1,10,18,2
+117,Πρώτη Λυκείου,2011,Κορίτσι,13,City,City,City,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,5,"4, 5",,,2,3,2,0,4,4,1,0,2,1,2,2,3,3,4,,19,1,2,3,2,0,4,4,1,0,2,1,2,2,3,3,4,,19,1
+120,,2008,Αγόρι,16,Ocean,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,LANDSCAPES,LANDSCAPES,7,5,"3, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+121,,2012,Κορίτσι,12,Space,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+122,,2012,Αγόρι,12,City,City,City,City,City,City,City,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+125,,2013,Αγόρι,11,Space,Space,Space,Space,NATURE_BLOOMING,NATURE_BLOOMING,NATURE_BLOOMING,7,4,"3, 6, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+129,,2013,Αγόρι,11,City,City,,LANDSCAPES,LANDSCAPES,,,4,2,"1, 2",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+135,,2013,Αγόρι,11,Space,Space,Space,Space,Space,FOOD,FUTURISTIC_TRANSPORTATION,7,5,"3, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+136,Πρώτη Γυμνασίου,2011,Αγόρι,13,Space,Space,Space,Space,Space,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,0,1,4,0,0,0,4,0,0,2,3,4,2,1,2,,18,2,0,1,4,0,0,0,4,0,0,2,3,4,2,1,2,,18,2
+137,,2011,Κορίτσι,13,City,City,City,City,City,City,City,7,4,"4, 5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+140,,2008,Κορίτσι,16,Ocean,Ocean,,,,,,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+142,,2014,Αγόρι,10,Animals,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,LANDSCAPES,,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+151,,2009,Αγόρι,15,City,City,City,City,City,City,City,7,5,"6, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+152,,2013,Αγόρι,11,Animals,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,3,"1, 3, 4, 5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+153,,2014,Αγόρι,10,Space,Space,ANCIENT_CIVILIZATION,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,6,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+154,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,6,3,,,4,2,0,0,4,4,3,4,1,4,0,2,4,1,0,10,19,2,4,2,0,0,4,4,3,4,1,4,0,2,4,1,0,10,19,2
+155,Πρώτη Δημοτικού,2013,Αγόρι,11,Space,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+156,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,7,,,,3,2,2,1,2,1,4,2,1,2,2,2,3,2,2,10,17,2,3,2,2,1,2,1,4,2,1,2,2,2,3,2,2,10,17,2
+157,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,4,"3, 6, 7",,,0,0,4,3,3,4,4,1,0,3,0,4,4,0,0,,16,2,0,0,4,3,3,4,4,1,0,3,0,4,4,0,0,,16,2
+160,,2008,Κορίτσι,16,City,City,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,City,City,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+161,,2012,Αγόρι,12,Space,Space,Space,Space,Space,Space,Space,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+162,,2012,Κορίτσι,12,City,City,City,LANDSCAPES,NATURE_BLOOMING,NATURE_BLOOMING,FUTURISTIC_TRANSPORTATION,7,5,"3, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+163,,2014,Αγόρι,10,Animals,Animals,Animals,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+173,,2014,Αγόρι,10,Space,Space,Space,Space,Space,Space,Space,7,5,"3, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+174,,2011,Αγόρι,13,City,City,City,City,City,City,City,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+176,,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,ANCIENT_CIVILIZATION,7,5,"4, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+177,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,5,"4, 6",,,1,4,2,0,4,4,3,0,0,4,1,4,4,1,0,,18,1,1,4,2,0,4,4,3,0,0,4,1,4,4,1,0,,18,1
+180,,2008,Αγόρι,16,City,City,,,,,,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+182,,2012,Αγόρι,12,Animals,Animals,Animals,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+183,,2014,Κορίτσι,10,City,City,City,City,City,City,City,7,4,"1, 4, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+189,,2013,Κορίτσι,11,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,,4,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+194,Πρώτη Γυμνασίου,,Κορίτσι,,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,5,"4, 6",,,1,2,4,1,3,4,3,0,1,2,1,2,4,3,0,10,19,2,1,2,4,1,3,4,3,0,1,2,1,2,4,3,0,10,19,2
+195,Πρώτη Δημοτικού,2013,Κορίτσι,11,Ocean,Ocean,ANCIENT_CIVILIZATION,LANDSCAPES,LANDSCAPES,LANDSCAPES,LANDSCAPES,7,4,"3, 5, 7",,,0,,4,3,4,3,2,3,0,2,0,4,3,0,1,10,,2,0,,4,3,4,3,2,3,0,2,0,4,3,0,1,10,,2
+196,,2011,Κορίτσι,13,Space,Space,Space,Space,Space,Space,Space,7,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+197,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,4,"3, 4, 7",,,2,4,3,1,4,4,3,3,1,4,0,2,3,1,0,,19,1,2,4,3,1,4,4,3,3,1,4,0,2,3,1,0,,19,1
+200,,2008,Κορίτσι,16,Ocean,,,,,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+202,,2012,Αγόρι,12,Space,Space,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+204,,,Κορίτσι,,Space,Space,,,,,,2,0,"1, 2",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+205,,2013,Αγόρι,11,Animals,MICROWORLD,MICROWORLD,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,6,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+214,,2011,Αγόρι,13,Space,Space,Space,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,6,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+216,Πρώτη Γυμνασίου,2024,Αγόρι,0,Animals,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,6,5,,,1,2,4,0,3,4,2,1,0,3,0,3,2,1,1,,20,3,1,2,4,0,3,4,2,1,0,3,0,3,2,1,1,,20,3
+217,Πρώτη Γυμνασίου,2011,Αγόρι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,4,,,3,0,4,0,3,4,4,3,1,4,2,0,3,4,2,,18,3,3,0,4,0,3,4,4,3,1,4,2,0,3,4,2,,18,3
+220,,2008,Κορίτσι,16,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,5,"3, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+223,,2014,Κορίτσι,10,Animals,Animals,Animals,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+233,,2014,Κορίτσι,10,Space,Space,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,FUTURISTIC_TRANSPORTATION,7,2,"2, 3, 4, 5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+234,,2011,Κορίτσι,13,Space,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+235,,2013,Κορίτσι,11,City,City,City,City,City,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+237,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,4,,,1,2,3,2,2,3,3,2,1,3,1,3,2,2,1,10,19,2,1,2,3,2,2,3,3,2,1,3,1,3,2,2,1,10,19,2
+240,,2008,Αγόρι,16,Space,Space,Space,Space,Space,Space,Space,7,5,"6, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+242,,2012,Αγόρι,12,Space,Space,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+244,,2013,Κορίτσι,11,City,City,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,7,4,"1, 4, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+248,,2014,Κορίτσι,10,Space,Space,Space,Space,Space,Space,Space,7,3,"1, 4, 5, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+249,,2013,Κορίτσι,11,Ocean,Ocean,Ocean,LANDSCAPES,LANDSCAPES,LANDSCAPES,LANDSCAPES,7,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+252,,2013,Κορίτσι,11,Space,Space,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,NATURE_BLOOMING,FUTURISTIC_TRANSPORTATION,7,4,"4, 5, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+254,,2011,Αγόρι,13,City,City,City,City,City,City,City,7,6,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+255,,2013,Κορίτσι,11,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+256,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,6,,,3,2,4,2,4,4,1,0,2,2,1,0,2,4,2,10,18,2,3,2,4,2,4,4,1,0,2,2,1,0,2,4,2,10,18,2
+260,,2008,Αγόρι,16,City,MICROWORLD,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,FOOD,,6,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+262,,2012,Αγόρι,12,Animals,Animals,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,,6,5,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+273,,2014,Αγόρι,10,City,MICROWORLD,MICROWORLD,MICROWORLD,MICROWORLD,MICROWORLD,MICROWORLD,7,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+274,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Animals,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,NATURE_BLOOMING,FUTURISTIC_TRANSPORTATION,7,5,"5, 6",,,2,3,4,1,3,2,4,1,0,4,2,2,3,1,1,10,19,2,2,3,4,1,3,2,4,1,0,4,2,2,3,1,1,10,19,2
+275,,2013,Κορίτσι,11,Space,Space,Space,Space,Space,Space,Space,7,5,"3, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+280,,2008,Αγόρι,16,City,City,City,City,City,City,City,7,6,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+282,,2012,Κορίτσι,12,City,City,City,City,City,City,City,7,6,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+294,,2011,Κορίτσι,13,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,6,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+295,,2013,Κορίτσι,11,City,City,City,City,City,City,City,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+296,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,3,4,2,3,4,4,1,2,4,3,4,0,3,4,3,10,17,1,3,4,2,3,4,4,1,2,4,3,4,0,3,4,3,10,17,1
+297,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Space,MICROWORLD,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,5,"4, 5",,,2,4,4,2,1,4,1,2,3,2,1,2,2,4,2,,17,2,2,4,4,2,1,4,1,2,3,2,1,2,2,4,2,,17,2
+300,,2008,Αγόρι,16,Space,Space,Space,Space,Space,Space,Space,7,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+302,,2012,Κορίτσι,12,Ocean,Ocean,Ocean,Ocean,NATURE_BLOOMING,NATURE_BLOOMING,FUTURISTIC_TRANSPORTATION,7,4,"3, 4, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+304,,2013,Κορίτσι,11,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+313,,2014,Αγόρι,10,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+314,,2011,Κορίτσι,13,Ocean,MICROWORLD,MICROWORLD,LANDSCAPES,LANDSCAPES,LANDSCAPES,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+315,,2013,Κορίτσι,11,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,4,"3, 6, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+316,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Space,Space,Space,Space,Space,Space,Space,7,6,1,,,1,1,4,0,3,3,4,0,0,2,3,2,3,2,1,10,19,3,1,1,4,0,3,3,4,0,0,2,3,2,3,2,1,10,19,3
+320,,2008,Αγόρι,16,Animals,Animals,Animals,Animals,,,,4,2,"3, 4",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+322,,2012,Αγόρι,12,Space,Space,Space,Space,Space,Space,Space,7,4,"3, 4, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+331,,2011,Κορίτσι,13,Space,Space,Space,Space,Space,Space,Space,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+333,,2014,Κορίτσι,10,Animals,Animals,ANCIENT_CIVILIZATION,LANDSCAPES,LANDSCAPES,LANDSCAPES,FUTURISTIC_TRANSPORTATION,7,4,"2, 5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+334,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+335,Πρώτη Δημοτικού,2013,Κορίτσι,11,Space,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,6,3,,,1,1,4,0,2,4,4,2,0,1,0,4,4,0,0,10,,3,1,1,4,0,2,4,4,2,0,1,0,4,4,0,0,10,,3
+336,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,7,5,"3, 6",,,1,2,4,0,1,4,2,0,1,3,0,2,3,1,0,10,18,2,1,2,4,0,1,4,2,0,1,3,0,2,3,1,0,10,18,2
+340,,2008,Κορίτσι,16,Animals,,,,,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+342,,2012,Κορίτσι,12,Ocean,MICROWORLD,MICROWORLD,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+349,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,4,,,4,2,3,2,,4,0,2,4,3,2,2,1,2,0,,17,2,4,2,3,2,,4,0,2,4,3,2,2,1,2,0,,17,2
+350,,2009,Κορίτσι,15,Ocean,Ocean,Ocean,LANDSCAPES,LANDSCAPES,FOOD,FUTURISTIC_TRANSPORTATION,7,5,"5, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+354,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,7,,,,3,1,3,0,3,4,2,2,1,3,1,2,4,2,1,,19,2,3,1,3,0,3,4,2,2,1,3,1,2,4,2,1,,19,2
+355,Πρώτη Δημοτικού,2013,Κορίτσι,11,Space,MICROWORLD,MICROWORLD,LANDSCAPES,NATURE_BLOOMING,FOOD,FOOD,7,6,4,,,3,2,4,2,3,3,2,2,1,2,0,3,4,3,1,10,,2,3,2,4,2,3,3,2,2,1,2,0,3,4,3,1,10,,2
+356,Πρώτη Γυμνασίου,2010,Κορίτσι,14,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,3,2,4,2,3,4,2,1,2,4,2,2,3,2,2,,16,2,3,2,4,2,3,4,2,1,2,4,2,2,3,2,2,,16,2
+357,,2011,Αγόρι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,5,"4, 5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+360,,2008,Κορίτσι,16,Ocean,,,,,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+361,,2012,Αγόρι,12,Animals,Animals,Animals,,,,,3,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+362,,2012,Κορίτσι,12,Ocean,,,,,,,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+364,,2013,Κορίτσι,11,Animals,MICROWORLD,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,FOOD,FOOD,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+369,,2013,Κορίτσι,11,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,5,"4, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+371,,2011,Κορίτσι,13,City,City,City,City,City,City,City,7,6,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+374,Πρώτη Γυμνασίου,2011,Αγόρι,13,Ocean,Ocean,Ocean,Ocean,NATURE_BLOOMING,FOOD,FOOD,7,4,"2, 4, 5",,,1,2,3,1,2,2,3,1,1,3,1,3,3,2,1,8,16,2,1,2,3,1,2,2,3,1,1,3,1,3,3,2,1,8,16,2
+375,,2013,Κορίτσι,11,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,FUTURISTIC_TRANSPORTATION,7,6,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+380,,2008,Αγόρι,16,,,,,,,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+382,,2012,Κορίτσι,12,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,4,"4, 5, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+391,Πρώτη Γυμνασίου,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,NATURE_BLOOMING,FOOD,FOOD,7,4,"1, 2, 3",,,0,4,4,1,1,2,4,4,1,2,2,2,4,1,2,,17,2,0,4,4,1,1,2,4,4,1,2,2,2,4,1,2,,17,2
+394,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,2,2,2,3,2,4,2,4,2,4,3,2,3,2,2,,18,1,2,2,2,3,2,4,2,4,2,4,3,2,3,2,2,,18,1
+395,Πρώτη Δημοτικού,2013,Κορίτσι,11,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,1,2,3,1,2,3,4,1,0,2,3,4,4,3,0,9,,1,1,2,3,1,2,3,4,1,0,2,3,4,4,3,0,9,,1
+396,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+400,,2008,Κορίτσι,16,Animals,Animals,Animals,,,,,3,2,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+401,,2011,Κορίτσι,13,Ocean,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,LANDSCAPES,FOOD,FOOD,7,5,"3, 5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+402,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+403,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+404,,2011,Κορίτσι,13,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,Ocean,7,6,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+405,,2011,Κορίτσι,13,Ocean,Ocean,Ocean,LANDSCAPES,NATURE_BLOOMING,NATURE_BLOOMING,FUTURISTIC_TRANSPORTATION,7,5,"6, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+406,,2011,Κορίτσι,13,Animals,MICROWORLD,ANCIENT_CIVILIZATION,LANDSCAPES,NATURE_BLOOMING,FOOD,FUTURISTIC_TRANSPORTATION,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+407,,2011,Κορίτσι,13,City,City,City,City,City,City,City,7,5,"3, 6",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+408,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,5,"3, 7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+409,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+410,,2011,Κορίτσι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+411,Πρώτη Γυμνασίου,2012,Αγόρι,12,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,5,"2, 3",,,1,0,3,1,2,3,4,1,0,3,2,3,0,1,1,,19,3,1,0,3,1,2,3,4,1,0,3,2,3,0,1,1,,19,3
+421,,2011,Κορίτσι,13,Space,Space,Space,Space,Space,FOOD,FOOD,7,5,"2, 5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+422,Πρώτη Γυμνασίου,2011,Αγόρι,13,Animals,Animals,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,ANCIENT_CIVILIZATION,7,5,"4, 7",,,3,2,4,4,4,0,1,4,3,4,1,3,4,2,1,,18,2,3,2,4,4,4,0,1,4,3,4,1,3,4,2,1,,18,2
+423,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,FUTURISTIC_TRANSPORTATION,7,6,1,,,1,1,3,1,3,3,3,2,1,2,3,2,2,2,1,,19,2,1,1,3,1,3,3,3,2,1,2,3,2,2,2,1,,19,2
+424,Πρώτη Γυμνασίου,2011,Αγόρι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,5,"2, 7",,,0,4,4,0,3,4,4,3,1,4,0,3,2,1,1,,18,2,0,4,4,0,3,4,4,3,1,4,0,3,2,1,1,,18,2
+425,Πρώτη Γυμνασίου,2011,Αγόρι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,5,,,2,1,4,0,3,4,4,0,0,3,0,4,3,2,0,,19,2,2,1,4,0,3,4,4,0,0,3,0,4,3,2,0,,19,2
+426,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,7,,,,3,0,4,4,4,4,0,4,4,2,2,2,4,2,4,,12,1,3,0,4,4,4,4,0,4,4,2,2,2,4,2,4,,12,1
+427,Πρώτη Γυμνασίου,2011,Αγόρι,13,Space,Space,Space,Space,Space,Space,Space,7,6,4,,,2,1,2,1,4,2,4,2,0,3,1,2,2,0,1,10,19,2,2,1,2,1,4,2,4,2,0,3,1,2,2,0,1,10,19,2
+428,Πρώτη Γυμνασίου,2011,Αγόρι,13,Space,Space,Space,Space,Space,Space,Space,7,6,6,,,2,1,4,1,2,4,4,1,0,1,2,4,3,1,2,,19,2,2,1,4,1,2,4,4,1,0,1,2,4,3,1,2,,19,2
+429,Πρώτη Γυμνασίου,2011,Αγόρι,13,Animals,Animals,Animals,Animals,Animals,Animals,Animals,7,6,7,,,0,4,4,4,0,4,4,0,0,0,0,4,4,0,0,,12,1,0,4,4,4,0,4,4,0,0,0,0,4,4,0,0,,12,1
+432,Πρώτη Γυμνασίου,2011,Αγόρι,13,City,City,City,City,City,City,City,7,3,"1, 3, 4, 7",,,2,2,4,1,0,4,0,2,0,2,1,4,4,0,4,,14,1,2,2,4,1,0,4,0,2,0,2,1,4,4,0,4,,14,1
+1234567890,,1969,Κορίτσι,55,City,City,,,,,,2,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2147483647,,909,Αγόρι,1115,Animals,MICROWORLD,MICROWORLD,LANDSCAPES,NATURE_BLOOMING,NATURE_BLOOMING,NATURE_BLOOMING,7,2,"2, 3, 4, 5, 7",,,4,4,4,4,4,4,,4,4,4,4,4,4,4,4,10,20,3,4,4,4,4,4,4,,4,4,4,4,4,4,4,4,10,20,3

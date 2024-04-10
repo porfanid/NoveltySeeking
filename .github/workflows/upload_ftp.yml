@@ -1,0 +1,41 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 21
+
+    - name: Install dependencies
+      run: cd novelty-seeking&&npm install
+
+    - name: Build React app
+      run: cd novelty-seeking&&CI=false npm run build
+
+#    - name: Copy videos to Build folder
+#      run: cd novelty-seeking&&CI=false npm run videos
+    
+    - name: Set up Environment
+      run: echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/build/.env
+
+    - name: Upload to FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_SECRET }}
+        local-dir: novelty-seeking/build/
+        server-dir: /novelty_seeking/ # Change this to the desired remote directory
+        dangerous-clean-slate: true

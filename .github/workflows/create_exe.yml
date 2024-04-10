@@ -1,0 +1,39 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  build-windows-exe:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller
+          pip install -r GetData/requirements.txt  # Install all dependencies from requirements.txt
+
+      - name: Build Windows EXE
+        run: |
+          cd GetData
+          pyinstaller --onefile --console --icon=cse.logo.ico download.py
+
+      - name: Copy EXE to project root
+        run: |
+          cp GetData/dist/download.exe ./NoveltySeeking.exe
+
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: NoveltySeeking.exe
+          path: NoveltySeeking.exe

@@ -1,0 +1,46 @@
+name: Build macOS App
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  build-macos-app:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller
+          pip install -r GetData/requirements.txt  # Install all dependencies from requirements.txt
+          brew install create-dmg
+
+      - name: Build macOS App
+        run: |
+          cd GetData
+          pyinstaller --onefile --console --icon=cse.logo.ico download.py
+          mv dist/download dist/NoveltySeeking.app
+          create-dmg --volname "NoveltySeeking" --volicon "cse.icns" --window-pos 200 120 \
+          --window-size 800 400 \
+          --icon-size 100 \
+          "NoveltySeeking.dmg" "dist"
+          
+
+      - name: Copy App to project root
+        run: |
+          cp GetData/NoveltySeeking.dmg ./NoveltySeeking.dmg
+
+      - name: Upload App artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: NoveltySeeking.dmg
+          path: NoveltySeeking.dmg
