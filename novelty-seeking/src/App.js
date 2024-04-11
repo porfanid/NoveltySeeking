@@ -93,7 +93,7 @@ function App() {
           // Handle the response data as needed
         })
         .catch(error => {
-          console.error('Error:', error);
+          alert('Error:'+ error);
           // Handle errors
         });
   }
@@ -112,7 +112,7 @@ function App() {
           // Handle the response data as needed
         })
         .catch(error => {
-          console.error('Error:', error);
+          alert('Error:'+ error);
           // Handle errors
         });
 

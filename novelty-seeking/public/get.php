@@ -64,6 +64,6 @@ try {
 
 } catch (PDOException $e) {
     // Handle database connection errors or query execution errors
-    echo json_encode(['error' => 'Database error: ' . $e->getMessage()]);
+    throw new Exception(json_encode(['error' => 'Database error: ' . $e->getMessage()]));
 }
 ?>

@@ -73,12 +73,10 @@ try {
         echo "Success";
     } else {
         // Handle non-POST requests
-        echo "error";
+        throw new Exception("You need to make a post request for this file to work");
     }
 
 } catch (PDOException $e) {
-    // Handle database connection errors or query execution errors
-    echo "Error2".$e.PHP_EOL;
-    var_dump($_POST);
+    throw new Exception("Database error: " . $e->getMessage());
 }
 ?>

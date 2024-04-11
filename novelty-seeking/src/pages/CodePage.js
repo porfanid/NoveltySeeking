@@ -51,12 +51,11 @@ const CodePage = (props)=>{
                     </div>:null
                     }
                     {/* Input field for entering a code */}
-                    <div className="row">
-                        {isMobile&&<div className="col-md-3 mt-5 mb-5"/>}
+                    <div className="row justify-content-center">
 
-                        <div className="col-md-6 mt-5 mb-5">
-                            {(show_auth) ? <div className="input-group mt-5">
-                                <input type="password" className="form-control" placeholder="Κωδικός αίθουσας"
+                        <div className="col-md-6 mt-5 mb-5 justify-content-center centeredText">
+                            {(show_auth) ? <div className="col-5 input-group mt-5">
+                                <input type="password" className="justify-content-center form-control" placeholder="Κωδικός αίθουσας"
                                        onChange={handlePasswordChange} required={true}/>
                             </div> : null}
                         </div>
