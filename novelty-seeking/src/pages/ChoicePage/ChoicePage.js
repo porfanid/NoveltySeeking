@@ -23,9 +23,6 @@ function ChoicePage(props){
     const previousChoice=props.getLastChoice(index)
 
     useEffect(() => {
-        if(get_time_for_entire_quiz) {
-            props.setStartTime(Date.now());
-        }
         if(index>1) {
             if(is_next_option_random) {
                 let isDifferentFromPrevious = (value) => {

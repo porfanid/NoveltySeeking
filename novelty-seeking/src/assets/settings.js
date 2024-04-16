@@ -33,4 +33,4 @@ export const correct_password = "brain2024";
 
 export const get_time_for_each_question = true;
 
-export const get_time_for_entire_quiz = true;
+export const get_time_for_entire_quiz = false;

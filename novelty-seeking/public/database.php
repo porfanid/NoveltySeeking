@@ -58,15 +58,17 @@ try {
         $category = $_POST['category'];
         $counter = $_POST['counter'];
         $quiz = $_POST['quiz'];
+        $date = $_POST['date'];
 
         // Prepare and execute the SQL query to insert data
-        $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz) VALUES (:code, :id, :choice, :category, :counter, :quiz)");
+        $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz, date) VALUES (:code, :id, :choice, :category, :counter, :quiz, :date)");
         $stmt->bindParam(':code', $code);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':choice', $choice);
         $stmt->bindParam(':category', $category);
         $stmt->bindParam(':counter', $counter);
         $stmt->bindParam(':quiz', $quiz);
+        $stmt->bindParam(':date', $date);
 
         $stmt->execute();
         // You can handle the success or provide a response as needed

@@ -8,7 +8,6 @@ function QuizPage(props){
     let {index,choice, category, counter} = useParams();
 
     const [answers, setAllAnswers] = useState([]);
-    const [startTime] = useState(Date.now());
     const [userHasAnswered, setUserHasAnswered] = useState(false);
     const navigate = useNavigate();
 
@@ -56,7 +55,8 @@ function QuizPage(props){
                             if(!show_next_button_to_quiz) {
                                 const link = (index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/quizComplete";
                                 if(get_time_for_each_question){
-                                    props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
+                                    console.log(props.startTime)
+                                    props.setSelectedTime(Math.round((Date.now() - props.startTime) / 1000))
                                 }
                                 navigate(link);
                             }
@@ -73,7 +73,8 @@ function QuizPage(props){
                     <div className="big-border-button">
                         <NavLink onClick={(event)=>{
                             if(get_time_for_each_question){
-                                props.setSelectedTime(Math.round((Date.now() - startTime) / 1000))
+                                console.log(props.startTime.toString())
+                                props.setSelectedTime(Math.round((Date.now() - props.startTime) / 1000))
                             }
                             if(!userHasAnswered){
                                 event.preventDefault();

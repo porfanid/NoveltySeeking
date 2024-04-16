@@ -151,7 +151,7 @@ function App() {
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage code={code} setStartTime={setStartTime} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/choice/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
+      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage code={code} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/choice/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -167,7 +167,7 @@ function App() {
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quiz/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
+      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} startTime={startTime} setSelectedTime={(time)=>{setCurrentAnswer("time", time)}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quiz/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
