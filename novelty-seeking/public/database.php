@@ -79,6 +79,7 @@ try {
     }
 
 } catch (PDOException $e) {
-    throw new Exception("Database error: " . $e->getMessage());
+    //throw new Exception("Database error: " . $e->getMessage());
+    echo $e->getMessage();
 }
 ?>
