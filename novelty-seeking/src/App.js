@@ -151,7 +151,7 @@ function App() {
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage code={code} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/choice/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
+      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage setStartTime={()=>{setStartTime(Date.now())}} code={code} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/choice/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks

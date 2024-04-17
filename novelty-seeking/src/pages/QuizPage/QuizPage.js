@@ -74,7 +74,7 @@ function QuizPage(props){
                         <NavLink onClick={(event)=>{
                             if(get_time_for_each_question){
                                 console.log(props.startTime.toString())
-                                props.setSelectedTime((Math.round((Date.now() - props.startTime) / 1000)).toString())
+                                props.setSelectedTime((Date.now() - props.startTime) / 1000)
                             }
                             if(!userHasAnswered){
                                 event.preventDefault();
