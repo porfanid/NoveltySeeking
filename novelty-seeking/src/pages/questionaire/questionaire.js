@@ -303,7 +303,7 @@ const Questionnaire = (props) => {
                                                 >
                                                     <div className={"row"}>
                                                         <div className={"col-2"}
-                                                             style={{border: "2px solid black"}}><b>Γυμνάσιο/Λύκειο</b>
+                                                             style={{border: "2px solid black"}}><b>{(selectedClass === '20' || selectedClass === '21' || selectedClass === '22')?<>Γυμνάσιο</>:<>Λύκειο</>}</b>
                                                         </div>
                                                         <div className={"col-10"}>
                                                             <div className={"row p-0"}>
