@@ -41,16 +41,46 @@ const Questionnaire = (props) => {
         { id: '31', text: 'Ενθουσιάζομαι εύκολα με νέες ιδέες ή δραστηριότητες.' },
         { id: '32', text: 'Προτιμώ δραστηριότητες χωρίς κανόνες.' },
         { id: '33', text: 'Συχνά κάνω πράγματα που στην πραγματικότητα δεν μου επιτρέπεται να κάνω.' },
-        // Add more new questions here if necessary
     ];
+
+    const [selectedClass, setSelectedClass] = useState(
+        answers.hasOwnProperty(questions.length + 4) ? answers[questions.length + 4] : undefined
+    );
 
     const handleChange = (event) => {
         setAnswers({ ...answers, [event.target.name]: event.target.value });
     };
 
+    const handleClassChange = (event) => {
+        handleChange(event);
+        const selectedValue = event.target.value;
+        setSelectedClass(selectedValue);
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        // You can handle form submission logic here
+
+        // code to see if all questions have been answered
+        const requiredQuestionIds = questions.filter(question => question.id > 18).map(question => question.id);
+        if(selectedClass === '10' || selectedClass === '11') {
+            requiredQuestionIds.push((questions.length + 1).toString())
+        }else{
+            requiredQuestionIds.push((questions.length + 2).toString())
+        }
+
+        requiredQuestionIds.push((questions.length+3).toString())
+        requiredQuestionIds.push((questions.length+4).toString())
+        let answeredQuestionIds = Object.keys(answers);
+
+        let missingAnswers = requiredQuestionIds.filter(id => !answeredQuestionIds.includes(id));
+
+        if (missingAnswers.length > 0) {
+            // If there are unanswered questions, display an error message or handle accordingly
+            alert(`Δεν έχετε απαντήσει τις ερωτήσεις: `+missingAnswers.join(", "));
+            console.log(requiredQuestionIds)
+            console.log(answeredQuestionIds)
+            return;
+        }
 
         let error = false;
         Object.entries(answers).forEach(([questionId, answer])=>{
@@ -74,8 +104,6 @@ const Questionnaire = (props) => {
                     alert(errorMessage);
                     // Handle errors
                 });
-
-
         });
 
         if(!error) {
@@ -143,7 +171,7 @@ const Questionnaire = (props) => {
                                             <RadioGroup
                                                 name={(questions.length + 4).toString()}
                                                 value={(answers.hasOwnProperty(questions.length + 4)) ? answers[questions.length + 4] : "undefined"}
-                                                onChange={handleChange}
+                                                onChange={handleClassChange}
                                                 className={"radio-group"}
                                             >
                                                 <div className={"row"}>
@@ -240,7 +268,7 @@ const Questionnaire = (props) => {
                                                 </b>
                                             </div>
                                             <hr/>
-                                            <div className={"card-body"}>
+                                            {(selectedClass === '10' || selectedClass === '11') &&<div className={"card-body"}>
                                                 <RadioGroup
                                                     name={(questions.length + 1).toString()}
                                                     value={(answers.hasOwnProperty((questions.length + 1))) ? answers[(questions.length + 1)] : "undefined"}
@@ -262,10 +290,11 @@ const Questionnaire = (props) => {
                                                         }
                                                     </div>
                                                 </RadioGroup>
-                                            </div>
+                                            </div>}
 
 
-                                            <div className={"card-body"}>
+                                            {(selectedClass === '20' || selectedClass === '21' || selectedClass === '22' || // Show for Γυμνάσιο or Λύκειο
+                                                selectedClass === '30' || selectedClass === '31' || selectedClass === '32') &&<div className={"card-body"}>
                                                 <RadioGroup
                                                     name={(questions.length + 2).toString()}
                                                     value={(answers.hasOwnProperty((questions.length + 2))) ? answers[(questions.length + 2)] : "undefined"}
@@ -293,7 +322,7 @@ const Questionnaire = (props) => {
                                                         </div>
                                                     </div>
                                                 </RadioGroup>
-                                            </div>
+                                            </div>}
                                         </div>
 
 

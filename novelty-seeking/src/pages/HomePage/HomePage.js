@@ -12,8 +12,10 @@ function HomePage(props) {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const [gender, setGender] = useState(null);
+    const [code, setCode] = useState(null);
 
     const handleCodeChange = (e) => {
+        setCode(e.target.value);
         props.setCode(e.target.value);
     };
 
@@ -52,16 +54,19 @@ function HomePage(props) {
 
                             <div className="row">
                                 <div className="col-md-12 mb-5">
+                                    <h3 className={"text-dark-emphasis"}>Ημερομηνία Γέννησης:</h3><br></br>
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DatePicker
-                                            value={selectedDate} // Pass the selected date as a value
-                                            onChange={handleDateChange} // Handle date change event
+                                            id="birthday"
+                                            value={selectedDate}
+                                            onChange={handleDateChange}
                                             format="DD/MM/YYYY"
                                         />
                                     </LocalizationProvider>
                                 </div>
-
                             </div>
+
+
                             <div className="row">
                                 <div className="col-md-12 mb-5">
                                     {/* Input field for entering a code with limited length */}
@@ -94,13 +99,16 @@ function HomePage(props) {
                             <div className="buttons">
                                 <div className="bigborder-button">
                                     <button className="main-button" onClick={() => {
+
+                                        if (!(code && selectedDate && gender)) {
+                                            alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
+                                            return;
+                                        }
                                         props.publishUser(gender, selectedDate);
                                         console.log(process.env.NODE_ENV)
-                                        if(false) {
-                                            navigate(`${process.env.PUBLIC_URL}/questionnaire`)
-                                        }else{
-                                            navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
-                                        }
+
+                                        navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
+
                                     }}>
                                         Ξεκινήστε τις Ερωτήσεις
                                     </button>
