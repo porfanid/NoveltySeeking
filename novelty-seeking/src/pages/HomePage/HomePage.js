@@ -5,7 +5,9 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Button from '@mui/material/Button';
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {baudrate} from "../../assets/settings";
+import openSerialPort from "../../assets/Arduino";
 
 function HomePage(props) {
     const navigate = useNavigate();
@@ -13,6 +15,12 @@ function HomePage(props) {
     const [selectedDate, setSelectedDate] = useState(null);
     const [gender, setGender] = useState(null);
     const [code, setCode] = useState(null);
+
+    const [port, setPort] = useState(null);
+
+    useEffect(() => {
+        setPort(openSerialPort())
+    }, []);
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
@@ -99,7 +107,7 @@ function HomePage(props) {
                             <div className="buttons">
                                 <div className="bigborder-button">
                                     <button className="main-button" onClick={() => {
-
+                                        requestPort();
                                         if (!(code && selectedDate && gender)) {
                                             alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
                                             return;

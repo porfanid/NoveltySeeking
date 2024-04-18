@@ -1,7 +1,7 @@
 import Header from "../../GeneralComponents/Header";
 import {NavLink, useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {delay_quiz_page, show_countdown, show_next_button_to_video} from "../../assets/settings";
+import {delay_quiz_page, number_of_questions, show_countdown, show_next_button_to_video} from "../../assets/settings";
 import "./countdown.css";
 import VideoComponent from "./VideoComponent";
 
@@ -33,7 +33,7 @@ function VideoPage(props){
     return (
         <>
             <Header />
-            <h2>{greek_translation[choice]}</h2>
+            <h2>Video {index} από τα {number_of_questions}: {greek_translation[choice]}</h2>
 
             {(show_countdown && !show_next_button_to_video) ? (!videoFinished) ? (
 
