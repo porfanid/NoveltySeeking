@@ -54,6 +54,14 @@ def fetch_data_from_database(conn):
        MAX(CASE WHEN a.id = 5 THEN a.quiz END) AS quiz_5,
        MAX(CASE WHEN a.id = 6 THEN a.quiz END) AS quiz_6,
        MAX(CASE WHEN a.id = 7 THEN a.quiz END) AS quiz_7,
+       -- Dates
+       MAX(CASE WHEN a.id = 1 THEN a.date END) AS date_1,
+       MAX(CASE WHEN a.id = 2 THEN a.date END) AS date_2,
+       MAX(CASE WHEN a.id = 3 THEN a.date END) AS date_3,
+       MAX(CASE WHEN a.id = 4 THEN a.date END) AS date_4,
+       MAX(CASE WHEN a.id = 5 THEN a.date END) AS date_5,
+       MAX(CASE WHEN a.id = 6 THEN a.date END) AS date_6,
+       MAX(CASE WHEN a.id = 7 THEN a.date END) AS date_7,
        -- Pivot for questioner table
        MAX(CASE WHEN q.id = 1 THEN q.answer END) AS answer_1,
        MAX(CASE WHEN q.id = 2 THEN q.answer END) AS answer_2,
@@ -95,7 +103,7 @@ def fetch_data_from_database(conn):
 FROM user u
 LEFT JOIN answer a ON u.code = a.code AND a.id IN (1, 2, 3, 4, 5, 6, 7)
 LEFT JOIN questioner q ON u.code = q.code AND q.id BETWEEN 1 AND 37
-GROUP BY u.code, u.year_of_birth, u.sex 
+GROUP BY u.code, u.year_of_birth, u.sex
 """)
         data = cursor.fetchall()
         return data
@@ -113,12 +121,6 @@ def download_questions(url):
     except requests.exceptions.RequestException as e:
         print("Error downloading questions data:", e)
         return None
-
-
-# def calculate_age(year_of_birth):
-#    current_year = datetime.now().year
-#    age = year_of_birth
-#    return age
 
 def calculate_age(birthdate):
     if birthdate == "null":
@@ -158,20 +160,27 @@ def write_to_csv(data, question_data):
         'choice_4': 'Επιλογή 4',
         'choice_5': 'Επιλογή 5',
         'choice_6': 'Επιλογή 6',
-        'choice_7': 'Επιλογή 7'
+        'choice_7': 'Επιλογή 7',
+        'date_1': 'Χρόνος 1',
+        'date_2': 'Χρόνος 2',
+        'date_3': 'Χρόνος 3',
+        'date_4': 'Χρόνος 4',
+        'date_5': 'Χρόνος 5',
+        'date_6': 'Χρόνος 6',
+        'date_7': 'Χρόνος 7'
     }
 
     for i in range(1, 37):
-        column_mapping[f'answer_{i}'] = f'Ερώτηση {i}' if i < 19 else f'Ερώτηση {i-18}'
+        column_mapping[f'answer_{i}'] = f'Ερώτηση {i}'
 
     with open('output.csv', mode='w', newline='') as file:
         fieldnames = ['Κωδικός', 'Τμήμα', 'ημερομηνία γέννησης', 'Φύλο', 'Ηλικία',
-                      'Επιλογή 1', 'Επιλογή 2', 'Επιλογή 3', 'Επιλογή 4', 'Επιλογή 5', 'Επιλογή 6', 'Επιλογή 7'
-            , 'Απαντημένες Ερωτήσεις', 'Ερωτήσεις που απαντήθηκαν σωστά', 'Θέσεις λανθασμένων απαντήσεων'
-                      , 'Παρατηρήσεις', 'Τρόπος απάντησης(Έντυπα, ψηφιακά)']
+                        'Επιλογή 1', 'Χρόνος 1', 'Επιλογή 2', 'Χρόνος 2', 'Επιλογή 3', 'Χρόνος 3', 'Επιλογή 4', 'Χρόνος 4', 'Επιλογή 5', 'Χρόνος 5', 'Επιλογή 6', 'Χρόνος 6', 'Επιλογή 7', 'Χρόνος 7'
+                        , 'Απαντημένες Ερωτήσεις', 'Ερωτήσεις που απαντήθηκαν σωστά', 'Θέσεις λανθασμένων απαντήσεων', 'Παρατηρήσεις', 'Τρόπος απάντησης(Έντυπα, ψηφιακά)'
+                    ]
 
         for i in range(1, 37):
-            fieldnames.append(f'Ερώτηση {i}' if i < 19 else f'Ερώτηση {i-18}')
+            fieldnames.append(f'Ερώτηση {i}')
         writer = csv.DictWriter(file, fieldnames=fieldnames)
 
         # Write header with Greek column names
