@@ -221,9 +221,9 @@ def write_to_csv(data, question_data):
 
 def main():
     # Database connection parameters
-    database = "exbragr_novelty_seeking"
-    username = "porfanid"
-    password = "metamule"
+    database = "db"
+    username = "user"
+    password = "passwd"
 
     questions_url = "https://exploringthebrain.gr/novelty_seeking/assets/questions.json"
     questions_data = download_questions(questions_url)
