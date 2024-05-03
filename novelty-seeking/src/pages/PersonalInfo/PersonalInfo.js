@@ -4,7 +4,6 @@
  * (code, birthdate,etc)
  * and selects whether he wants to use the serial port
  */
-import Header from "../../GeneralComponents/Header";
 import { useNavigate } from "react-router-dom";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -120,7 +119,6 @@ function PersonalInfo(props) {
 
     return (
         <>
-            <Header />
             <div className="hero-section align-items-center justify-content-center">
                 <h2>Εισάγετε τον <em>Προσωπικό σας Κωδικό</em></h2>
                 <div className="container d-flex align-items-center justify-content-center">

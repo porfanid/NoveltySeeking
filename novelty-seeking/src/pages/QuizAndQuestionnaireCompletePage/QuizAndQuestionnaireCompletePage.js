@@ -1,14 +1,12 @@
 /**
  * Complete Page. The test has been completed and the user can return to the beginning
  */
-import Header from "../../GeneralComponents/Header";
 import {useNavigate} from "react-router-dom";
 
-export default function CompletePage(){
+export default function QuizAndQuestionnaireCompletePage(){
     const navigate = useNavigate();
     return(
         <>
-            <Header/>
             <h2>Ευχαριστούμε</h2>
             <p>
                 <h3 className={"text-white"}>Aπάντησες στις ερωτήσεις μας και μπήκες στην κλήρωση για το δώρο!</h3>

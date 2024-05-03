@@ -4,14 +4,14 @@ import PersonalInfo from "./pages/PersonalInfo/PersonalInfo";
 import ChoicePage from "./pages/ChoicePage/ChoicePage";
 import VideoPage from "./pages/VideoPage/VideoPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
-import QuizCompletePage from "./pages/QuizPage/CompletePage/CompletePage";
+import QuizCompletePage from "./pages/QuizPage/QuizCompletePage/QuizCompletePage";
 import {useEffect, useState} from "react";
 import QuizResult from "./pages/QuizPage/QuizResult";
 import axios from 'axios';
 import NotLicensed from "./pages/notLicensed/notLicensed";
 import CodePage from "./pages/CodePage";
 import Questionaire from "./pages/questionaire/questionaire";
-import CompletePage from "./pages/CompletePage/CompletePage"
+import QuizAndQuestionnaireCompletePage from "./pages/QuizAndQuestionnaireCompletePage/QuizAndQuestionnaireCompletePage"
 
 function App() {
 
@@ -19,7 +19,6 @@ function App() {
   const [licenseValid, setLicenseValid] = useState(true);
   const [previousChoices] = useState([]);
   const [startTime, setStartTime] = useState(Date.now());
-  const [ setTotalDuration] =  useState(0);
 
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
@@ -175,9 +174,9 @@ function App() {
       path:process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quizResult/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
-      path:process.env.PUBLIC_URL+"/quizComplete",element: (enteredPassword)?<QuizCompletePage code={code} resetAnswers={resetAnswers} totalDuration = {(endTime)=>setTotalDuration((endTime - startTime) / 1000)} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
+      path:process.env.PUBLIC_URL+"/quizComplete",element: (enteredPassword)?<QuizCompletePage code={code} resetAnswers={resetAnswers} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
     },{
-      path:process.env.PUBLIC_URL+"/Complete",element: (enteredPassword)?<CompletePage/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
+      path:process.env.PUBLIC_URL+"/Complete",element: (enteredPassword)?<QuizAndQuestionnaireCompletePage/>:<Navigate to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
     },
   ])
 

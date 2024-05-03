@@ -3,10 +3,9 @@
  *  before the question
  * This, along with the QuizPage.js, is the main part of the app and are displayed 7 times to the user unless chosen otherwise in the app configuration
  */
-import Header from "../../GeneralComponents/Header";
 import {NavLink, useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {delay_quiz_page, number_of_questions, show_countdown, show_next_button_to_video} from "../../assets/settings";
+import {delay_quiz_page,show_countdown, show_next_button_to_video} from "../../assets/settings";
 import "./countdown.css";
 import VideoComponent from "./VideoComponent";
 
@@ -37,8 +36,7 @@ function VideoPage(props){
 
     return (
         <>
-            <Header />
-            <h2>Video {index} από τα {number_of_questions}: {greek_translation[choice]}</h2>
+            <h2>{/*Video {index} από τα {number_of_questions}: */}{greek_translation[choice]}</h2>
 
             {(show_countdown && !show_next_button_to_video) ? (!videoFinished) ? (
 
@@ -54,7 +52,7 @@ function VideoPage(props){
 
                                 const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
 
-                                const timeoutId = setTimeout(() => {
+                                setTimeout(() => {
                                     clearInterval(intervalId);
                                     // Navigate to the new page after the delay
                                     navigate(next_page);
@@ -85,7 +83,7 @@ function VideoPage(props){
                                 setVideoFinished(true);
                                 if (!show_next_button_to_video) {
                                     const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
-                                    const timeoutId = setTimeout(() => {
+                                    setTimeout(() => {
                                         // Navigate to the new page after the delay
                                         navigate(next_page);
                                     }, delay_quiz_page);

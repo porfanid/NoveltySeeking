@@ -1,6 +1,5 @@
-import Header from "../../../GeneralComponents/Header";
 import {useEffect} from "react";
-import {get_time_for_entire_quiz, number_of_questions, show_auth, use_otp} from "../../../assets/settings";
+import {number_of_questions} from "../../../assets/settings";
 import {useNavigate} from "react-router-dom";
 
 function QuizCompletePage(props){
@@ -8,9 +7,6 @@ function QuizCompletePage(props){
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(get_time_for_entire_quiz) {
-            props.totalDuration(Date.now());
-        }
         props.completeAnswerSet(number_of_questions.toString());
         console.log(JSON.stringify(props.answers))
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -18,7 +14,6 @@ function QuizCompletePage(props){
 
     return(
         <>
-            <Header/>
             <h2>Συγχαρητήρια!!!</h2>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>

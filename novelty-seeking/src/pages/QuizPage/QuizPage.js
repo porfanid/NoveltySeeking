@@ -3,7 +3,6 @@
  * @desc This file defines the QuizPage component which is used to display the quiz question and the 3 answers to the user
  * This is the main part of the app and is displayed 7 times to the user unless chosen otherwise in the app configuration
  */
-import Header from "../../GeneralComponents/Header";
 import {NavLink, useNavigate, useParams} from "react-router-dom";
 import "./answer.css";
 import {useEffect, useState} from "react";
@@ -47,7 +46,6 @@ function QuizPage(props){
 
     return(
         <>
-            <Header code={props.code}/>
             <h2 className={"mt-5"}>{props.questions[choice][category][counter].question}</h2>
 
             <div className="answer-container mt-lg-5">

@@ -4,7 +4,6 @@
  * Simple page that displays the 4 first options.
  * The user can choose any of them and the process with the videos will start
  */
-import Header from "../../GeneralComponents/Header";
 import image1 from "./images/1.jpg";
 import image2 from "./images/2.jpg";
 import image4 from "./images/3.jpg";
@@ -53,7 +52,6 @@ function ChoicePage(props){
 
     return(
         <>
-            <Header/>
             <h2 className={"mt-0"}>Παρακαλώ επιλέξτε μια κατηγορία</h2>
             <div className={"justify-content-center"}>
                 <div className={"row mb-5 mt-5"}>

@@ -2,7 +2,6 @@
  *First page where the user must enter a password to continue
  * If the password is correct, the user is redirected to the next page which is the page to enter his personal info
  */
-import Header from "../GeneralComponents/Header";
 import {correct_password, otp_secret, show_auth, use_otp} from "../assets/settings";
 import * as OTPAuth from "otpauth";
 import {useState} from "react";
@@ -16,10 +15,6 @@ const CodePage = (props)=>{
     const [passwordCorrect, setPasswordCorrect]=useState(true);
     const navigate = useNavigate();
     const location = useLocation();
-    const isMobile= window.innerWidth <= 991
-
-    console.log();
-
 
     const validate_otp = (token)=> {
         let totp = new OTPAuth.TOTP({
@@ -44,7 +39,6 @@ const CodePage = (props)=>{
 
     return (
         <>
-            <Header />
             <div className="hero-section">
                 <div className="overlay"></div>
                 <div className="container">

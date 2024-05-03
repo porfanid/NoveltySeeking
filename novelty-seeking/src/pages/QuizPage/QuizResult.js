@@ -1,4 +1,6 @@
-import Header from "../../GeneralComponents/Header";
+/**
+ * Simple page to display a message after each question
+ */
 import nextImage from "./images/next.png";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
@@ -47,7 +49,6 @@ function QuizResult(props){
     }
     return(
         <>
-            <Header/>
             {/**<h2>Απάντησες {answer}</h2>**/}
             {(props.isAnswerCorrect) ? <h2>{correct_answers[(index%correct_answers.length)]}</h2> : <h2>{wrong_answers[(index%wrong_answers.length)]}</h2>}
             <p style={{fontSize: 32}}>
