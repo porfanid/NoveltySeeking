@@ -218,7 +218,7 @@ def write_to_csv(data, question_data):
 
             writer.writerow(mapped_row)
 
-
+//TODO: Change the variables to match your configuration
 def main():
     # Database connection parameters
     database = "db"
