@@ -1,11 +1,11 @@
-//TODO:  Change the DD/MM/YYYY
 import Header from "../../GeneralComponents/Header";
 import {useNavigate} from "react-router-dom";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Button from '@mui/material/Button';
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {baudrate} from "../../assets/settings";
 
 function HomePage(props) {
     const navigate = useNavigate();
@@ -13,6 +13,75 @@ function HomePage(props) {
     const [selectedDate, setSelectedDate] = useState(null);
     const [gender, setGender] = useState(null);
     const [code, setCode] = useState(null);
+
+    const [port, setPort] = useState(null);
+
+
+    const requestPort = async () => {
+        let temp_port
+        try {
+            // if no port is passed to this function,
+            if (port == null) {
+                temp_port = await navigator.serial.requestPort();
+                // pop up window to select port:
+                setPort(temp_port);
+            } else {
+                // open the port that was passed:
+                temp_port = port;
+            }
+            // set port settings and open it:
+            // TODO: make port settings configurable
+            // from calling script:
+            await temp_port.open({ baudRate: 9600 });
+            // start the listenForSerial function:
+            //this.serialReadPromise = this.listenForSerial();
+            return temp_port;
+        } catch (err) {
+            // if there's an error opening the port:
+            if(temp_port) {
+                await temp_port.close();
+            }
+            console.error("There was an error opening the serial port:", err);
+        }
+    };
+
+
+    const writeDataToSerialPort = async (data) => {
+        let port;
+        try {
+            // Open the serial port
+            port = await requestPort();
+
+            if (port) {
+                // Get the writable stream writer from the port
+                const writer = port.writable.getWriter();
+
+                try {
+                    // Write data to the serial port
+                    await writer.write(data);
+                    console.log('Data written to serial port:', data);
+                } finally {
+                    // Release the writer's lock
+                    writer.releaseLock();
+                }
+            }
+        } catch (error) {
+            console.error('Error writing data to serial port:', error);
+        } finally {
+            // Close the serial port
+            if (port!=null) {
+                await port.close();
+                console.log('Serial port closed.');
+            }else{
+                console.log('Serial port was not opened.');
+                console.log(port)
+            }
+        }
+    };
+
+    useEffect(() => {
+
+    }, []);
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
@@ -99,7 +168,7 @@ function HomePage(props) {
                             <div className="buttons">
                                 <div className="bigborder-button">
                                     <button className="main-button" onClick={() => {
-
+                                        writeDataToSerialPort("a")
                                         if (!(code && selectedDate && gender)) {
                                             alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
                                             return;

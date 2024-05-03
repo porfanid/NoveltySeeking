@@ -7,7 +7,7 @@ import {NavLink, useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 import {
     first_choice_has_button,
-    get_time_for_entire_quiz, is_next_option_random,
+    is_next_option_random,
     random_choices,
     remove_all_previous_values_from_choices
 } from "../../assets/settings";

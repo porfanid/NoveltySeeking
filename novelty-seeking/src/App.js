@@ -93,7 +93,8 @@ function App() {
           // Handle the response data as needed
         })
         .catch(error => {
-          alert('Error:'+ error);
+          //TODO: Remove the comment
+          //alert('Error:'+ error);
           // Handle errors
         });
   }
