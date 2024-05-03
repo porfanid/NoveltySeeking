@@ -5,6 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Button from '@mui/material/Button';
 import {useEffect, useState} from "react";
+import {Form} from "react-bootstrap";
 import {baudrate} from "../../assets/settings";
 
 function HomePage(props) {
@@ -13,10 +14,13 @@ function HomePage(props) {
     const [selectedDate, setSelectedDate] = useState(null);
     const [gender, setGender] = useState(null);
     const [code, setCode] = useState(null);
-    const [port, setPort] = useState(null);
     const [portOpened, setPortOpened] = useState(false);
 
     const [port, setPort] = useState(null);
+
+    const isSerialSupported = () => {
+        return 'serial' in navigator && typeof navigator.serial.requestPort === 'function';
+    };
 
 
     const requestPort = async () => {
@@ -34,7 +38,7 @@ function HomePage(props) {
             // set port settings and open it:
             // TODO: make port settings configurable
             // from calling script:
-            await temp_port.open({ baudRate: 9600 });
+            await temp_port.open({ baudRate: baudrate });
             // start the listenForSerial function:
             //this.serialReadPromise = this.listenForSerial();
             return temp_port;
