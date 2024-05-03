@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../Heavy_local_greece/.idea/Heavy_local_greece.iml" filepath="$PROJECT_DIR$/../../Heavy_local_greece/.idea/Heavy_local_greece.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../QuestMatch/.idea/QuestMatch.iml" filepath="$PROJECT_DIR$/../../QuestMatch/.idea/QuestMatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/novelty-seeking.iml" filepath="$PROJECT_DIR$/.idea/novelty-seeking.iml" />
     </modules>
   </component>

@@ -12,5 +12,6 @@
     <orderEntry type="library" name="swiper" level="application" />
     <orderEntry type="module" module-name="Heavy_local_greece" />
     <orderEntry type="library" name="bootstrap-datepicker" level="application" />
+    <orderEntry type="module" module-name="QuestMatch" />
   </component>
 </module>

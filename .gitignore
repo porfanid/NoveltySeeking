@@ -1,2 +1,5 @@
 GetData/venv
+*.sql
+encephalograph/user_data
 Codes
+project
