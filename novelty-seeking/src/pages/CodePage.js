@@ -1,3 +1,7 @@
+/*
+ *First page where the user must enter a password to continue
+ * If the password is correct, the user is redirected to the next page which is the page to enter his personal info
+ */
 import Header from "../GeneralComponents/Header";
 import {correct_password, otp_secret, show_auth, use_otp} from "../assets/settings";
 import * as OTPAuth from "otpauth";

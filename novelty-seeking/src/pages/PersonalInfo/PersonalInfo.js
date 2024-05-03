@@ -1,3 +1,9 @@
+/*
+ * This component is the first page of the application
+ * where the user enters his personal details
+ * (code, birthdate,etc)
+ * and selects whether he wants to use the serial port
+ */
 import Header from "../../GeneralComponents/Header";
 import { useNavigate } from "react-router-dom";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -8,7 +14,7 @@ import {useEffect, useState} from "react";
 import {Form} from "react-bootstrap";
 import {baudrate} from "../../assets/settings";
 
-function HomePage(props) {
+function PersonalInfo(props) {
     const navigate = useNavigate();
 
     const [selectedDate, setSelectedDate] = useState(null);
@@ -213,4 +219,4 @@ function HomePage(props) {
     );
 }
 
-export default HomePage;
+export default PersonalInfo;

@@ -1,3 +1,7 @@
+/*
+ * This is a simple example of a questionnaire component that uses React hooks to manage state.
+ * It displays the questions to the users, but from the 18th question onwards, it also asks the user to select their class.
+ */
 import React, {useState} from 'react';
 import { FormControl, FormControlLabel, Radio, RadioGroup, Button } from '@mui/material';
 import axios from "axios";
@@ -8,6 +12,9 @@ const Questionnaire = (props) => {
     const navigate = useNavigate();
 
     const questions = [
+        /**
+         * sample questions because the JTCI questionair hadn't arrived yet and we didn't want to mix the results.
+         */
         { id: '1', text: 'Γενικά, προτιμώ να αποταμιεύω τα χρήματά μου, παρά να τα ξοδεύω.' },
         { id: '2', text: 'Πριν δοκιμάσω κάτι καινούργιο, αγχώνομαι.' },
         { id: '3', text: 'Μου αρέσει να ακολουθώ κανόνες.' },
@@ -26,6 +33,9 @@ const Questionnaire = (props) => {
         { id: '16', text: 'Σε άγνωστες καταστάσεις νιώθω άβολα και νευρικά.' },
         { id: '17', text: 'Μου αρέσει όταν τα πράγματα γίνονται με αυστηρό και τακτικό τρόπο.' },
         { id: '18', text: 'Συνήθως δεν ολοκληρώνω μία εργασία/δουλειά που χρειάζεται πολύ χρόνο. ' },
+        /**
+         * New Questions from the JTCI questionair to validate our results
+         */
         { id: '19', text: 'Συνήθως όταν θέλω να έχω κάτι, το θέλω άμεσα.' },
         { id: '20', text: 'Συχνά λέω αυτό που μου έρχεται πρώτο στο μυαλό.' },
         { id: '21', text: 'Προτιμώ να σκέφτομαι προσεκτικά πριν πάρω μία απόφαση.' },

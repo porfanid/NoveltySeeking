@@ -1,6 +1,7 @@
-import Header from "../../GeneralComponents/Header";
-import {NavLink} from "react-router-dom";
-
+/**
+ * Simple page to display if the user is not licensed to use the app
+ * (Meaning that a disagreement has happened)
+ */
 function NotLicensed(){
     return(
         <>

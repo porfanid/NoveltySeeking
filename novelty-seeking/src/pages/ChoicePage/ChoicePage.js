@@ -1,3 +1,9 @@
+/**
+ * @author Pavlos Orfanidis
+ * @version 1.0.0
+ * Simple page that displays the 4 first options.
+ * The user can choose any of them and the process with the videos will start
+ */
 import Header from "../../GeneralComponents/Header";
 import image1 from "./images/1.jpg";
 import image2 from "./images/2.jpg";

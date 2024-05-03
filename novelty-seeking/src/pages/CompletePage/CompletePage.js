@@ -1,3 +1,6 @@
+/**
+ * Complete Page. The test has been completed and the user can return to the beginning
+ */
 import Header from "../../GeneralComponents/Header";
 import {useNavigate} from "react-router-dom";
 

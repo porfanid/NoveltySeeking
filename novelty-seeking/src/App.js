@@ -1,6 +1,6 @@
 import './App.css';
 import {createBrowserRouter, Navigate, RouterProvider, useParams} from "react-router-dom"
-import HomePage from "./pages/HomePage/HomePage";
+import PersonalInfo from "./pages/PersonalInfo/PersonalInfo";
 import ChoicePage from "./pages/ChoicePage/ChoicePage";
 import VideoPage from "./pages/VideoPage/VideoPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
@@ -19,7 +19,7 @@ function App() {
   const [licenseValid, setLicenseValid] = useState(true);
   const [previousChoices] = useState([]);
   const [startTime, setStartTime] = useState(Date.now());
-  const [totalDuration, setTotalDuration] =  useState(0);
+  const [ setTotalDuration] =  useState(0);
 
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
@@ -146,7 +146,7 @@ function App() {
       path:process.env.PUBLIC_URL+"/",element: (!enteredPassword)?<CodePage hasEnteredPassword={hasEnteredPassword}/>:<Navigate  to= {process.env.PUBLIC_URL+"/user_code"} state={{ previous: process.env.PUBLIC_URL+"/" }} replace/>,
     },
     {
-      path:process.env.PUBLIC_URL+"/user_code",element: (enteredPassword)?<HomePage publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/user_code" }} replace/>,
+      path:process.env.PUBLIC_URL+"/user_code",element: (enteredPassword)?<PersonalInfo publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/user_code" }} replace/>,
     },{
       path:process.env.PUBLIC_URL+"/questionnaire",element: (enteredPassword)?<Questionaire code={code}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/questionnaire" }} replace/>,
     },

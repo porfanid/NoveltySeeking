@@ -1,4 +1,7 @@
-import React, {useEffect, useState} from 'react';
+/*
+ * made the video part as a different component because I used a lot of parameters iin the video component
+ */
+import React, {useState} from 'react';
 import { useParams } from "react-router-dom";
 import "./loading.css";
 

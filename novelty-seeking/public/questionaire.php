@@ -51,7 +51,7 @@ try {
     // Check if the request is a POST request
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_POST = json_decode(file_get_contents("php://input"),true);
-        // Assuming you have received the data in the POST request
+        // Get the data from the POST request
         $code = $_POST['code'];
         $id = $_POST['index'];
         $answer = $_POST['answer'];

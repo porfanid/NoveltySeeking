@@ -1,3 +1,8 @@
+/*
+ *   This page is being used to display a small video (about 20 seconds) to the user
+ *  before the question
+ * This, along with the QuizPage.js, is the main part of the app and are displayed 7 times to the user unless chosen otherwise in the app configuration
+ */
 import Header from "../../GeneralComponents/Header";
 import {NavLink, useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
