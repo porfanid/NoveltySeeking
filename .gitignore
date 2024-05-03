@@ -1,4 +1,7 @@
-GetData/venv
+ProcessResults/venv
+ProcessResults/.idea
+ProcessResults/.vscode
+ProcessResults/_*
 *.sql
 encephalograph/user_data
 Codes

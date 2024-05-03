@@ -8,9 +8,9 @@ with open('/home/porfanid/programming/NoveltySeeking/novelty-seeking/public/asse
 # Connect to MySQL database
 conn = mysql.connector.connect(
     host="localhost",
-    user="porfanid",
+    user="user",
     password="metamule",
-    database="exbragr_novelty_seeking"
+    database="passwd"
 )
 cursor = conn.cursor()
 

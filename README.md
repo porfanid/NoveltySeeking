@@ -64,10 +64,10 @@ DB_PASSWORD=passwd
      PRIMARY KEY (`code`)
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
    ```
-3) The website connects itself(using the webserial api) to an arduino that does the job of the start switch to the encephalograph. This means that you will need to compile and run on your arduino the `SerialCallResponseASCII.ino` file found in the encephalograph folder.
+3) The website connects itself(using the webserial api) to an arduino that does the job of the start switch to the encephalograph. This means that you will need to compile and run on your arduino the `arduino.ino` file found in the encephalograph folder.
 4) You will have to figure out where the pins that act as the switch in your encephalograph are. (You will have to use the pinout model for each encephalograph. It is not the same.) If it is 5V input, then you are good as it is.
    1) you will need jumper cables to connect the arduino to the encephalograph
    2) If you need 3.3V input, I have included a fritzin design that shows the schematics for a circuit that gets 5V as input and outputs 3.3V, so you will need the apropriate resistors and cables to create the circuit and connect it to the encephalograph
 5) And please remember that you will need 2 USB ports for this to work. One for he arduino to control the encephalograph, and another for the encephalograph to send the data to the computer.
-6) When you are done getting your data, you need to go to the `GetData/download.py` file and update the credentials to the database in the main function to the ones you used in th .env file.
-7) If there is something wrong with the databse, you can run the `restore_data.py` file to fix it
+6) When you are done getting your data, you need to go to the `ProcessResults/save_to_csv.py` file and update the credentials to the database in the main function to the ones you used in th .env file.
+7) If there is something wrong with the databse, you can run the `restore_data.py` file to fix it (but you will need to change the redentials in this script too)
