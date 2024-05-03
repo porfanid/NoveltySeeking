@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
 import Header from "../../GeneralComponents/Header";
 import { useNavigate } from "react-router-dom";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import Button from "@mui/material/Button";
-import {Form} from "react-bootstrap";
+import Button from '@mui/material/Button';
+import {useEffect, useState} from "react";
+import {baudrate} from "../../assets/settings";
 
 function HomePage(props) {
     const navigate = useNavigate();
@@ -16,50 +16,74 @@ function HomePage(props) {
     const [port, setPort] = useState(null);
     const [portOpened, setPortOpened] = useState(false);
 
-    const isSerialSupported = () => {
-        return 'serial' in navigator && typeof navigator.serial.requestPort === 'function';
-    };
+    const [port, setPort] = useState(null);
+
 
     const requestPort = async () => {
+        let temp_port
         try {
-            let temp_port = port;
-            if (!temp_port) {
+            // if no port is passed to this function,
+            if (port == null) {
                 temp_port = await navigator.serial.requestPort();
-                setPort(temp_port);
-            }
-            if (!portOpened && temp_port && temp_port.readable && temp_port.writable) {
-                // Port is already open, set portOpened to true
-                setPortOpened(true);
+                // pop up window to select port:
                 setPort(temp_port);
             } else {
-                // Open the port if it's not already opened
-                await temp_port.open({ baudRate: 9600 });
-                setPortOpened(true);
+                // open the port that was passed:
+                temp_port = port;
             }
+            // set port settings and open it:
+            // TODO: make port settings configurable
+            // from calling script:
+            await temp_port.open({ baudRate: 9600 });
+            // start the listenForSerial function:
+            //this.serialReadPromise = this.listenForSerial();
             return temp_port;
         } catch (err) {
-            console.error("Error opening serial port:", err);
+            // if there's an error opening the port:
+            if(temp_port) {
+                await temp_port.close();
+            }
+            console.error("There was an error opening the serial port:", err);
+        }
+    };
+
+
+    const writeDataToSerialPort = async (data) => {
+        let port;
+        try {
+            // Open the serial port
+            port = await requestPort();
+
             if (port) {
+                // Get the writable stream writer from the port
+                const writer = port.writable.getWriter();
+
+                try {
+                    // Write data to the serial port
+                    await writer.write(data);
+                    console.log('Data written to serial port:', data);
+                } finally {
+                    // Release the writer's lock
+                    writer.releaseLock();
+                }
+            }
+        } catch (error) {
+            console.error('Error writing data to serial port:', error);
+        } finally {
+            // Close the serial port
+            if (port!=null) {
                 await port.close();
-                setPort(null);
-                setPortOpened(false);
+                console.log('Serial port closed.');
+            }else{
+                console.log('Serial port was not opened.');
+                console.log(port)
             }
         }
     };
 
-    const writeDataToSerialPort = async (data) => {
-        try {
-            const port = await requestPort();
-            if (port) {
-                const writer = port.writable.getWriter();
-                await writer.write(data);
-                console.log("Data written to serial port:", data);
-                writer.releaseLock();
-            }
-        } catch (error) {
-            console.error("Error writing data to serial port:", error);
-        }
-    };
+    useEffect(() => {
+
+    }, []);
 
     const handleCodeChange = (e) => {
         setCode(e.target.value);
@@ -161,17 +185,18 @@ function HomePage(props) {
                             }
                             <div className="buttons">
                                 <div className="bigborder-button">
-                                    <button
-                                        className="main-button"
-                                        onClick={() => {
-                                            if (!(code && selectedDate && gender)) {
-                                                alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
-                                                return;
-                                            }
-                                            props.publishUser(gender, selectedDate);
-                                            navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`);
-                                        }}
-                                    >
+                                    <button className="main-button" onClick={() => {
+                                        writeDataToSerialPort("a")
+                                        if (!(code && selectedDate && gender)) {
+                                            alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
+                                            return;
+                                        }
+                                        props.publishUser(gender, selectedDate);
+                                        console.log(process.env.NODE_ENV)
+
+                                        navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
+
+                                    }}>
                                         Ξεκινήστε τις Ερωτήσεις
                                     </button>
                                 </div>
