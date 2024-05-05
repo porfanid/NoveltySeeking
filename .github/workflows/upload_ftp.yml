@@ -23,8 +23,8 @@ jobs:
     
     - name: Set up Environment
       run: |
-        echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/build/.env
-        echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/build/.env
+        echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/public/.env
+        echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/public/.env
 
     - name: Build React app
       env:
