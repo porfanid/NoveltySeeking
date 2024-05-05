@@ -35,7 +35,7 @@ $host = $envVars['DB_HOST'];
 $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
 $password = $envVars['DB_PASSWORD'];
-$valid_token = $envVars['VALID_TOKEN'];
+$valid_token = $envVars['REACT_APP_VALID_TOKEN'];
 
 $provided_token = isset($_SERVER['HTTP_AUTHORIZATION']) ? trim(str_replace('Bearer', '', $_SERVER['HTTP_AUTHORIZATION'])) : null;
 
@@ -50,6 +50,11 @@ error_reporting(E_ALL);
 try {
     // Get the code from the URL parameters
     $code = $_GET['code'];
+
+    $token = $_GET['token'];
+    if($token!==$valid_token){
+        throw new Exception("Invalid token");
+    }
 
     // Create a PDO connection
     $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8mb4", $username, $password);

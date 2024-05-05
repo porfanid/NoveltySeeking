@@ -23,10 +23,7 @@ jobs:
     
     - name: Set up Database Environment
       run: |
-        echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/public/.env
-
-    - name: Set up PHP Environment
-      run: echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/public/.env
+        echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/.env
     
     - name: Set up React Environment
       run: echo "REACT_APP_VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/.env
@@ -36,7 +33,7 @@ jobs:
       env:
         DB_PASSWORD: ${{ secrets.FTP_SECRET }}
         REACT_APP_VALID_TOKEN: ${{ secrets.VALID_TOKEN }}
-      run: cd novelty-seeking && REACT_APP_VALID_TOKEN=${{ secrets.VALID_TOKEN }} CI=false npm run build
+      run: cd novelty-seeking && npm run build
 
     - name: Upload to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0

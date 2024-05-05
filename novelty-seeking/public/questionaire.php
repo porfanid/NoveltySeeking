@@ -40,7 +40,7 @@ $host = $envVars['DB_HOST'];
 $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
 $password = $envVars['DB_PASSWORD'];
-$valid_token = $envVars['VALID_TOKEN'];
+$valid_token = $envVars['REACT_APP_VALID_TOKEN'];
 
 try {
     // Create a PDO connection
