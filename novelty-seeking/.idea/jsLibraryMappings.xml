@@ -3,5 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/../../Heavy_local_greece" libraries="{b0d67becdd, bootstrap-icons, widget.prod}" />
     <file url="file://$PROJECT_DIR$/../../QuestMatch" libraries="{@popperjs/core, bootstrap, font-awesome, jquery-3.5.1.slim}" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

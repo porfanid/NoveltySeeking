@@ -99,7 +99,8 @@ const Questionnaire = (props) => {
             const data={
                 "code": props.code,
                 "index": questionId,
-                "answer": answer
+                "answer": answer,
+                "token": process.env.VALID_TOKEN
             }
 
 

@@ -25,7 +25,9 @@ jobs:
       run: cd novelty-seeking&&CI=false npm run build
     
     - name: Set up Environment
-      run: echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/build/.env
+      run: |
+      	echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/build/.env
+      	echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/build/.env
 
     - name: Upload to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0

@@ -24,14 +24,7 @@ function parseEnv($filePath)
 }
 
 
-$valid_tokens = ['xWi5tHFb5X4Scwp9pP4dX6hSSnXbdZqjJ9rBjEpfj9jXSkjFj5DKqL5uik4WKwS'];
-$provided_token = isset($_SERVER['HTTP_AUTHORIZATION']) ? trim(str_replace('Bearer', '', $_SERVER['HTTP_AUTHORIZATION'])) : null;
 
-if (!in_array($provided_token, $valid_tokens)) {
-    header('HTTP/1.0 401 Unauthorized');
-    echo 'Access Denied';
-    exit;
-}
 
 
 // Load environment variables from .env file
@@ -42,6 +35,15 @@ $host = $envVars['DB_HOST'];
 $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
 $password = $envVars['DB_PASSWORD'];
+$valid_token = $envVars['VALID_TOKEN'];
+
+$provided_token = isset($_SERVER['HTTP_AUTHORIZATION']) ? trim(str_replace('Bearer', '', $_SERVER['HTTP_AUTHORIZATION'])) : null;
+
+if ($provided_token== $valid_tokens) {
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Access Denied';
+    exit;
+}
 
 error_reporting(E_ALL);
 

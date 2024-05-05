@@ -40,6 +40,7 @@ $host = $envVars['DB_HOST'];
 $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
 $password = $envVars['DB_PASSWORD'];
+$valid_token = $envVars['VALID_TOKEN'];
 
 try {
     // Create a PDO connection
@@ -55,6 +56,11 @@ try {
         $code = $_POST['code'];
         $id = $_POST['index'];
         $answer = $_POST['answer'];
+
+        $token = $_POST['token'];
+        if($token!==$valid_token){
+            throw new Exception("Invalid token");
+        }
 
 
         // Prepare and execute the SQL query to insert data

@@ -40,6 +40,7 @@ $host = $envVars['DB_HOST'];
 $database = $envVars['DB_DATABASE'];
 $username = $envVars['DB_USERNAME'];
 $password = $envVars['DB_PASSWORD'];
+$valid_token = $envVars['VALID_TOKEN'];
 
 try {
     // Create a PDO connection
@@ -60,6 +61,13 @@ try {
         $counter = $_POST['counter'];
         $quiz = $_POST['quiz'];
         $date = $_POST['date'];
+        
+        $token = $_POST['token'];
+        if($token!==$valid_token){
+            throw new Exception("Invalid token");
+        }
+
+
 
         // Prepare and execute the SQL query to insert data for each question
         $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz, date) VALUES (:code, :id, :choice, :category, :counter, :quiz, :date)");
