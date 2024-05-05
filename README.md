@@ -26,17 +26,18 @@ Encephalograph
 
 ### Coding
 
-1. The app stores the data in a mysql database. You can initialize a database of your own by editing the .env file in the `novelty-seeking/public` folder
+1. The app stores the data in a mysql database. You can initialize a database of your own by editing the .env file in the `novelty-seeking` folder and making sure that all are there
 
-```
+```properties
 DB_HOST=localhost
 DB_DATABASE=db
 DB_USERNAME=user
 DB_PASSWORD=passwd
+REACT_APP_VALID_TOKEN="Something to prevent spam to your form"
 ```
 
 2) You need to create the following tables in the database so that the data can be saved without errors:
-   ```
+   ```sql
    CREATE TABLE `answer` (
      `code` int NOT NULL,
      `id` int NOT NULL,
