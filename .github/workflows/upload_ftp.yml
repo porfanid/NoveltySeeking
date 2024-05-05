@@ -20,14 +20,17 @@ jobs:
 
     - name: Install dependencies
       run: cd novelty-seeking&&npm install
-
-    - name: Build React app
-      run: cd novelty-seeking&&CI=false npm run build
     
     - name: Set up Environment
       run: |
         echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/build/.env
         echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/build/.env
+
+    - name: Build React app
+      env:
+        DB_PASSWORD: ${{ secrets.FTP_SECRET }}
+        VALID_TOKEN: ${{ secrets.VALID_TOKEN }}
+      run: cd novelty-seeking&&CI=false npm run build
 
     - name: Upload to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
