@@ -85,7 +85,7 @@ function App() {
       'code': code,
       'sex': sex,
       'year_of_birth':JSON.stringify(year_of_birth),
-      "token": process.env.VALID_TOKEN
+      'token': process.env.VALID_TOKEN
     };
     axios.post(process.env.PUBLIC_URL+"/user.php", data)
         .then(response => {
@@ -106,7 +106,7 @@ function App() {
     data["code"]=code;
     data["token"]=process.env.VALID_TOKEN;
 
-    console.log(data)
+    console.log(data);
 
     axios.post(process.env.PUBLIC_URL+"/database.php", data)
         .then(response => {
