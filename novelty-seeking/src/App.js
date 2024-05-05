@@ -104,7 +104,7 @@ function App() {
     const data=currentAnswer;
     data["index"] = index;
     data["code"]=code;
-    data["token"]=process.env.VALID_TOKEN;
+    data["token"]=process.env.REACT_APP_VALID_TOKEN;
 
     console.log(data);
 
