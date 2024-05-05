@@ -23,6 +23,9 @@ jobs:
     
     - name: Set up Database Environment
       run: |
+        echo "DB_HOST=localhost" >> novelty-seeking/.env
+        echo "DB_DATABASE=exbragr_novelty_seeking" >> novelty-seeking/.env
+        echo "DB_USERNAME=exbragr_novelty_seeking" >> novelty-seeking/.env
         echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/.env
     
     - name: Set up React Environment
