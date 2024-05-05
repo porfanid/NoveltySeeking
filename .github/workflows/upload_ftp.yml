@@ -21,10 +21,16 @@ jobs:
     - name: Install dependencies
       run: cd novelty-seeking&&npm install
     
-    - name: Set up Environment
+    - name: Set up Database Environment
       run: |
         echo "DB_PASSWORD=${{ secrets.FTP_SECRET }}" >> novelty-seeking/public/.env
-        echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/public/.env
+
+    - name: Set up PHP Environment
+      run: echo "VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/public/.env
+    
+    - name: Set up React Environment
+      run: echo "REACT_APP_VALID_TOKEN=${{ secrets.VALID_TOKEN }}" >> novelty-seeking/.env
+
 
     - name: Build React app
       env:
