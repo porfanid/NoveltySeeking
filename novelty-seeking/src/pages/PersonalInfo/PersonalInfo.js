@@ -194,7 +194,9 @@ function PersonalInfo(props) {
                             <div className="buttons">
                                 <div className="bigborder-button">
                                     <button className="main-button" onClick={() => {
-                                        writeDataToSerialPort("a")
+                                        if(portOpened) {
+                                            writeDataToSerialPort("a")
+                                        }
                                         if (!(code && selectedDate && gender)) {
                                             alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
                                             return;
