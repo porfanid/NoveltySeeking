@@ -16,11 +16,13 @@ import {
     random_choices,
     remove_all_previous_values_from_choices
 } from "../../assets/settings";
+import {useTranslation} from "react-i18next";
 
 function ChoicePage(props){
     const navigate = useNavigate();
 
     let { index,category} = useParams();
+    const { t} = useTranslation("common");
 
 
 
@@ -59,7 +61,7 @@ function ChoicePage(props){
 
     return(
         <>
-            <h2 className="mt-0 text-center">Παρακαλώ επιλέξτε μια κατηγορία</h2>
+            <h2 className="mt-0 text-center">{t("choose-category")}</h2>
             <div className="d-flex justify-content-center mb-5">
                 <div className="row">
                     <div className="col-md-6 mb-3 d-flex justify-content-center">

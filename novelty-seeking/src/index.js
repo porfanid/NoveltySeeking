@@ -3,10 +3,32 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'i18next';
+import translationEL from './locales/el/translation.json';
+import questionsEl from './locales/el/questions.json';
+import questionnaireEl from './locales/el/questionnaire.json';
+
+translationEL["quiz"] = questionsEl;
+translationEL["jtci-questions"]=questionnaireEl;
+
+i18n.init({
+    interpolation: { escapeValue: false }, // React already does escaping
+    lng: 'el', // Default language
+    resources: {
+        el: {
+            common: translationEL,
+        },
+
+    },
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-        <App />
+      <I18nextProvider i18n={i18n}>
+          <App />
+      </I18nextProvider>
   </React.StrictMode>
 );
 

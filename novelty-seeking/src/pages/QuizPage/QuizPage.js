@@ -7,6 +7,7 @@ import {NavLink, useNavigate, useParams} from "react-router-dom";
 import "./answer.css";
 import {useEffect, useState} from "react";
 import {get_time_for_each_question, number_of_questions, show_next_button_to_quiz} from "../../assets/settings";
+import {useTranslation} from "react-i18next";
 
 function QuizPage(props){
     let {index,choice, category, counter} = useParams();
@@ -14,10 +15,11 @@ function QuizPage(props){
     const [answers, setAllAnswers] = useState([]);
     const [userHasAnswered, setUserHasAnswered] = useState(false);
     const navigate = useNavigate();
+    const { t} = useTranslation("common");
 
     useEffect(()=> {
 
-        const questions = props.questions
+        const questions = t("quiz", { returnObjects: true })
         const setQuizCorrectAnswer = props.setQuizCorrectAnswer;
         const falseAnswers = questions[choice][category][counter]["false answers"];
         const correctAnswer = questions[choice][category][counter]["correct answer"];
@@ -46,7 +48,7 @@ function QuizPage(props){
 
     return(
         <>
-            <h2 className={"mt-5"}>{props.questions[choice][category][counter].question}</h2>
+            <h2 className={"mt-5"}>{t("quiz", { returnObjects: true })[choice][category][counter].question}</h2>
 
             <div className="answer-container mt-lg-5">
                 {answers.map((answer, index) => (
@@ -81,12 +83,12 @@ function QuizPage(props){
                             }
                             if(!userHasAnswered){
                                 event.preventDefault();
-                                alert("Παρακαλώ απαντήστε στην ερώτηση!");
+                                alert(t("answer-question"));
                                 return false;
                             }
                         }} className="active"
                                  to={(index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/quizComplete"}>
-                            Επόμενη Σελίδα
+                            {t("continue")}
                         </NavLink>
                     </div>
                 </div>

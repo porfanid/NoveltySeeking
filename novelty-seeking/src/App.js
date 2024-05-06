@@ -12,10 +12,9 @@ import NotLicensed from "./pages/notLicensed/notLicensed";
 import CodePage from "./pages/CodePage";
 import Questionaire from "./pages/questionaire/questionaire";
 import QuizAndQuestionnaireCompletePage from "./pages/QuizAndQuestionnaireCompletePage/QuizAndQuestionnaireCompletePage"
+import {useTranslation} from "react-i18next";
 
-function App() {
-
-  const [questions, setJsonData] = useState(null);
+function App(props) {
   const [licenseValid, setLicenseValid] = useState(true);
   const [previousChoices] = useState([]);
   const [startTime, setStartTime] = useState(Date.now());
@@ -48,17 +47,6 @@ function App() {
     };
 
     fetchLicenseData();
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch(process.env.PUBLIC_URL+'/assets/questions.json');
-        const data = await response.json();
-        setJsonData(data);
-      } catch (error) {
-        console.error('Error fetching JSON data:', error);
-      }
-    };
-    fetchData()
   }, []);
 
   const [code, setCode] = useState('');
@@ -67,6 +55,7 @@ function App() {
   const [quizCorrectanswer, setQuizCorrectanswer] = useState(null);
   const [answers, setAnswers] = useState({});
   const [currentAnswer, setAnswer] = useState({});
+  const { t, i18n} = useTranslation("common");
 
   const [enteredPassword, hasEnteredPassword] = useState(false);
 
@@ -105,6 +94,7 @@ function App() {
     data["index"] = index;
     data["code"]=code;
     data["token"]=process.env.REACT_APP_VALID_TOKEN;
+    data["lang"] = i18n.language;
 
     console.log(data);
 
@@ -169,14 +159,14 @@ function App() {
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} questions={questions} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} startTime={startTime} setSelectedTime={(time)=>{setCurrentAnswer("date", time)}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quiz/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
+      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} startTime={startTime} setSelectedTime={(time)=>{setCurrentAnswer("date", time)}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quiz/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       path:process.env.PUBLIC_URL+"/quizResult/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizResult code={code} setCurrentAnswer={setCurrentAnswer} currectAnswer={currentAnswer} completeAnswerSet={completeAnswerSet} isAnswerCorrect={selectedQuiz===quizCorrectanswer}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quizResult/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
-      path:process.env.PUBLIC_URL+"/quizComplete",element: (enteredPassword)?<QuizCompletePage code={code} resetAnswers={resetAnswers} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
+      path:process.env.PUBLIC_URL+"/quizComplete",element: (enteredPassword)?<QuizCompletePage code={code} resetAnswers={resetAnswers} answers={answers} completeAnswerSet={completeAnswerSet}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/quizComplete" }} replace/>,
     },{
       path:process.env.PUBLIC_URL+"/Complete",element: (enteredPassword)?<QuizAndQuestionnaireCompletePage/>:<Navigate to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/complete" }} replace/>,
     },
@@ -204,13 +194,13 @@ function App() {
             <div className="row">
               <div className="col-12 text-center">
                 <div className="mb-3">
-                  Made by <a href={"https://pavlos.orfanidis.net.gr"} className="text-white">Paul Orfanidis</a>
+                  {t('madeBy')} <a href={"https://pavlos.orfanidis.net.gr"} className="text-white">{t('pavlos')}</a>
                 </div>
                 <div className="mb-3">
-                  With the direction of{" "}
-                  <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"} className="text-white">Konstantinos Tsamis</a>,{" "}
-                  <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"} className="text-white">Alexandra Pliakopanou</a>,{" "}
-                  <a href={"#"} className="text-white">Christos Bozidis</a>
+                  {t("direction")+" "+t("male-article")+" "}
+                  <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"} className="text-white">{t("konstantinos-tsamis")}</a>,{" "+t("female-article")+" "}
+                  <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"} className="text-white">{t("alexandra-pliakopanou")}</a> {t("and")+" "+t("male-article")+" "}
+                  <a href={"#"} className="text-white">{t("christos-bozidis")}</a>
                 </div>
               </div>
             </div>

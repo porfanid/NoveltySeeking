@@ -6,6 +6,7 @@ import {correct_password, otp_secret, show_auth, use_otp} from "../assets/settin
 import * as OTPAuth from "otpauth";
 import {useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const CodePage = (props)=>{
 
@@ -15,6 +16,7 @@ const CodePage = (props)=>{
     const [passwordCorrect, setPasswordCorrect]=useState(true);
     const navigate = useNavigate();
     const location = useLocation();
+    const { t} = useTranslation("common");
 
     const validate_otp = (token)=> {
         let totp = new OTPAuth.TOTP({
@@ -42,10 +44,10 @@ const CodePage = (props)=>{
             <div className="hero-section">
                 <div className="overlay"></div>
                 <div className="container">
-                    <h2>Εισάγετε τον κωδικό της <em>αίθουσας</em></h2>
+                    <h2 dangerouslySetInnerHTML={{__html:t("enter-room-code")}}></h2>
                     {(!passwordCorrect)?
                     <div className="alert alert-warning" role="alert">
-                        Λάθος κωδικός. Παρακαλώ ξαναπροσπαθήστε.
+                        {t("wrong-password")}
                     </div>:null
                     }
                     {/* Input field for entering a code */}
@@ -53,7 +55,7 @@ const CodePage = (props)=>{
 
                         <div className="col-md-6 mt-5 mb-5 justify-content-center centeredText">
                             {(show_auth) ? <div className="col-5 input-group mt-5">
-                                <input type="password" className="justify-content-center form-control" placeholder="Κωδικός αίθουσας"
+                                <input type="password" className="justify-content-center form-control" placeholder={t("room-password")}
                                        onChange={handlePasswordChange} required={true}/>
                             </div> : null}
                         </div>
@@ -83,7 +85,7 @@ const CodePage = (props)=>{
                                     navigate(location.state.previous)
                                 }
                             }}>
-                                Επόμενο βήμα
+                                {t("continue")}
                             </button>
                         </div>
                     </div>

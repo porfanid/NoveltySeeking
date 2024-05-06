@@ -61,6 +61,7 @@ try {
         $counter = $_POST['counter'];
         $quiz = $_POST['quiz'];
         $date = $_POST['date'];
+        $lang = $_POST['lang'];
         
         $token = $_POST['token'];
         if($token!==$valid_token){
@@ -70,7 +71,7 @@ try {
 
 
         // Prepare and execute the SQL query to insert data for each question
-        $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz, date) VALUES (:code, :id, :choice, :category, :counter, :quiz, :date)");
+        $stmt = $pdo->prepare("INSERT INTO answer (code, id, choice, category, counter, quiz, date, lang) VALUES (:code, :id, :choice, :category, :counter, :quiz, :date, :lang)");
         $stmt->bindParam(':code', $code);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':choice', $choice);
@@ -78,6 +79,7 @@ try {
         $stmt->bindParam(':counter', $counter);
         $stmt->bindParam(':quiz', $quiz);
         $stmt->bindParam(':date', $date);
+        $stmt->bindParam(':lang', $lang);
 
         $stmt->execute();
         // You can handle the success or provide a response as needed

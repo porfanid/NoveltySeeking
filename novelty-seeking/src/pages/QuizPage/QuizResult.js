@@ -5,25 +5,18 @@ import nextImage from "./images/next.png";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 import "./answer.css";
+import {useTranslation} from "react-i18next";
 
 function QuizResult(props){
     let { index,choice,category, counter } = useParams();
+    const { t} = useTranslation("common");
     const addToAnswerSet=()=>{
         props.completeAnswerSet(index)
     }
 
-    const correct_answers = [
-        "Μπράβο! Συνέχισε έτσι!",
-        "Πολύ καλά, συνέχισε!",
-        "Τέλεια! Συνέχισε!",
-        "Εξαιρετικά!"
-    ];
+    const correct_answers = t("quiz-correct-answers", { returnObjects: true });
 
-    const wrong_answers = [
-        "Καλή προσπάθεια, συνέχισε!",
-        "Δεν πειράζει, Συνέχισε να προσπαθείς",
-        "Συνέχισε την προσπάθεια"
-    ];
+    const wrong_answers = t("quiz-wrong-answers", { returnObjects: true });
 
     useEffect(() => {
         addToAnswerSet(index)
@@ -32,8 +25,6 @@ function QuizResult(props){
 
     index = parseInt(index);
     const navigate = useNavigate();
-
-    const answer=(props.isAnswerCorrect===true)?"Σωστά":"Λάθος";
 
     function repeat(){
         props.setCurrentAnswer("choice", choice);
@@ -52,7 +43,7 @@ function QuizResult(props){
         <>
             {(props.isAnswerCorrect) ? <h2>{correct_answers[(index%correct_answers.length)]}</h2> : <h2>{wrong_answers[(index%wrong_answers.length)]}</h2>}
             <span className={"mt-3 text-white"} style={{fontSize: 32}}>
-                Επίλεξε με τι θα ήθελες να συνεχίσεις:
+                {t("choose-next")}:
             </span>
 
             <div className={"center mx-auto text-center mb-5"}>
@@ -70,7 +61,7 @@ function QuizResult(props){
                             }}
                             className="option-image"
                         />
-                        <p className={"h2"} onClick={repeat}>Συνέχεια του ίδιου βίντεο</p>
+                        <p className={"h2"} onClick={repeat}>{t("same-video")}</p>
                     </div>
 
 
@@ -86,7 +77,7 @@ function QuizResult(props){
                             }}
                             className="option-image"
                         />
-                        <p className={"h2"} onClick={changeCategory}>Άλλο βίντεο ίδιας κατηγορίας</p>
+                        <p className={"h2"} onClick={changeCategory}>{t("same-category")}</p>
                     </div>
 
                     <div className={"col-md-4 p-3"}>
@@ -101,7 +92,7 @@ function QuizResult(props){
                                 maxHeight: "33vh"
                             }}
                         />
-                        <p className={"h2"} onClick={moveToNext}>Βίντεο άλλης κατηγορίας</p>
+                        <p className={"h2"} onClick={moveToNext}>{t("different-category")}</p>
                     </div>
                 </div>
             </div>

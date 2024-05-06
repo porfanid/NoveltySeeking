@@ -56,6 +56,7 @@ try {
         $code = $_POST['code'];
         $id = $_POST['index'];
         $answer = $_POST['answer'];
+        $language = $_POST['lang'];
 
         $token = $_POST['token'];
         if($token!==$valid_token){
@@ -64,10 +65,11 @@ try {
 
 
         // Prepare and execute the SQL query to insert data
-        $stmt = $pdo->prepare("INSERT INTO questioner (code, id, answer) VALUES (:code, :id, :answer)");
+        $stmt = $pdo->prepare("INSERT INTO questioner (code, id, answer, lang) VALUES (:code, :id, :answer, :lang)");
         $stmt->bindParam(':code', $code);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':answer', $answer);
+        $stmt->bindParam(':lang', $language);
 
 
         $stmt->execute();

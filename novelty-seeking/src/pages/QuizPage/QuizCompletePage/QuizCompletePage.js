@@ -1,10 +1,12 @@
 import {useEffect} from "react";
 import {number_of_questions} from "../../../assets/settings";
 import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 function QuizCompletePage(props){
 
     const navigate = useNavigate();
+    const { t} = useTranslation("common");
 
     useEffect(() => {
         props.completeAnswerSet(number_of_questions.toString());
@@ -14,11 +16,11 @@ function QuizCompletePage(props){
 
     return(
         <>
-            <h2>Συγχαρητήρια!!!</h2>
+            <h2>{t("congrats")}</h2>
             <div className={"center mx-auto text-center"}>
                 <div className={"d-flex flex-row flex-wrap justify-content-center"}>
                     <div className={"col-md-4 p-3"}>
-                    <h5 className={"text-white"}>Το τεστ ολοκληρώθηκε.</h5>
+                    <h5 className={"text-white"}>{t("quiz-end")}</h5>
                     </div>
                 </div>
             </div>
@@ -28,7 +30,7 @@ function QuizCompletePage(props){
                     <button className="main-button" onClick={() => {
                         navigate(`${process.env.PUBLIC_URL}/questionnaire`);
                     }}>
-                        Συνέχισε στο ερωτηματολόγιο
+                        {t("continue-to-questionnaire")}
                     </button>
                 </div>
                 <div className="icon-button">

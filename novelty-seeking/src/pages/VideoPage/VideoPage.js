@@ -8,35 +8,28 @@ import {useEffect, useState} from "react";
 import {delay_quiz_page,show_countdown, show_next_button_to_video} from "../../assets/settings";
 import "./countdown.css";
 import VideoComponent from "./VideoComponent";
+import {useTranslation} from "react-i18next";
 
 function VideoPage(props){
     const navigate = useNavigate();
     const [videoFinished, setVideoFinished] = useState(false);
     const [countdown, setCountdown] = useState(delay_quiz_page/1000);
+    const { t} = useTranslation("common");
+    const [title, setTitle] = useState("");
 
 
-    const greek_translation={
-        "Ocean": "Ωκεανός",
-        "City":"Αρχιτεκτονική",
-        "Animals":"Ζώα Αφρικής",
-        "ANCIENT_CIVILIZATION":"Αρχαίοι Πολιτισμοί",
-        "FOOD": "Μαγειρική",
-        "FUTURISTIC_TRANSPORTATION": "Υπερσύγχρονα μέσα μεταφοράς",
-        "LANDSCAPES": "Κλίματα",
-        "MICROWORLD": "Μικρόκοσμος",
-        "NATURE_BLOOMING": "Ανάπτυξη φυτών",
-        "Space": "Διάστημα"
-    }
     let { index, choice, category, counter } = useParams();
 
     useEffect(() => {
         props.setCategoryAndCounter(category, counter);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        const titles = t("video-title", { returnObjects: true});
+        setTitle(titles[choice]);
+        console.log(JSON.stringify(t("video-title")))
     }, []);
 
     return (
         <>
-            <h2>{/*Video {index} από τα {number_of_questions}: */}{greek_translation[choice]}</h2>
+            <h2>{/*Video {index} από τα {number_of_questions}: */}{title}</h2>
 
             {(show_countdown && !show_next_button_to_video) ? (!videoFinished) ? (
                 <div className="row">
@@ -67,7 +60,7 @@ function VideoPage(props){
                         <div className="card_body">
                             <div className="countdown_section">
                                 <div id="seconds" className="value">{countdown}</div>
-                                <div className="countdown_label">SECONDS</div>
+                                <div className="countdown_label">{t("seconds")}</div>
                             </div>
                         </div>
                     </div>

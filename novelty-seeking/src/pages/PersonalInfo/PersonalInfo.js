@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import {useEffect, useState} from "react";
 import {Form} from "react-bootstrap";
 import {baudrate} from "../../assets/settings";
+import {useTranslation} from "react-i18next";
 
 function PersonalInfo(props) {
     const navigate = useNavigate();
@@ -22,6 +23,7 @@ function PersonalInfo(props) {
     const [portOpened, setPortOpened] = useState(false);
 
     const [port, setPort] = useState(null);
+    const { t} = useTranslation("common");
 
     const isSerialSupported = () => {
         //return false;
@@ -121,14 +123,14 @@ function PersonalInfo(props) {
     return (
         <>
             <div className="hero-section align-items-center justify-content-center">
-                <h2 className={"mb-4"}>Εισάγετε τον <em>Προσωπικό σας Κωδικό</em></h2>
+                <h2 className={"mb-4"} dangerouslySetInnerHTML={{__html:t("enter-personal-code")}}></h2>
                 <div className="container d-flex align-items-center justify-content-center">
                     <div className="col-md-9">
 
 
                         <div className="row">
                             <div className="col-md-6 mb-2 d-flex align-items-center">
-                                <span className="h3 text-white">Προσωπικός κωδικός:</span>
+                                <span className="h3 text-white">{t("personal-code")}:</span>
                             </div>
                             <div className="col-md-3 mb-2 d-flex align-items-center">
                                 <div className="flex-grow-1">
@@ -136,7 +138,7 @@ function PersonalInfo(props) {
                                         type="text"
                                         id="personal-code"
                                         className="form-control"
-                                        placeholder="Προσωπικός κωδικός"
+                                        placeholder={t("personal-code")}
                                         onChange={handleCodeChange}
                                         required={true}
                                     />
@@ -148,7 +150,7 @@ function PersonalInfo(props) {
 
                         <div className="row">
                             <div className="h3 col-md-12 mb-2 d-flex align-items-center">
-                                <span className="text-white">Ημερομηνία Γέννησης:</span>
+                                <span className="text-white">{t("birthdate")}:</span>
                                 <div className="flex-grow-1">
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DatePicker
@@ -166,7 +168,7 @@ function PersonalInfo(props) {
                         <div className="row">
                             <div
                                 className="col-md-12 mb-2 d-flex align-items-center">
-                                <h3 className="text-white">Φύλο:</h3>
+                                <h3 className="text-white">{t("sex")}:</h3>
                                 <div className={"flex-grow-1"}>
                                     <Button
                                         variant="contained"
@@ -177,7 +179,7 @@ function PersonalInfo(props) {
                                         }}
                                         onClick={() => handleGenderSelect("female")}
                                     >
-                                        Κορίτσι
+                                        {t("female")}
                                     </Button>
                                     <Button
                                         variant="contained"
@@ -187,7 +189,7 @@ function PersonalInfo(props) {
                                         }}
                                         onClick={() => handleGenderSelect("male")}
                                     >
-                                        Αγόρι
+                                        {t("male")}
                                     </Button>
                                 </div>
                             </div>
@@ -211,7 +213,7 @@ function PersonalInfo(props) {
                                             className={`btn ${portOpened ? 'btn-primary' : 'btn-secondary'} btn-sm`}
                                             htmlFor="btn-check-outlined"
                                         >
-                                            {portOpened ? 'Ο εγκεφαλογράφος συνδέθηκε' : 'Σύνδεση εγκεφαλογράφου'}
+                                            {portOpened ? t("encephalograph-connected") : t("connect-encephalograph")}
                                         </label>
                                     </div>}
                                 <div
@@ -223,7 +225,7 @@ function PersonalInfo(props) {
                                                 })
                                             }
                                             if (!(code && selectedDate && gender)) {
-                                                alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
+                                                alert(t("fill-all-fields"));
                                                 return;
                                             }
                                             props.publishUser(gender, selectedDate);
@@ -231,7 +233,7 @@ function PersonalInfo(props) {
 
                                             navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
                                         }}>
-                                            Ξεκινήστε τις Ερωτήσεις
+                                            {t("begin-questions")}
                                         </button>
                                     </div>
                                 </div>
