@@ -4,6 +4,7 @@
 import nextImage from "./images/next.png";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
+import "./answer.css";
 
 function QuizResult(props){
     let { index,choice,category, counter } = useParams();
@@ -49,30 +50,27 @@ function QuizResult(props){
     }
     return(
         <>
-            {/**<h2>Απάντησες {answer}</h2>**/}
             {(props.isAnswerCorrect) ? <h2>{correct_answers[(index%correct_answers.length)]}</h2> : <h2>{wrong_answers[(index%wrong_answers.length)]}</h2>}
-            <p style={{fontSize: 32}}>
-            Επίλεξε με τι θα ήθελες να συνεχίσεις:
-            </p>
+            <span className={"mt-3 text-white"} style={{fontSize: 32}}>
+                Επίλεξε με τι θα ήθελες να συνεχίσεις:
+            </span>
 
-            <div className={"center mx-auto text-center"}>
-                <div className={"d-flex flex-row flex-wrap justify-content-center"}>
-                    <div className={"col-md-5 p-3"}>
+            <div className={"center mx-auto text-center mb-5"}>
+                <div className={"d-flex flex-row flex-wrap justify-content-center mb-5"}>
+                    <div className={"col-md-4 p-3"}>
                         <img
                             name={"repeat"}
                             src={process.env.PUBLIC_URL + `/assets/images/options/${choice}/repeat/${category}/${counter}.PNG`}
                             alt={"repeat"}
                             onClick={repeat}
                             style={{
-                                width: '300px',
-                                height: '300px',
-                                top: 0,
-                                left: 0,
-                                filter: "blur(3px)"
+                                filter: "blur(3px)",
+                                width: "auto",
+                                maxHeight: "33vh"
                             }}
+                            className="option-image"
                         />
-                        <p></p>
-                        <h2 style={{fontSize: 37}} onClick={repeat}>Συνέχεια του ίδιου βίντεο</h2>
+                        <p className={"h2"} onClick={repeat}>Συνέχεια του ίδιου βίντεο</p>
                     </div>
 
 
@@ -83,33 +81,32 @@ function QuizResult(props){
                             alt={"change category"}
                             onClick={changeCategory}
                             style={{
-                                width: '300px',
-                                height: '300px',
-                                top: 0,
-                                left: 0,
+                                width: "auto",
+                                maxHeight: "33vh"
                             }}
+                            className="option-image"
                         />
-                        <p></p>
-                        <h2 style={{fontSize: 37}} onClick={changeCategory}>Άλλο βίντεο ίδιας κατηγορίας</h2>
+                        <p className={"h2"} onClick={changeCategory}>Άλλο βίντεο ίδιας κατηγορίας</p>
                     </div>
 
-                    <div className={"col-md-3 p-3"}>
+                    <div className={"col-md-4 p-3"}>
                         <img
                             name={"next"}
                             src={nextImage}
                             alt={"next"}
                             onClick={moveToNext}
+                            className="option-image"
                             style={{
-                                width: '300px',
-                                height: '300px',
+                                width: "auto",
+                                maxHeight: "33vh"
                             }}
                         />
-                        <p></p>
-                        <h2 style={{fontSize: 37}} onClick={moveToNext}>Βίντεο άλλης κατηγορίας</h2>
+                        <p className={"h2"} onClick={moveToNext}>Βίντεο άλλης κατηγορίας</p>
                     </div>
                 </div>
             </div>
         </>
+
     );
 }
 

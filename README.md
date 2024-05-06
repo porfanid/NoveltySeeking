@@ -26,6 +26,15 @@ Encephalograph
 
 ### Coding
 
+```properties
+Foler structure:
+-----------------
+novelty-seeking: react app that shows the website, plus some php scripts in the public folder to store the data to the backend
+ProcessResults: process the data from the database (You need to run it to the same server with the database as it connects to it)
+encephalograph: folder that coontains the arduino project to connect t the encephalograph from the website
+```
+
+
 1. The app stores the data in a mysql database. You can initialize a database of your own by editing the .env file in the `novelty-seeking` folder and making sure that all are there
 
 ```properties

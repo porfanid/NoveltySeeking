@@ -24,6 +24,7 @@ function PersonalInfo(props) {
     const [port, setPort] = useState(null);
 
     const isSerialSupported = () => {
+        //return false;
         return 'serial' in navigator && typeof navigator.serial.requestPort === 'function';
     };
 
@@ -120,27 +121,35 @@ function PersonalInfo(props) {
     return (
         <>
             <div className="hero-section align-items-center justify-content-center">
-                <h2>Εισάγετε τον <em>Προσωπικό σας Κωδικό</em></h2>
+                <h2 className={"mb-4"}>Εισάγετε τον <em>Προσωπικό σας Κωδικό</em></h2>
                 <div className="container d-flex align-items-center justify-content-center">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="row">
-                                <div className="col-md-12 mb-5">
-                                    <div className="input-group mb-2">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            placeholder="Προσωπικός κωδικός"
-                                            onChange={handleCodeChange}
-                                            required={true}
-                                        />
-                                    </div>
+                    <div className="col-md-9">
+
+
+                        <div className="row">
+                            <div className="col-md-6 mb-2 d-flex align-items-center">
+                                <span className="h3 text-white">Προσωπικός κωδικός:</span>
+                            </div>
+                            <div className="col-md-3 mb-2 d-flex align-items-center">
+                                <div className="flex-grow-1">
+                                    <input
+                                        type="text"
+                                        id="personal-code"
+                                        className="form-control"
+                                        placeholder="Προσωπικός κωδικός"
+                                        onChange={handleCodeChange}
+                                        required={true}
+                                    />
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="row">
-                                <div className="col-md-12 mb-5">
-                                    <h3 className={"text-dark-emphasis"}>Ημερομηνία Γέννησης:</h3><br />
+                        <hr className={"text-white"}/>
+
+                        <div className="row">
+                            <div className="h3 col-md-12 mb-2 d-flex align-items-center">
+                                <span className="text-white">Ημερομηνία Γέννησης:</span>
+                                <div className="flex-grow-1">
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DatePicker
                                             id="birthday"
@@ -151,9 +160,14 @@ function PersonalInfo(props) {
                                     </LocalizationProvider>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="row">
-                                <div className="col-md-12 mb-5">
+                        <hr className={"text-white"}/>
+                        <div className="row">
+                            <div
+                                className="col-md-12 mb-2 d-flex align-items-center">
+                                <h3 className="text-white">Φύλο:</h3>
+                                <div className={"flex-grow-1"}>
                                     <Button
                                         variant="contained"
                                         style={{
@@ -177,41 +191,53 @@ function PersonalInfo(props) {
                                     </Button>
                                 </div>
                             </div>
+                        </div>
+                        <hr className={"text-white"}/>
 
-                            {(isSerialSupported())&&
+
+                        <div className="buttons mb-3">
                             <div className="row">
-                                <div className="col-md-12 mb-5">
-                                    <Form.Check
-                                        type="switch"
-                                        id="custom-switch"
-                                        label="Χρήση Serial Port"
-                                        checked={portOpened}
-                                        onChange={toggleSerialPort}
-                                    />
-                                </div>
-                            </div>
-                            }
-                            <div className="buttons">
-                                <div className="bigborder-button">
-                                    <button className="main-button" onClick={() => {
-                                        if(portOpened) {
-                                            writeDataToSerialPort("a").then(r => {})
-                                        }
-                                        if (!(code && selectedDate && gender)) {
-                                            alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
-                                            return;
-                                        }
-                                        props.publishUser(gender, selectedDate);
-                                        console.log(process.env.NODE_ENV)
+                                {(isSerialSupported()) &&
+                                    <div className="col-md-4 mb-0 d-flex justify-content-start align-items-start">
+                                        <input
+                                            type="checkbox"
+                                            className={`btn-check ${portOpened ? 'btn-outline-primary' : 'btn-secondary'}`}
+                                            id="btn-check-outlined"
+                                            autoComplete="off"
+                                            checked={portOpened}
+                                            onChange={toggleSerialPort}
+                                        />
+                                        <label
+                                            className={`btn ${portOpened ? 'btn-primary' : 'btn-secondary'} btn-sm`}
+                                            htmlFor="btn-check-outlined"
+                                        >
+                                            {portOpened ? 'Ο εγκεφαλογράφος συνδέθηκε' : 'Σύνδεση εγκεφαλογράφου'}
+                                        </label>
+                                    </div>}
+                                <div
+                                    className={`d-flex justify-content-center align-items-center ${(isSerialSupported()) ? 'col-md-8' : 'col-md-12'}`}>
+                                    <div className="bigborder-button">
+                                        <button className="main-button" onClick={() => {
+                                            if (portOpened) {
+                                                writeDataToSerialPort("a").then(r => {
+                                                })
+                                            }
+                                            if (!(code && selectedDate && gender)) {
+                                                alert("Παρακαλώ συμπληρώστε όλα τα πεδία!");
+                                                return;
+                                            }
+                                            props.publishUser(gender, selectedDate);
+                                            console.log(process.env.NODE_ENV)
 
-                                        navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
-
-                                    }}>
-                                        Ξεκινήστε τις Ερωτήσεις
-                                    </button>
+                                            navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)
+                                        }}>
+                                            Ξεκινήστε τις Ερωτήσεις
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

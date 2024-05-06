@@ -1,0 +1,5 @@
+.option-image {
+    max-height: 100px; /* Set a maximum height for all images */
+    height: 10vh;
+    width: auto; /* Allow width to adjust automatically */
+}

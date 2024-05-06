@@ -39,10 +39,9 @@ function VideoPage(props){
             <h2>{/*Video {index} από τα {number_of_questions}: */}{greek_translation[choice]}</h2>
 
             {(show_countdown && !show_next_button_to_video) ? (!videoFinished) ? (
-
-                    <div className="row">
-                        <div className="col-1"></div>
-                        <div className="col-10">
+                <div className="row">
+                    <div className="col-1"></div>
+                    <div className="col-10">
                         <VideoComponent end={() => {
                             setVideoFinished(true);
                             if (!show_next_button_to_video) {
@@ -57,13 +56,12 @@ function VideoPage(props){
                                     // Navigate to the new page after the delay
                                     navigate(next_page);
                                 }, delay_quiz_page);
-
                             }
                         }} />
-
-                        </div>
                     </div>
-                ) : (<div className="row">
+                </div>
+            ) : (
+                <div className="row">
                     <div className="col-4"></div>
                     <div className="card bg-dark col-4">
                         <div className="card_body">
@@ -75,37 +73,35 @@ function VideoPage(props){
                     </div>
                     <div className="col-4"></div>
                 </div>
-            ):(
-                    <div className="row d-flex justify-content-center align-content-center">
-                        <div className="col-1"></div>
-                        <div className="col-10">
-                            <VideoComponent end={() => {
-                                setVideoFinished(true);
-                                if (!show_next_button_to_video) {
-                                    const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
-                                    setTimeout(() => {
-                                        // Navigate to the new page after the delay
-                                        navigate(next_page);
-                                    }, delay_quiz_page);
-
-                                }
-                            }}/>
-                        </div>
-                        <div className="col-1"></div>
+            ) : (
+                <div className="row d-flex justify-content-center align-items-center">
+                    <div className="col-1"></div>
+                    <div className="col-10">
+                        <VideoComponent end={() => {
+                            setVideoFinished(true);
+                            if (!show_next_button_to_video) {
+                                const next_page = process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter;
+                                setTimeout(() => {
+                                    // Navigate to the new page after the delay
+                                    navigate(next_page);
+                                }, delay_quiz_page);
+                            }
+                        }}/>
                     </div>
-                )
-            }
-
+                    <div className="col-1"></div>
+                </div>
+            )}
 
             <div className="buttons">
-                {(show_next_button_to_video) ?
+                {show_next_button_to_video && (
                     <div className="big-border-button">
-                        {videoFinished ? (<NavLink className="disabled"
-                                                   to={process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter}>
-                            Επόμενη Σελίδα
-                        </NavLink>) : null}
-                    </div> : null
-                }
+                        {videoFinished ? (
+                            <NavLink className="disabled" to={process.env.PUBLIC_URL + "/quiz/" + index + "/choice/" + choice + "/category/" + category + "/counter/" + counter}>
+                                Επόμενη Σελίδα
+                            </NavLink>
+                        ) : null}
+                    </div>
+                )}
             </div>
         </>
     )

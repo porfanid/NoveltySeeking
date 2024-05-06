@@ -186,17 +186,36 @@ function App() {
   return (
     <>
       <div className="main-banner">
-        <div className="">
           <div className="row">
             <div className="col-lg-12">
               <div className="m-auto">
                 {
-                  (licenseValid)?<RouterProvider router={router} />:<NotLicensed/>
+                  (licenseValid) ? <RouterProvider router={router}/> : <NotLicensed/>
                 }
               </div>
             </div>
           </div>
-        </div>
+
+        <footer
+            className="text-center text-lg-start text-white d-flex footer"
+            style={{backgroundColor: "#3e4551"}}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-12 text-center">
+                <div className="mb-3">
+                  Made by <a href={"https://pavlos.orfanidis.net.gr"} className="text-white">Paul Orfanidis</a>
+                </div>
+                <div className="mb-3">
+                  With the direction of{" "}
+                  <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"} className="text-white">Konstantinos Tsamis</a>,{" "}
+                  <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"} className="text-white">Alexandra Pliakopanou</a>,{" "}
+                  <a href={"#"} className="text-white">Christos Bozidis</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );

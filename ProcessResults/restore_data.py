@@ -1,5 +1,6 @@
 import json
 import mysql.connector
+from os import environ
 
 # Load JSON file
 with open('/home/porfanid/programming/NoveltySeeking/novelty-seeking/public/assets/questions.json', 'r') as f:
@@ -7,10 +8,10 @@ with open('/home/porfanid/programming/NoveltySeeking/novelty-seeking/public/asse
 
 # Connect to MySQL database
 conn = mysql.connector.connect(
-    host="localhost",
-    user="user",
-    password="metamule",
-    database="passwd"
+    host=environ.get('DB_HOST'),
+    user=environ.get('DB_USERNAME'),
+    password=environ.get('DB_PASSWORD'),
+    database=environ.get('DB_DATABASE')
 )
 cursor = conn.cursor()
 

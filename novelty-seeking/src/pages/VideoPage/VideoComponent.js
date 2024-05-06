@@ -17,38 +17,24 @@ export default function VideoComponent(props) {
     return (
         <>
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                {isLoading&& (
-                    <div className={"img-fluid"}
-                         style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
-                        <div className="loadingio-spinner-spinner-w2t6013t4v">
-                            <div className="ldio-e1jr8bcoslt">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                {isLoading && (
+                    <div className="position-absolute top-50 start-50 translate-middle">
+                        <div className="spinner-border text-primary" role="status">
+                            <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>
                 )}
                 <video
                     muted={true}
                     preload="auto"
-                    className={"img-fluid"}
+                    className="img-fluid col-7"
                     autoPlay={true}
                     onEnded={props.end}
                     onError={console.error}
                     onLoadedData={handleVideoLoaded}
                     controls={false}
                 >
-                    <source src={ process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/output${counter}.mp4`}
+                    <source src={process.env.PUBLIC_URL + `/assets/videos/${choice}/${category}/output${counter}.mp4`}
                             type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>

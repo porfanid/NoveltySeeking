@@ -27,6 +27,13 @@ function ChoicePage(props){
     index=parseInt(index);
     const previousChoice=props.getLastChoice(index)
 
+    const handleImageClick = (imageName) => {
+        props.setSelectedImage(imageName);
+        if (!first_choice_has_button) {
+            navigate(`${process.env.PUBLIC_URL}/video/${index}/choice/${imageName}`);
+        }
+    };
+
     useEffect(() => {
         if(index>1) {
             if(is_next_option_random) {
@@ -52,84 +59,64 @@ function ChoicePage(props){
 
     return(
         <>
-            <h2 className={"mt-0"}>Παρακαλώ επιλέξτε μια κατηγορία</h2>
-            <div className={"justify-content-center"}>
-                <div className={"row mb-5 mt-5"}>
-                    <div className={"col-md-6"}>
+            <h2 className="mt-0 text-center">Παρακαλώ επιλέξτε μια κατηγορία</h2>
+            <div className="d-flex justify-content-center mb-5">
+                <div className="row">
+                    <div className="col-md-6 mb-3 d-flex justify-content-center">
                         <img
-                            name={"Ocean"}
+                            name="Ocean"
                             src={image1}
-                            alt={"Ocean"}
-                            style={{ border: props.selectedImage === 'Ocean' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
-                            onClick={() => {
-                                props.setSelectedImage("Ocean")
-                                if(!first_choice_has_button){
-                                    navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Ocean")
-                                }
-                            }}
+                            alt="Ocean"
+                            className={`category-image ${props.selectedImage === 'Ocean' ? 'selected' : ''}`}
+                            onClick={() => handleImageClick('Ocean')}
+                            style={{ width: 'auto', maxHeight: '33vh' }} // Adjust the max-height as needed
                         />
                     </div>
-                    <div className={"col-md-6"}>
+                    <div className="col-md-6 mb-3 d-flex justify-content-center">
                         <img
-                            name={"City"}
-                            src={image2} alt={"City"}
-                            style={{ border: props.selectedImage === 'City' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
-                            onClick={() => {
-                                props.setSelectedImage("City");
-                                if(!first_choice_has_button){
-                                    navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/City")
-                                }
-                            }}
+                            name="City"
+                            src={image2}
+                            alt="City"
+                            className={`category-image ${props.selectedImage === 'City' ? 'selected' : ''}`}
+                            onClick={() => handleImageClick('City')}
+                            style={{ width: 'auto', maxHeight: '33vh' }} // Adjust the max-height as needed
                         />
                     </div>
-                </div>
-                <div className={"row mb-3"}>
-                    <div className={"col-md-6"}>
+                    <div className="col-md-6 mb-3 d-flex justify-content-center">
                         <img
-                            name={"Animals"}
+                            name="Animals"
                             src={image3}
-                            alt={"Animals"}
-                            onClick={() => {
-                                props.setSelectedImage("Animals")
-                                if(!first_choice_has_button){
-                                    navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Animals")
-                                }
-                            }}
-                            style={{ border: props.selectedImage === 'Animals' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
+                            alt="Animals"
+                            className={`category-image ${props.selectedImage === 'Animals' ? 'selected' : ''}`}
+                            onClick={() => handleImageClick('Animals')}
+                            style={{ width: 'auto', maxHeight: '33vh' }} // Adjust the max-height as needed
                         />
                     </div>
-
-                    <div className={"col-md-6"}>
-                        <img name={"Space"}
-                             src={image4}
-                             alt={"Space"}
-                             onClick={() => {
-                                 props.setSelectedImage("Space")
-                                 if(!first_choice_has_button){
-                                     navigate(process.env.PUBLIC_URL+`/video/`+index+"/choice/Space")
-                                 }
-                             }}
-                             style={{ border: props.selectedImage === 'Space' ? '10px solid red' : 'none', width:"350px", height:"300px" }}
+                    <div className="col-md-6 mb-3 d-flex justify-content-center">
+                        <img
+                            name="Space"
+                            src={image4}
+                            alt="Space"
+                            className={`category-image ${props.selectedImage === 'Space' ? 'selected' : ''}`}
+                            onClick={() => handleImageClick('Space')}
+                            style={{ width: 'auto', maxHeight: '33vh' }} // Adjust the max-height as needed
                         />
                     </div>
                 </div>
             </div>
 
-
-            <div className="buttons">
-                {(first_choice_has_button)?
-                <div className="big-border-button">
-                    <NavLink className="active" to={process.env.PUBLIC_URL+`/video/`+index+"/choice/"+props.selectedImage}>
-                        Επόμενη Σελίδα
-                    </NavLink>
-                </div>:null
+            <div className="buttons d-flex justify-content-center mb-5">
+                {first_choice_has_button &&
+                    <div className="big-border-button">
+                        <NavLink className="active" to={`${process.env.PUBLIC_URL}/video/${index}/choice/${props.selectedImage}`}>
+                            Επόμενη Σελίδα
+                        </NavLink>
+                    </div>
                 }
-                {/*<div className="icon-button">
-                    <a href="https://youtube.com/templatemo" target="_blank" rel={"noreferrer"}><i className="fa fa-play"></i> Watch Our Video Now</a>
-                </div>
-                */}
             </div>
         </>
+
+
     )
 }
 
