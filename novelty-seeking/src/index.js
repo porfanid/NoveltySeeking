@@ -14,9 +14,9 @@ translationEL["jtci-questions"]=questionnaireEl;
 
 i18n.init({
     interpolation: { escapeValue: false }, // React already does escaping
-    lng: 'en', // Default language
+    lng: 'el', // Default language
     resources: {
-        en: {
+        el: {
             common: translationEL,
         },
 
