@@ -24,7 +24,6 @@ function VideoPage(props){
         props.setCategoryAndCounter(category, counter);
         const titles = t("video-title", { returnObjects: true});
         setTitle(titles[choice]);
-        console.log(JSON.stringify(t("video-title")))
     }, []);
 
     return (
