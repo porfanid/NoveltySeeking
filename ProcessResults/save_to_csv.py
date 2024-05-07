@@ -11,7 +11,6 @@ load_dotenv()
 localedir = 'translations'  # Directory containing translations
 translate = gettext.translation('base', localedir = localedir, languages=['el'])
 _ = translate.gettext
-
 locale.setlocale(locale.LC_ALL, 'el_GR.UTF-8')
 
 

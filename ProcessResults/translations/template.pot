@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: save_to_csv.py:26
@@ -33,9 +33,6 @@ msgstr ""
 msgid "Code"
 msgstr ""
 
-#: save_to_csv.py:178
-msgid "birhdate"
-msgstr ""
 
 #: save_to_csv.py:179 save_to_csv.py:200 save_to_csv.py:227
 msgid "Sex"

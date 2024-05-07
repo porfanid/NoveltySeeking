@@ -5,11 +5,16 @@ import reportWebVitals from './reportWebVitals';
 
 import {I18nextProvider} from 'react-i18next';
 import i18n from 'i18next';
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
+
+/*
+ * Template to copy in case you want to add a translation (Read the README file)
+ */
 import translationEL from './locales/el/translation.json';
 import questionsEl from './locales/el/questions.json';
 import questionnaireEl from './locales/el/questionnaire.json';
-import {DevSupport} from "@react-buddy/ide-toolbox";
-import {ComponentPreviews, useInitial} from "./dev";
+
 
 translationEL["quiz"] = questionsEl;
 translationEL["jtci-questions"] = questionnaireEl;
@@ -25,6 +30,10 @@ i18n.init({
 }).then(r => {
     console.log("i18n initialized");
 });
+
+/*
+ * End of template.
+ */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

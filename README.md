@@ -26,14 +26,100 @@ Encephalograph
 
 ### Coding
 
+#### Translations
+
+The website supports translations in different languages. In order for you to create a tranlation in a different language you will have to:
+
+##### Create a translation
+
+1) go in the `novelty-seeking/src/locales` folder.
+2) Duplicate any folder you know the language(source language) and rename it to the language you will translate it into(target language).
+3) Go in the folder and you will find 3 json files. You will have to translate all of them without changing the names
+
+##### Use a translationss
+
+In order for you to use a translation in the webpage you will have to copy a little bit of code and change it.
+
+1) Go to the src folder and open the `index.js` file.
+2) 
+3) Find the comment that refers to the template. It should have this:
+
+   ```javascript
+   import translationEL from './locales/el/translation.json';
+   import questionsEl from './locales/el/questions.json';
+   import questionnaireEl from './locales/el/questionnaire.json';
+
+
+   translationEL["quiz"] = questionsEl;
+   translationEL["jtci-questions"] = questionnaireEl;
+
+   i18n.init({
+       interpolation: {escapeValue: false}, // React already does escaping
+       lng: 'el', // Default language
+       resources: {
+           el: {
+               common: translationEL,
+           }
+       },
+   }).then(r => {
+       console.log("i18n initialized");
+   });
+   ```
+4) You will add your code like this:
+
+   ```javascript
+   import translationEL from './locales/el/translation.json';
+   import questionsEl from './locales/el/questions.json';
+   import questionnaireEl from './locales/el/questionnaire.json';
+   /**
+    * Change this to your actual files and add the actual language code
+    */
+   import translationLang from './locales/lang/translation.json';
+   import questionsLang from './locales/lang/questions.json';
+   import questionnaireLang from './locales/lang/questionnaire.json';
+
+
+   translationEL["quiz"] = questionsEl;
+   translationEL["jtci-questions"] = questionnaireEl;
+
+
+   /**
+    * Change this to the actual language code
+    * DO NOT CHANGE THE KEYS. They are used in the code and if you do it you will mess the website up
+    */
+   translationLang["quiz"] = questionsLang;
+   translationLang["jtci-questions"] = questionnaireLang;
+
+   /*
+    * Add the language here(Change with the language code)
+    */
+
+   i18n.init({
+       interpolation: {escapeValue: false}, // React already does escaping
+       lng: 'el', // Default language
+       resources: {
+           el: {
+               common: translationEL,
+           },
+   	lang: {
+               common: translationLang,
+           }
+       },
+   }).then(r => {
+       console.log("i18n initialized");
+   });
+   ```
+5) functionality for visual translation between the languages will be added soon.
+
+#### Functionality
+
 ```properties
-Foler structure:
+Folder structure:
 -----------------
 novelty-seeking: react app that shows the website, plus some php scripts in the public folder to store the data to the backend
 ProcessResults: process the data from the database (You need to run it to the same server with the database as it connects to it)
 encephalograph: folder that coontains the arduino project to connect t the encephalograph from the website
 ```
-
 
 1. The app stores the data in a mysql database. You can initialize a database of your own by editing the .env file in the `novelty-seeking` folder and making sure that all are there
 
@@ -54,7 +140,8 @@ REACT_APP_VALID_TOKEN="Something to prevent spam to your form"
      `category` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
      `counter` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
      `quiz` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
-     `date` varchar(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
+     `date` int CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
+     `lang` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
      PRIMARY KEY (`code`,`id`)
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
 
@@ -63,6 +150,7 @@ REACT_APP_VALID_TOKEN="Something to prevent spam to your form"
      `code` int NOT NULL,
      `id` int NOT NULL,
      `answer` int NOT NULL,
+     `lang` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
      PRIMARY KEY (`code`,`id`)
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
