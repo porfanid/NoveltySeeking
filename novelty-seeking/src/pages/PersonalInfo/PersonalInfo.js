@@ -229,6 +229,7 @@ function PersonalInfo(props) {
                                                 return;
                                             }
                                             props.publishUser(gender, selectedDate);
+                                            props.setStartTime();
                                             console.log(process.env.NODE_ENV)
 
                                             navigate(`${process.env.PUBLIC_URL}/choice/1/category/1/counter/1`)

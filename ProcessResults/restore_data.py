@@ -1,10 +1,9 @@
 import json
+from os import environ, walk, path
 import mysql.connector
-from os import environ
+from dotenv import load_dotenv
 
-# Load JSON file
-with open('/home/porfanid/programming/NoveltySeeking/novelty-seeking/public/assets/questions.json', 'r') as f:
-    data = json.load(f)
+load_dotenv()
 
 # Connect to MySQL database
 conn = mysql.connector.connect(
@@ -15,27 +14,39 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Iterate through JSON data and update MySQL table
-for category, category_data in data.items():
-    print(category)
-    for subcategory, subcategory_data in category_data.items():
-        print(subcategory)
-        for counter, counter_data in subcategory_data.items():
-            question = counter_data.get('question')
-            correct_answer = counter_data.get('correct answer')
-            false_answers = counter_data.get('false answers')
-            
-            # Update MySQL table with category information
-            for answer in [correct_answer] + false_answers:
-                query = "UPDATE answer SET choice = %s WHERE quiz = %s  and category=%s and counter=%s"
-#                query = "UPDATE answer SET category = {} WHERE quiz = {} and category={} and counter={}".format(category, answer, subcategory, counter)
+# Function to iterate through subdirectories recursively
+def process_subdirectories(root_dir):
+    for root, dirs, files in walk(root_dir):
+        for file in files:
+            if file == 'questions.json':
+                json_file_path = path.join(root, file)
+                process_json_file(json_file_path, lang=path.split(root)[-1])
 
-                print(query)
-                cursor.execute(query, (category, answer, subcategory, counter))
-                conn.commit()
+# Function to process JSON file
+def process_json_file(json_file_path, lang):
+    with open(json_file_path, 'r') as f:
+        data = json.load(f)
+
+    for category, category_data in data.items():
+        for subcategory, subcategory_data in category_data.items():
+            for counter, counter_data in subcategory_data.items():
+                question = counter_data.get('question')
+                correct_answer = counter_data.get('correct answer')
+                false_answers = counter_data.get('false answers')
+                
+                for answer in [correct_answer] + false_answers:
+                    query = "UPDATE answer SET choice = %s WHERE quiz = %s and category = %s and counter = %s and lang = %s"
+                    cursor.execute(query, (answer, category, subcategory, counter, lang))
+                    conn.commit()
+
+# Define the root directory where JSON files are located
+root_directory = 'translations'
+
+# Process all subdirectories
+process_subdirectories(root_directory)
 
 # Close connection
-#cursor.close()
-#conn.close()
+cursor.close()
+conn.close()
 
 print("Category information updated successfully.")

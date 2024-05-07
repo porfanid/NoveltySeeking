@@ -22,6 +22,9 @@ function App(props) {
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
     const licenseServer= `https://turingmachine.pro/api/noveltySeeking`
+
+    console.log(i18n.languages)
+
     const fetchLicenseData = async () => {
       try {
         const response = await fetch(licenseServer,{
@@ -137,13 +140,13 @@ function App(props) {
       path:process.env.PUBLIC_URL+"/",element: (!enteredPassword)?<CodePage hasEnteredPassword={hasEnteredPassword}/>:<Navigate  to= {process.env.PUBLIC_URL+"/user_code"} state={{ previous: process.env.PUBLIC_URL+"/" }} replace/>,
     },
     {
-      path:process.env.PUBLIC_URL+"/user_code",element: (enteredPassword)?<PersonalInfo publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/user_code" }} replace/>,
+      path:process.env.PUBLIC_URL+"/user_code",element: (enteredPassword)?<PersonalInfo setStartTime={()=>{setStartTime(Date.now())}} publishUser={publishUser} code={code} setCode = {setCode}/>:<Navigate to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/user_code" }} replace/>,
     },{
       path:process.env.PUBLIC_URL+"/questionnaire",element: (enteredPassword)?<Questionaire code={code}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+"/questionnaire" }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage setStartTime={()=>{setStartTime(Date.now())}} code={code} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/choice/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
+      path:process.env.PUBLIC_URL+"/choice/:index/category/:category/counter/:counter",element: (enteredPassword)?<ChoicePage code={code} previousChoices = {previousChoices} getLastChoice={getLastChoice} setCurrentAnswer={setCurrentAnswer} setSelectedImage={setSelectedImage} selectedImage={selectedImage}/>:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/choice/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -159,7 +162,7 @@ function App(props) {
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} startTime={startTime} setSelectedTime={(time)=>{setCurrentAnswer("date", time)}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quiz/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
+      path:process.env.PUBLIC_URL+"/quiz/:index/choice/:choice/category/:category/counter/:counter",element: (enteredPassword)?<QuizPage code={code} currectAnswer={currentAnswer} setQuizCorrectAnswer={setQuizCorrectanswer} choice={selectedImage} setSelectedQuiz={(quiz)=>{setQuiz(quiz); setCurrentAnswer("quiz", quiz) }} startTime={startTime} setSelectedTime={(time)=>{setCurrentAnswer("date", Math.round((time - startTime) / 1000))}} />:<Navigate  to= {process.env.PUBLIC_URL+"/"} state={{ previous: process.env.PUBLIC_URL+`/quiz/${useParams().index}/category/${useParams().category}/counter/${useParams().counter}` }} replace/>,
     },
     {
       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -197,9 +200,11 @@ function App(props) {
                   {t('madeBy')} <a href={"https://pavlos.orfanidis.net.gr"} className="text-white">{t('pavlos')}</a>
                 </div>
                 <div className="mb-3">
-                  {t("direction")+" "+t("male-article")+" "}
-                  <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"} className="text-white">{t("konstantinos-tsamis")}</a>,{" "+t("female-article")+" "}
-                  <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"} className="text-white">{t("alexandra-pliakopanou")}</a> {t("and")+" "+t("male-article")+" "}
+                  {t("direction") + " " + t("male-article") + " "}
+                  <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"}
+                     className="text-white">{t("konstantinos-tsamis")}</a>,{" " + t("female-article") + " "}
+                  <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"}
+                     className="text-white">{t("alexandra-pliakopanou")}</a> {t("and") + " " + t("male-article") + " "}
                   <a href={"#"} className="text-white">{t("christos-bozidis")}</a>
                 </div>
               </div>

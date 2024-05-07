@@ -1,2 +1,5 @@
 requests
 openpyxl
+
+mysql-connector-python
+python-dotenv

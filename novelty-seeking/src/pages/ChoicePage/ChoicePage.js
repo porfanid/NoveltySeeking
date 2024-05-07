@@ -52,7 +52,6 @@ function ChoicePage(props){
                 props.previousChoices.push(randomArray[randomIndex]);
                 navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+randomArray[randomIndex]+"/category/"+category+"/counter/1")
             }else{
-                props.setStartTime();
                 navigate(process.env.PUBLIC_URL + `/video/` + index+"/choice/"+random_choices[index-2]+"/category/"+category+"/counter/1")
             }
         }

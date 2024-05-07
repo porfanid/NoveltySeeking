@@ -13,14 +13,15 @@ translationEL["quiz"] = questionsEl;
 translationEL["jtci-questions"]=questionnaireEl;
 
 i18n.init({
-    interpolation: { escapeValue: false }, // React already does escaping
+    interpolation: {escapeValue: false}, // React already does escaping
     lng: 'el', // Default language
     resources: {
         el: {
             common: translationEL,
-        },
-
+        }
     },
+}).then(r =>{
+    console.log("i18n initialized");
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

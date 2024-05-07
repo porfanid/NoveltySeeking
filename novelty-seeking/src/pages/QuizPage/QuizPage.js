@@ -61,7 +61,7 @@ function QuizPage(props){
                                 const link = (index < number_of_questions) ? process.env.PUBLIC_URL + `/quizResult/${index}/choice/${choice}/category/${category}/counter/${counter}` : process.env.PUBLIC_URL + "/quizComplete";
                                 if(get_time_for_each_question){
                                     console.log(props.startTime)
-                                    props.setSelectedTime(Math.round((Date.now() - props.startTime) / 1000))
+                                    props.setSelectedTime(Date.now())
                                 }
                                 navigate(link);
                             }
@@ -79,7 +79,7 @@ function QuizPage(props){
                         <NavLink onClick={(event)=>{
                             if(get_time_for_each_question){
                                 console.log(props.startTime.toString())
-                                props.setSelectedTime((Date.now() - props.startTime) / 1000)
+                                props.setSelectedTime(Date.now())
                             }
                             if(!userHasAnswered){
                                 event.preventDefault();
