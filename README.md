@@ -43,8 +43,7 @@ In order for you to use a translation in the webpage you will have to copy a lit
 1) Go to the src folder and open the `index.js` file.
 2) 
 3) Find the comment that refers to the template. It should have this:
-
-   ```javascript
+  ```javascript
    import translationEL from './locales/el/translation.json';
    import questionsEl from './locales/el/questions.json';
    import questionnaireEl from './locales/el/questionnaire.json';
@@ -66,8 +65,7 @@ In order for you to use a translation in the webpage you will have to copy a lit
    });
    ```
 4) You will add your code like this:
-
-   ```javascript
+  ```javascript
    import translationEL from './locales/el/translation.json';
    import questionsEl from './locales/el/questions.json';
    import questionnaireEl from './locales/el/questionnaire.json';
@@ -122,7 +120,6 @@ encephalograph: folder that coontains the arduino project to connect t the encep
 ```
 
 1. The app stores the data in a mysql database. You can initialize a database of your own by editing the .env file in the `novelty-seeking` folder and making sure that all are there
-
 ```properties
 DB_HOST=localhost
 DB_DATABASE=db
