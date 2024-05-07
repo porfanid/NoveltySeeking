@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { I18nextProvider } from 'react-i18next';
+import {I18nextProvider} from 'react-i18next';
 import i18n from 'i18next';
 import translationEL from './locales/el/translation.json';
 import questionsEl from './locales/el/questions.json';
 import questionnaireEl from './locales/el/questionnaire.json';
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
 
 translationEL["quiz"] = questionsEl;
-translationEL["jtci-questions"]=questionnaireEl;
+translationEL["jtci-questions"] = questionnaireEl;
 
 i18n.init({
     interpolation: {escapeValue: false}, // React already does escaping
@@ -20,17 +22,21 @@ i18n.init({
             common: translationEL,
         }
     },
-}).then(r =>{
+}).then(r => {
     console.log("i18n initialized");
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-      <I18nextProvider i18n={i18n}>
-          <App />
-      </I18nextProvider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <I18nextProvider i18n={i18n}>
+            <DevSupport ComponentPreviews={ComponentPreviews}
+                        useInitialHook={useInitial}
+            >
+                <App/>
+            </DevSupport>
+        </I18nextProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
