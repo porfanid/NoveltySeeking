@@ -8,6 +8,10 @@ import i18n from 'i18next';
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
 
+import translationEn from './locales/en/translation.json';
+import questionsEn from './locales/en/questions.json';
+import questionnaireEn from './locales/en/questionnaire.json';
+
 /*
  * Template to copy in case you want to add a translation (Read the README file)
  */
@@ -19,12 +23,17 @@ import questionnaireEl from './locales/el/questionnaire.json';
 translationEL["quiz"] = questionsEl;
 translationEL["jtci-questions"] = questionnaireEl;
 
+translationEn["quiz"] = questionsEn;
+translationEn["jtci-questions"] = questionnaireEn;
+
 i18n.init({
     interpolation: {escapeValue: false}, // React already does escaping
-    lng: 'el', // Default language
+    lng: 'el', // Default languages
     resources: {
         el: {
             common: translationEL,
+        },en: {
+            common: translationEn,
         }
     },
 }).then(r => {
