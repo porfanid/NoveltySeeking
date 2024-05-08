@@ -179,15 +179,15 @@ function App(props) {
   return (
     <>
       <div className="main-banner">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="m-auto">
-                {
-                  (licenseValid) ? <RouterProvider router={router}/> : <NotLicensed/>
-                }
-              </div>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="m-auto">
+              {
+                (licenseValid) ? <RouterProvider router={router}/> : <NotLicensed/>
+              }
             </div>
           </div>
+        </div>
 
         <footer
             className="text-center text-lg-start text-white d-flex footer"
@@ -199,32 +199,38 @@ function App(props) {
                 <div className="mb-3">
                   {t('madeBy')} <a href={"https://pavlos.orfanidis.net.gr"} className="text-white">{t('pavlos')}</a>
                 </div>
-                <div className="mb-3">
-                  {t("direction") + " " + t("male-article") + " "}
-                  <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"}
-                     className="text-white">{t("konstantinos-tsamis")}</a>,
-                  {" " + t("female-article") + " "}
-                  <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"}
-                     className="text-white">{t("alexandra-pliakopanou")}</a> {t("and") + " " + t("male-article") + " "}
-                  <a href={"#"} className="text-white">{t("christos-bozidis")}</a>
-
-                  <div className="d-flex justify-content-end align-items-center" onClick={()=>{
-                    i18n.changeLanguage(i18n.language==="en"?"el":"en")
+                <div className="mb-3 d-flex justify-content-center align-items-center">
+                    <span>
+                        {t("direction") + " " + t("male-article") + " "}
+                      <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"}
+                         className="text-white">{t("konstantinos-tsamis")}</a>,
+                      {" " + t("female-article") + " "}
+                      <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"}
+                         className="text-white">{t("alexandra-pliakopanou")}</a> {t("and") + " " + t("male-article") + " "}
+                      <a href={"#"} className="text-white">{t("christos-bozidis")}</a>
+                    </span>
+                  <div style={{
+                    position: "absolute",
+                    right: '20vh',
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer"
+                  }} onClick={() => {
+                    i18n.changeLanguage(i18n.language === "en" ? "el" : "en")
                   }}>
-                      <ReactCountryFlag
-                          style={{
-                            fontSize: '2em',
-                            lineHeight: '2em',
-                            cursor: 'pointer'
-                          }}
-                          countryCode={i18n.language==="en"?"GR":"US"}/>
+                    <ReactCountryFlag
+                        style={{
+                          fontSize: '2em',
+                          lineHeight: '2em'
+                        }}
+                        countryCode={i18n.language === "en" ? "GR" : "US"}/>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
         </footer>
+
       </div>
     </>
   );
