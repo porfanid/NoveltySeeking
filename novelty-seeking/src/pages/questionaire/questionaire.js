@@ -146,7 +146,7 @@ const Questionnaire = (props) => {
                                     <FormControl component="fieldset">
                                         <div className="card form-group p-3">
                                             {/* Primary School Classes */}
-                                            <label><b>{t('classLabels.primary')}:</b></label>
+                                            <label><b>{t('class')}:</b></label>
                                             <hr/>
                                             <RadioGroup>
                                                 <div className="row">
