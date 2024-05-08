@@ -13,6 +13,7 @@ import CodePage from "./pages/CodePage";
 import Questionaire from "./pages/questionaire/questionaire";
 import QuizAndQuestionnaireCompletePage from "./pages/QuizAndQuestionnaireCompletePage/QuizAndQuestionnaireCompletePage"
 import {useTranslation} from "react-i18next";
+import ReactCountryFlag from "react-country-flag";
 
 function App(props) {
   const [licenseValid, setLicenseValid] = useState(true);
@@ -202,10 +203,24 @@ function App(props) {
                 <div className="mb-3">
                   {t("direction") + " " + t("male-article") + " "}
                   <a href={"https://www.linkedin.com/in/konstantinos-tsamis-669638a3/"}
-                     className="text-white">{t("konstantinos-tsamis")}</a>,{" " + t("female-article") + " "}
+                     className="text-white">{t("konstantinos-tsamis")}</a>,
+                  {" " + t("female-article") + " "}
                   <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"}
                      className="text-white">{t("alexandra-pliakopanou")}</a> {t("and") + " " + t("male-article") + " "}
                   <a href={"#"} className="text-white">{t("christos-bozidis")}</a>
+
+                  <div className="d-flex justify-content-end align-items-center" onClick={()=>{
+                    i18n.changeLanguage(i18n.language==="en"?"el":"en")
+                  }}>
+                      <ReactCountryFlag
+                          style={{
+                            fontSize: '2em',
+                            lineHeight: '2em',
+                            cursor: 'pointer'
+                          }}
+                          countryCode={i18n.language==="en"?"GR":"US"}/>
+                  </div>
+
                 </div>
               </div>
             </div>
