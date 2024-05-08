@@ -1,0 +1,126 @@
+{
+  "madeBy": "Created by",
+  "direction": "Under the guidance of",
+
+  "female-article": "of",
+  "male-article": "of",
+  "and": "and",
+
+  "pavlos": "Pavlos Orfanidis",
+  "konstantinos-tsamis": "Konstantinos Tsamis",
+  "alexandra-pliakopanou": "Alexandra Pliakopanou",
+  "christos-bozidis": "Christos Bozidis",
+
+  "enter-room-code": "Enter the code of the <em>room</em>",
+  "room-password": "Room password",
+  "wrong-password": "Wrong password. Please try again.",
+  "continue": "Next step",
+
+  "enter-personal-code": "Enter your <em>Personal Code</em>",
+  "personal-code": "Personal code",
+  "birthdate": "Date of Birth",
+  "sex": "Sex",
+  "male": "Male",
+  "female": "Female",
+  "encephalograph-connected": "The encephalograph is connected",
+  "connect-encephalograph": "Connect encephalograph",
+  "begin-questions": "Begin Questions",
+  "fill-all-fields": "Please fill in all fields!",
+
+  "choose-category": "Please select a category",
+  "video-title": {
+      "Ocean": "Ocean",
+      "City":"Architecture",
+      "Animals":"African Animals",
+      "ANCIENT_CIVILIZATION":"Ancient Civilizations",
+      "FOOD": "Cooking",
+      "FUTURISTIC_TRANSPORTATION": "Futuristic Transportation",
+      "LANDSCAPES": "Landscapes",
+      "MICROWORLD": "Microworld",
+      "NATURE_BLOOMING": "Plant Growth",
+      "Space": "Space"
+    },
+  "seconds": "Seconds",
+
+  "answer-question": "Please answer the question!",
+  "quiz-wrong-answers": [
+    "Good effort, keep going!",
+    "Never mind, keep trying",
+    "Keep trying"
+  ],
+  "quiz-correct-answers": [
+    "Well done! Keep it up!",
+    "Very good, keep going!",
+    "Great! Keep going!",
+    "Excellent!"
+  ],
+  "choose-next": "Choose how you would like to continue",
+  "same-video": "Continue with the same video",
+  "same-category": "Another video of the same category",
+  "different-category": "Video of a different category",
+  "congrats": "Congratulations!!!",
+  "quiz-end": "Quiz ended",
+  "continue-to-questionnaire": "Continue to questionnaire",
+
+  "questionnaire": "Questionnaire",
+
+  "questionnaire-intro": "In this questionnaire, you will find statements that could describe your attitudes, opinions, interests, and feelings. Each statement can be answered with the options <b>“no, not true,” “probably not true,” “partially true,” “probably true,” “yes, true”</b>. Read each statement and mark <u>which one applies most to you</u>. Answer <u>all</u> statements even if you are unsure of the answer. Read each statement carefully, but do not spend too much time deciding on an answer. There are no ‘right’ or ‘wrong’ answers; simply describe your <u>personal</u> opinions and feelings. If some statements seem similar to you, this is to describe yourself accurately. Try to describe yourself as you <u>usually or mostly</u> feel or act, not just how you feel at this moment.",
+
+  "you-havent-answered-questions": "You haven't answered the questions",
+  "no": "NO",
+  "probably-no": "PROBABLY NOT",
+  "partially": "PARTIALLY",
+  "probably-yes": "PROBABLY YES",
+  "yes": "YES",
+  "text-understanding": "Rate how well you understand a text when reading it",
+
+  "select-grade": "Mark the grade you most often get in school:",
+
+  "classLabels": {
+    "primary": "Primary School",
+    "secondary": "Middle School",
+    "highSchool": "High School"
+  },
+  "classValues": {
+    "primary": {
+      "10": "5th",
+      "11": "6th"
+    },
+    "secondary": {
+      "20": "1st",
+      "21": "2nd",
+      "22": "3rd"
+    },
+    "highSchool": {
+      "30": "1st",
+      "31": "2nd",
+      "32": "3rd"
+    }
+  },
+  "gradeLimits": {
+    "primary": {
+      "start": 1,
+      "end": 10
+    },
+    "secondary": {
+      "start": 1,
+      "end": 20
+    },
+    "highSchool": {
+      "start": 1,
+      "end": 20
+    }
+  },
+
+  "not-good": "Not Good at all",
+  "so-and-so": "So-so",
+  "very-good": "Very Good",
+  "excellent": "Excellent",
+  "submit": "Submit",
+
+  "thank-you": "Thank You",
+  "answered-questions": "You answered our questions and entered the draw for the prize!",
+  "test-is-complete": "Test is complete.",
+  "have-a-nice-day": "Have a nice day!",
+  "back-to-start": "Back to Start"
+}
