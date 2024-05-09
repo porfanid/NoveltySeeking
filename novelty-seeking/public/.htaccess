@@ -1,7 +1,22 @@
+Options +ExecCGI
+AddHandler cgi-script .py
+
+
+<Files "save_to_csv_.py">
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+\.py)$ ./venv/bin/python %{SCRIPT_FILENAME} [L]
+</Files>
+
 <Files ".env">
     Order Allow,Deny
     Deny from all
 </Files>
+
+<Directory "venv">
+  Order Allow,Deny
+  Deny from all
+</Directory>
 
 <IfModule mod_rewrite.c>
   Options -MultiViews
