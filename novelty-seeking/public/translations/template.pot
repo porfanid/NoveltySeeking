@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-07 12:11+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: save_to_csv.py:26
+msgid "Database connection established successfully"
+msgstr ""
+
+#: save_to_csv.py:29
+msgid "Error connecting to database:"
+msgstr ""
+
+#: save_to_csv.py:130
+msgid "Error fetching data from database:"
+msgstr ""
+
+#: save_to_csv.py:177 save_to_csv.py:200
+msgid "Code"
+msgstr ""
+
+
+#: save_to_csv.py:179 save_to_csv.py:200 save_to_csv.py:227
+msgid "Sex"
+msgstr ""
+
+#: save_to_csv.py:180 save_to_csv.py:181 save_to_csv.py:182 save_to_csv.py:183
+#: save_to_csv.py:184 save_to_csv.py:185 save_to_csv.py:186 save_to_csv.py:201
+msgid "Choice"
+msgstr ""
+
+#: save_to_csv.py:187 save_to_csv.py:188 save_to_csv.py:189 save_to_csv.py:190
+#: save_to_csv.py:191 save_to_csv.py:192 save_to_csv.py:193 save_to_csv.py:201
+msgid "Time"
+msgstr ""
+
+#: save_to_csv.py:200 save_to_csv.py:240
+msgid "class"
+msgstr ""
+
+#: save_to_csv.py:200 save_to_csv.py:218 save_to_csv.py:221
+msgid "birthdate"
+msgstr ""
+
+#: save_to_csv.py:200 save_to_csv.py:219 save_to_csv.py:222
+msgid "Age"
+msgstr ""
+
+#: save_to_csv.py:202 save_to_csv.py:231
+msgid "Answered Questions"
+msgstr ""
+
+#: save_to_csv.py:202 save_to_csv.py:235
+msgid "Questions Answered Correctly"
+msgstr ""
+
+#: save_to_csv.py:202 save_to_csv.py:235
+msgid "Positions of wrong answers"
+msgstr ""
+
+#: save_to_csv.py:202 save_to_csv.py:224
+msgid "Observations"
+msgstr ""
+
+#: save_to_csv.py:202 save_to_csv.py:225
+msgid "way-answered (digitally/physical)"
+msgstr ""
+
+#: save_to_csv.py:227
+msgid "Male"
+msgstr ""
+
+#: save_to_csv.py:227
+msgid "Female"
+msgstr ""
+
+#: save_to_csv.py:238
+msgid "First"
+msgstr ""
+
+#: save_to_csv.py:238
+msgid "Second"
+msgstr ""
+
+#: save_to_csv.py:238
+msgid "Third"
+msgstr ""
+
+#: save_to_csv.py:238
+msgid "Fifth"
+msgstr ""
+
+#: save_to_csv.py:238
+msgid "Sixth"
+msgstr ""
+
+#: save_to_csv.py:239
+msgid "Primary"
+msgstr ""
+
+#: save_to_csv.py:239
+msgid "Secondary"
+msgstr ""
+
+#: save_to_csv.py:239
+msgid "High School"
+msgstr ""
