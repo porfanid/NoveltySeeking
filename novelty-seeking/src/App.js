@@ -22,7 +22,7 @@ function App(props) {
 
   useEffect(() => {
     const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
-    const licenseServer= `https://turingmachine.pro/api/noveltySeeking`
+    const licenseServer= `https://turing-machine-q3r2373qtq-uc.a.run.app/api/noveltySeeking`
     
 
     const fetchLicenseData = async () => {

@@ -35,7 +35,7 @@ function PersonalInfo(props) {
         let temp_port
         try {
             // if no port is passed to this function,
-            if (port == null) {
+            if (port === null) {
                 temp_port = await navigator.serial.requestPort();
                 // pop up window to select port:
                 setPort(temp_port);
@@ -46,52 +46,58 @@ function PersonalInfo(props) {
             // set port settings and open it:
             // TODO: make port settings configurable
             // from calling script:
-            await temp_port.open({ baudRate: baudrate });
+
+            if (temp_port.readable === null || temp_port.writable === null) {
+                // Open the port with specific settings if it's not already open
+                await temp_port.open({ baudRate: 9600 }); // Set the appropriate baud rate here
+                console.log('Serial port opened');
+            } else {
+                console.log('Serial port is already open');
+            }
+            setPortOpened(true)
             // start the listenForSerial function:
             //this.serialReadPromise = this.listenForSerial();
             return temp_port;
         } catch (err) {
             // if there's an error opening the port:
-            if(temp_port) {
-                await temp_port.close();
-            }
             console.error("There was an error opening the serial port:", err);
         }
     };
 
 
     const writeDataToSerialPort = async (data) => {
-        let port;
         try {
-            // Open the serial port
-            port = await requestPort();
+            if (port && port.writable) {
+                // Create a TextEncoderStream to encode the data
+                const textEncoder = new TextEncoderStream();
 
-            if (port) {
-                // Get the writable stream writer from the port
-                const writer = port.writable.getWriter();
+                // Wait for the writable stream to be properly connected to the port's writable stream
+                const writableStreamClosed = textEncoder.readable.pipeTo(port.writable);
+
+                // Get a writer from the TextEncoderStream's writable stream
+                const writer = textEncoder.writable.getWriter();
 
                 try {
                     // Write data to the serial port
                     await writer.write(data);
                     console.log('Data written to serial port:', data);
-                } finally {
+                } catch (error) {
+                console.error('Error writing data to serial port:', error);
+            } finally {
                     // Release the writer's lock
                     writer.releaseLock();
                 }
+
+                // Wait for the writable stream to close
+                await writableStreamClosed;
+            } else {
+                console.error('Port is not initialized or writable stream is not available.');
             }
         } catch (error) {
             console.error('Error writing data to serial port:', error);
-        } finally {
-            // Close the serial port
-            if (port!=null) {
-                await port.close();
-                console.log('Serial port closed.');
-            }else{
-                console.log('Serial port was not opened.');
-                console.log(port)
-            }
         }
     };
+
 
     useEffect(() => {
 
@@ -112,7 +118,6 @@ function PersonalInfo(props) {
 
     const toggleSerialPort = () => {
         if (portOpened) {
-            port.close();
             setPortOpened(false);
             setPort(null);
         } else {
