@@ -20,38 +20,6 @@ function App(props) {
   const [previousChoices] = useState([]);
   const [startTime, setStartTime] = useState(Date.now());
 
-  useEffect(() => {
-    const licenseKey="155581-3AED40-64C29D-2C3A12-B6D099-V3"
-    const licenseServer= `https://turing-machine-q3r2373qtq-uc.a.run.app/api/noveltySeeking`
-    
-
-    const fetchLicenseData = async () => {
-      try {
-        const response = await fetch(licenseServer,{
-          method: 'GET',
-              headers: {
-            'Content-Type': 'application/json',
-                'license': licenseKey,
-                'machineId': "porfanidlicensekeymachine1",
-          },
-        });
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(data);
-        setLicenseValid(data.result)
-      }catch (error) {
-        console.error('Error fetching license data:');
-        console.log(error);
-        setLicenseValid(false);
-      }
-    };
-
-    fetchLicenseData();
-  }, []);
-
   const [code, setCode] = useState('');
   const [selectedImage, setImage] = useState(null);
   const [selectedQuiz, setQuiz] = useState(null);
@@ -182,9 +150,7 @@ function App(props) {
         <div className="row">
           <div className="col-lg-12">
             <div className="m-auto">
-              {
-                (licenseValid) ? <RouterProvider router={router}/> : <NotLicensed/>
-              }
+              <RouterProvider router={router}/>
             </div>
           </div>
         </div>
@@ -206,8 +172,8 @@ function App(props) {
                          className="text-white">{t("konstantinos-tsamis")}</a>,
                       {" " + t("female-article") + " "}
                       <a href={"https://www.linkedin.com/in/alexandra-pliakopanou/"}
-                         className="text-white">{t("alexandra-pliakopanou")}</a> {t("and") + " " + t("male-article") + " "}
-                      <a href={"#"} className="text-white">{t("christos-bozidis")}</a>
+                         className="text-white">{t("alexandra-pliakopanou")}</a>,{" " + t("male-article") + " "}
+                      <a href={"#"} className="text-white">{t("christos-bozidis")}</a> {t("and") + " " + t("female-article") + " " + t("konstantina-vraka")}
                     </span>
                   <div style={{
                     position: "absolute",
