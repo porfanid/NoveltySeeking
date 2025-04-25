@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024
+# This file is distributed under the same license as the PACKAGE package.
+# Pavlos Orfanidis, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-07 12:11+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Pavlos Orfanidis<pavlos@orfanidis.net.gr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Database connection established successfully"
+msgstr "Database connection established successfully"
+
+msgid "Error connecting to database:"
+msgstr "Error connecting to the database:"
+
+msgid "Error fetching data from database:"
+msgstr "Error fetching data from the database:"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Sex"
+msgstr "Sex"
+
+msgid "Choice"
+msgstr "Choice"
+
+msgid "Time"
+msgstr "Time"
+
+msgid "class"
+msgstr "Class"
+
+msgid "birthdate"
+msgstr "Birthdate"
+
+msgid "Age"
+msgstr "Age"
+
+msgid "Answered Questions"
+msgstr "Answered Questions"
+
+msgid "Questions Answered Correctly"
+msgstr "Questions Answered Correctly"
+
+msgid "Positions of wrong answers"
+msgstr "Positions of wrong answers"
+
+msgid "Observations"
+msgstr "Observations"
+
+msgid "way-answered (digitally/physical)"
+msgstr "Method of answering (digital/hard copy)"
+
+msgid "Male"
+msgstr "Male"
+
+msgid "Female"
+msgstr "Female"
+
+msgid "First"
+msgstr "First Grade"
+
+msgid "Second"
+msgstr "Second Grade"
+
+msgid "Third"
+msgstr "Third Grade"
+
+msgid "Fifth"
+msgstr "Fifth Grade"
+
+msgid "Sixth"
+msgstr "Sixth Grade"
+
+msgid "Primary"
+msgstr "of Primary School"
+
+msgid "Secondary"
+msgstr "of Secondary School"
+
+msgid "High School"
+msgstr "of High School"

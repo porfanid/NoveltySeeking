@@ -1,0 +1,1443 @@
+{
+  "Animals": {
+    "1": {
+        "1": {
+            "question": "What is the main source of food for giraffes in nature?",
+            "correct answer": "Leaves from trees",
+            "false answers": ["Fish", "Berries"]
+        },
+        "2": {
+            "question": "What kind of animal is depicted to coexist peacefully with giraffes?",
+            "correct answer": "Zebras",
+            "false answers": ["Antelopes", "Cheetahs"]
+        },
+        "3": {
+            "question": "What is the distinctive feature on the head of a giraffe?",
+            "correct answer": "Horn",
+            "false answers": ["Antlers", "Ears"]
+        },
+        "4": {
+            "question": "What is the characteristic pattern of the fur of a giraffe?",
+            "correct answer": "Spots",
+            "false answers": ["Stripes", "Squares"]
+        },
+        "5": {
+            "question": "What color are the spots of a giraffe?",
+            "correct answer": "Brown",
+            "false answers": ["Blue", "Red"]
+        },
+        "6": {
+            "question": "How many giraffes are visible in the background in the last scene?",
+            "correct answer": "One",
+            "false answers": ["Two", "Three"]
+        },
+        "7": {
+            "question": "What characteristic symbol forms on the pattern of the giraffe's fur?",
+            "correct answer": "Cross",
+            "false answers": ["Triangle", "Crescent"]
+        }
+    },
+    "2": {
+        "1": {
+            "question": "How do lions live in their natural environment?",
+            "correct answer": "In prides",
+            "false answers": ["Solitarily", "In pairs"]
+        },
+        "2": {
+            "question": "How do lions communicate with each other?",
+            "correct answer": "Roaring",
+            "false answers": ["Signaling with their paws", "Facial expressions"]
+        },
+        "3": {
+            "question": "How do lionesses safely transport their cubs?",
+            "correct answer": "Bite them on the back and carry them",
+            "false answers": ["Carry them on their backs", "Guide them with their paws"]
+        },
+        "4": {
+            "question": "What is special about the face of the lion drinking water in the video?",
+            "correct answer": "Scar between the eyes",
+            "false answers": ["One eye injured", "Different fur color from other lions"]
+        },
+        "5": {
+            "question": "How many legs do lions have?",
+            "correct answer": "Four",
+            "false answers": ["Two", "Six"]
+        },
+        "6": {
+            "question": "What is the natural habitat of lions?",
+            "correct answer": "Grasslands and savannas",
+            "false answers": ["Underwater caves", "Snow-covered mountains"]
+        }
+    },
+    "3": {
+        "1": {
+            "question": "Flamingos are:",
+            "correct answer": "Birds",
+            "false answers": ["Quadrupeds", "Reptiles"]
+        },
+        "2": {
+            "question": "Flamingos live in:",
+            "correct answer": "Wetlands",
+            "false answers": ["Snow-covered mountains", "Cities"]
+        },
+        "3": {
+            "question": "In the video, how do flamingos catch fish?",
+            "correct answer": "Dip their heads into the water",
+            "false answers": ["Dive underwater", "Use their legs"]
+        },
+        "4": {
+            "question": "What color are flamingos?",
+            "correct answer": "Pink",
+            "false answers": ["Blue", "Green"]
+        },
+        "5": {
+            "question": "Flamingos have:",
+            "correct answer": "Feathers",
+            "false answers": ["Short legs", "Short necks"]
+        }
+    },
+    "4": {
+        "1": {
+            "question": "Elephants live:",
+            "correct answer": "In small groups/families",
+            "false answers": ["Solitarily", "In very large herds"]
+        },
+        "2": {
+            "question": "Elephants have:",
+            "correct answer": "Large ears",
+            "false answers": ["Large eyes", "Large horns"]
+        },
+        "3": {
+            "question": "Baby elephants have not yet developed:",
+            "correct answer": "Tusks",
+            "false answers": ["Ears", "Tail"]
+        },
+        "4": {
+            "question": "In the video, what is the weather like?",
+            "correct answer": "Sunny",
+            "false answers": ["Rainy", "Foggy"]
+        }
+    },
+    "5": {
+        "1": {
+            "question": "What color are gorillas?",
+            "correct answer": "Black",
+            "false answers": ["White", "Green"]
+        },
+        "2": {
+            "question": "What can gorillas do?",
+            "correct answer": "Climb trees",
+            "false answers": ["Swim", "Paint"]
+        },
+        "3": {
+            "question": "In the video, what is the gorilla holding a baby gorilla doing?",
+            "correct answer": "Eating",
+            "false answers": ["Playing", "Growling"]
+        }
+    },
+    "6": {
+        "1": {
+            "question": "Where do crocodiles live?",
+            "correct answer": "In lakes and swamps",
+            "false answers": [
+                "In mountains",
+                "In the sea"
+            ]
+        },
+        "2": {
+            "question": "What do crocodiles not have?",
+            "correct answer": "Gills",
+            "false answers": [
+                "Tail",
+                "Four limbs"
+            ]
+        }
+    },
+    "7": {
+        "1": {
+            "question": "What pattern does the fur of a zebra have?",
+            "correct answer": "Black and white stripes",
+            "false answers": [
+                "White with yellow spots",
+                "Black with brown squares"
+            ]
+        }
+    }
+},
+"City": {
+  "1": {
+    "1": {
+      "question": "What is the London Eye?",
+      "correct answer": "Ferris wheel",
+      "false answers": [
+        "Statue",
+        "Bridge"
+      ]
+    },
+    "2": {
+      "question": "Where is the London Eye located?",
+      "correct answer": "In London among skyscrapers and classical buildings",
+      "false answers": [
+        "In a village in England",
+        "In a small town in England"
+      ]
+    },
+    "3": {
+      "question": "The London Eye is situated:",
+      "correct answer": "next to the River Thames",
+      "false answers": [
+        "next to Buckingham Palace",
+        "outside the city"
+      ]
+    },
+    "4": {
+      "question": "Approximately how many cabins are there on the wheel?",
+      "correct answer": "30",
+      "false answers": [
+        "10",
+        "5"
+      ]
+    },
+    "5": {
+      "question": "At the end of the video, what is shown?",
+      "correct answer": "a subway station and a statue",
+      "false answers": [
+        "a park",
+        "a bus parking area"
+      ]
+    },
+    "6": {
+      "question": "The London Eye is how tall?",
+      "correct answer": "135 meters",
+      "false answers": [
+        "15 meters",
+        "1500 meters"
+      ]
+    },
+    "7": {
+      "question": "The cabins:",
+      "correct answer": "are relatively large, enclosed, and can hold up to 25 people",
+      "false answers": [
+        "are open from the top",
+        "have a capacity of up to 5 people"
+      ]
+    }
+  },"2": {
+    "1": {
+      "question": "What color is the bridge?",
+      "correct answer": "red",
+      "false answers": [
+        "green",
+        "blue"
+      ]
+    },
+    "2": {
+      "question": "What CANNOT pass on the bridge?",
+      "correct answer": "trains",
+      "false answers": [
+        "cars",
+        "pedestrians"
+      ]
+    },
+    "3": {
+      "question": "The bridge passes over:",
+      "correct answer": "the sea",
+      "false answers": [
+        "a plain",
+        "other roads"
+      ]
+    },
+    "4": {
+      "question": "How many ships are shown in the video?",
+      "correct answer": "two",
+      "false answers": [
+        "none",
+        "ten"
+      ]
+    },
+    "5": {
+      "question": "In the video, the weather appears to be:",
+      "correct answer": "cloudy",
+      "false answers": [
+        "sunny",
+        "snowy"
+      ]
+    },
+    "6": {
+      "question": "How many meters long is the bridge (Golden Gate Bridge)?",
+      "correct answer": "2,737 meters",
+      "false answers": [
+        "10 meters",
+        "250 meters"
+      ]
+    }
+  },
+  "3": {
+    "1": {
+      "question": "The video shows:",
+      "correct answer": "a hydroelectric power plant",
+      "false answers": [
+        "a city",
+        "a park with wind turbines"
+      ]
+    },
+    "2": {
+      "question": "On the dam:",
+      "correct answer": "there is a highway",
+      "false answers": [
+        "there is nothing",
+        "there are electrical columns"
+      ]
+    },
+    "3": {
+      "question": "How many pillars are there in the water?",
+      "correct answer": "4",
+      "false answers": [
+        "2",
+        "1"
+      ]
+    },
+    "4": {
+      "question": "On either side of the dam:",
+      "correct answer": "There are rocky mountains on which it is based",
+      "false answers": [
+        "It borders a forest",
+        "There are houses"
+      ]
+    },
+    "5": {
+      "question": "The dam:",
+      "correct answer": "is gray in color",
+      "false answers": [
+        "is painted red",
+        "is decorated with paintings"
+      ]
+    }
+  },
+  "4": {
+    "1": {
+      "question": "The building shown in the video is located:",
+      "correct answer": "in a metropolis of Australia",
+      "false answers": [
+        "in a village in the USA",
+        "in a mountainous city in China"
+      ]
+    },
+    "2": {
+      "question": "The building is located:",
+      "correct answer": "next to the sea",
+      "false answers": [
+        "on a mountain",
+        "next to a village"
+      ]
+    },
+    "3": {
+      "question": "In the background behind the opera house, you can see",
+      "correct answer": "a bridge",
+      "false answers": [
+        "a lighthouse",
+        "a theater"
+      ]
+    },
+    "4": {
+      "question": "What is NOT shown in the video?",
+      "correct answer": "wind turbines",
+      "false answers": [
+        "ships",
+        "skyscrapers"
+      ]
+    }
+  },
+  "5": {
+    "1": {
+      "question": "The building shown in the video is:",
+      "correct answer": "the tallest building in the world",
+      "false answers": [
+        "the longest bridge in the world",
+        "the oldest preserved statue in the world"
+      ]
+    },
+    "2": {
+      "question": "At the base of the building, it appears that there are",
+      "correct answer": "pools",
+      "false answers": [
+        "nothing",
+        "a tropical forest"
+      ]
+    },
+    "3": {
+      "question": "In the city shown in the video, this skyscraper is:",
+      "correct answer": "the tallest one",
+      "false answers": [
+        "the only one that exists",
+        "shorter compared to others"
+      ]
+    }
+  },
+  "6": {
+    "1": {
+      "question": "The video shows:",
+      "correct answer": "the Statue of Liberty",
+      "false answers": [
+        "the Great Sphinx of Giza",
+        "Christ the Redeemer"
+      ]
+    },
+    "2": {
+      "question": "This specific statue is located:",
+      "correct answer": "in the city of New York",
+      "false answers": [
+        "in a forest in Brazil",
+        "in the desert of Egypt"
+      ]
+    }
+  },
+  "7": {
+    "1": {
+      "question": "In the building shown in the video, it appears to be used mainly",
+      "correct answer": "the upper floors",
+      "false answers": [
+        "only the ground floor",
+        "the entire building"
+      ]
+    }
+  }
+},
+"Ocean": {
+  "1": {
+    "1": {
+      "question": "The specific video presents:",
+      "correct answer": "the fish",
+      "false answers": [
+        "the dolphins",
+        "the sharks"
+      ]
+    },
+    "2": {
+      "question": "How many large fish are visible in the footage near the corals?",
+      "correct answer": "three",
+      "false answers": [
+        "one",
+        "five"
+      ]
+    },
+    "3": {
+      "question": "What color tails do the fish have at the end of the video?",
+      "correct answer": "yellow",
+      "false answers": [
+        "blue",
+        "grey"
+      ]
+    },
+    "4": {
+      "question": "What is not visible in this particular video?",
+      "correct answer": "fishing nets",
+      "false answers": [
+        "corals",
+        "sea sponges"
+      ]
+    },
+    "5": {
+      "question": "What color did the underwater plant have at the end of the video?",
+      "correct answer": "orange",
+      "false answers": [
+        "purple",
+        "green"
+      ]
+    },
+    "6": {
+      "question": "What color fish do not appear in this particular video?",
+      "correct answer": "blue",
+      "false answers": [
+        "orange",
+        "grey"
+      ]
+    },
+    "7": {
+      "question": "Fish generally move:",
+      "correct answer": "in schools",
+      "false answers": [
+        "in pairs",
+        "individually"
+      ]
+    }
+  },"2": {
+    "1": {
+      "question": "What does the specific video present?",
+      "correct answer": "sharks",
+      "false answers": [
+        "dolphins",
+        "whales"
+      ]
+    },
+    "2": {
+      "question": "How many different sharks do you see in the video?",
+      "correct answer": "three",
+      "false answers": [
+        "two",
+        "six"
+      ]
+    },
+    "3": {
+      "question": "What is special about the last shark?",
+      "correct answer": "It has brown spots",
+      "false answers": [
+        "It has white spots",
+        "It has no fin"
+      ]
+    },
+    "4": {
+      "question": "What do the sharks do with the fish in the video?",
+      "correct answer": "The fish swim alongside the sharks",
+      "false answers": [
+        "The sharks eat the fish",
+        "The sharks hunt the fish"
+      ]
+    },
+    "5": {
+      "question": "What part of their body do sharks usually protrude out of the water?",
+      "correct answer": "the dorsal fin",
+      "false answers": [
+        "the tail",
+        "the face"
+      ]
+    },
+    "6": {
+      "question": "Approximately how many sharks are visible at the end of the video?",
+      "correct answer": "five",
+      "false answers": [
+        "two",
+        "eight"
+      ]
+    }
+  },
+  "3": {
+    "1": {
+      "question": "The footage of this specific video was taken from:",
+      "correct answer": "the surface of the sea",
+      "false answers": [
+        "a submarine",
+        "divers"
+      ]
+    },
+    "2": {
+      "question": "The videos present:",
+      "correct answer": "whales",
+      "false answers": [
+        "sharks",
+        "dolphins"
+      ]
+    },
+    "3": {
+      "question": "What color are the whales at the end of the video?",
+      "correct answer": "black and white",
+      "false answers": [
+        "grey",
+        "blue"
+      ]
+    },
+    "4": {
+      "question": "Whales belong to the group of:",
+      "correct answer": "mammals",
+      "false answers": [
+        "fish",
+        "reptiles"
+      ]
+    },
+    "5": {
+      "question": "At the end of the video, the whale appears to:",
+      "correct answer": "leap out of the water",
+      "false answers": [
+        "swim in the water",
+        "play with other whales"
+      ]
+    }
+  },
+  "4": {
+    "1": {
+      "question": "What can you not see in the video?",
+      "correct answer": "dolphins",
+      "false answers": [
+        "humans",
+        "fish"
+      ]
+    },
+    "2": {
+      "question": "Suddenly at the end of the video appears:",
+      "correct answer": "a blue-yellow fish",
+      "false answers": [
+        "an orange-white fish",
+        "a lobster"
+      ]
+    },
+    "3": {
+      "question": "The most common species of sea turtle in Greece is:",
+      "correct answer": "the loggerhead sea turtle",
+      "false answers": [
+        "the solitary turtle",
+        "the green turtle"
+      ]
+    },
+    "4": {
+      "question": "The turtles in this specific video:",
+      "correct answer": "swim near the sea floor",
+      "false answers": [
+        "swim on the surface of the sea",
+        "walk on the shore"
+      ]
+    }
+  },
+  "5": {
+    "1": {
+      "question": "In the video, the fish that appears is called:",
+      "correct answer": "clownfish",
+      "false answers": [
+        "butterflyfish",
+        "anglerfish"
+      ]
+    },
+    "2": {
+      "question": "What color does the fish not have?",
+      "correct answer": "blue",
+      "false answers": [
+        "white",
+        "orange"
+      ]
+    },
+    "3": {
+      "question": "What is not visible in this specific video?",
+      "correct answer": "fish eggs",
+      "false answers": [
+        "other fish species",
+        "marine plants"
+      ]
+    }
+  },"6": {
+    "1": {
+      "question": "Jellyfish belong to the group of:",
+      "correct answer": "invertebrates",
+      "false answers": [
+        "vertebrates",
+        "fish"
+      ]
+    },
+    "2": {
+      "question": "What color was the last jellyfish?",
+      "correct answer": "red",
+      "false answers": [
+        "blue",
+        "purple"
+      ]
+    }
+  },
+  "7": {
+    "1": {
+      "question": "How many arms do octopuses have?",
+      "correct answer": "eight",
+      "false answers": [
+        "six",
+        "nine"
+      ]
+    }
+  }
+},
+"Space": {
+  "1": {
+    "1": {
+      "question": "Which planet is presented in the video?",
+      "correct answer": "Planet Earth",
+      "false answers": [
+        "Planet Mars",
+        "Planet Uranus"
+      ]
+    },
+    "2": {
+      "question": "The video seems to have been taken from:",
+      "correct answer": "a satellite",
+      "false answers": [
+        "the surface of the planet",
+        "the moon"
+      ]
+    },
+    "3": {
+      "question": "What is shown in the video is likely to be:",
+      "correct answer": "clouds from a hurricane",
+      "false answers": [
+        "snow-capped mountain",
+        "stormy sea"
+      ]
+    },
+    "4": {
+      "question": "The video shows the planet during:",
+      "correct answer": "day and night",
+      "false answers": [
+        "daytime",
+        "nighttime"
+      ]
+    },
+    "5": {
+      "question": "From space, one can see:",
+      "correct answer": "the movements of clouds",
+      "false answers": [
+        "the Great Wall of China",
+        "the center of the Earth"
+      ]
+    },
+    "6": {
+      "question": "In the video, which continent is not visible?",
+      "correct answer": "Africa",
+      "false answers": [
+        "Australia",
+        "Asia"
+      ]
+    },
+    "7": {
+      "question": "The specific video seems to have started from where?",
+      "correct answer": "A populated area of Europe",
+      "false answers": [
+        "A point in the Pacific Ocean",
+        "Antarctica"
+      ]
+    }
+  },
+  "2": {
+    "1": {
+      "question": "What is shown in the video?",
+      "correct answer": "spacecraft launch",
+      "false answers": [
+        "spacecraft landing",
+        "spacecraft construction"
+      ]
+    },
+    "2": {
+      "question": "The spacecraft launch is done from:",
+      "correct answer": "Earth",
+      "false answers": [
+        "the moon",
+        "a space station"
+      ]
+    },
+    "3": {
+      "question": "The launch details are visible in the image:",
+      "correct answer": "bottom left",
+      "false answers": [
+        "top right",
+        "bottom right"
+      ]
+    },
+    "4": {
+      "question": "From space to Earth is depicted:",
+      "correct answer": "barren land",
+      "false answers": [
+        "ocean",
+        "city"
+      ]
+    },
+    "5": {
+      "question": "The spacecraft:",
+      "correct answer": "breaks apart during its flight",
+      "false answers": [
+        "remains intact throughout the flight",
+        "has the ability to land back on Earth"
+      ]
+    },
+    "6": {
+      "question": "The lower part that breaks off in the video:",
+      "correct answer": "Is cylindrical with blue fins",
+      "false answers": [
+        "Is a red sphere",
+        "Is directed into space"
+      ]
+    }
+  },
+  "3": {
+    "1": {
+      "question": "Which planet is depicted?",
+      "correct answer": "Saturn",
+      "false answers": [
+        "Mars",
+        "Jupiter"
+      ]
+    },
+    "2": {
+      "question": "Saturn's rings:",
+      "correct answer": "are composed of meteorite fragments",
+      "false answers": [
+        "are an optical illusion",
+        "do not exist"
+      ]
+    },
+    "3": {
+      "question": "Saturn is:",
+      "correct answer": "larger than Earth",
+      "false answers": [
+        "the largest planet in the solar system",
+        "smaller than Earth"
+      ]
+    },
+    "4": {
+      "question": "At the end of the video, an image of a",
+      "correct answer": "comet appears",
+      "false answers": [
+        "small planet",
+        "moon"
+      ]
+    },
+    "5": {
+      "question": "At the beginning of the video, the shots are:",
+      "correct answer": "fake-animated",
+      "false answers": [
+        "from an Earth observatory",
+        "from a video from an artificial satellite"
+      ]
+    }
+  },
+  "4": {
+    "1": {
+      "question": "How many natural satellites (moons) does Earth have?",
+      "correct answer": "one",
+      "false answers": [
+        "two",
+        "none"
+      ]
+    },
+    "2": {
+      "question": "What does the Moon show?",
+      "correct answer": "Craters",
+      "false answers": [
+        "Red color",
+        "Seas"
+      ]
+    },
+    "3": {
+      "question": "When was the first manned moon landing?",
+      "correct answer": "in 1969",
+      "false answers": [
+        "in 1859",
+        "in 1999"
+      ]
+    },
+    "4": {
+      "question": "In the specific video, how many robots are visible?",
+      "correct answer": "one",
+      "false answers": [
+        "none",
+        "four"
+      ]
+    }
+  },
+  "5": {
+    "1": {
+      "question": "What does the video show?",
+      "correct answer": "the Sun",
+      "false answers": [
+        "Venus",
+        "a black hole"
+      ]
+    },
+    "2": {
+      "question": "The video shows",
+      "correct answer": "Solar flares projecting arcs on its surface",
+      "false answers": [
+        "The planets of the solar system orbiting the Sun",
+        "The asteroid belt of the solar system"
+      ]
+    },
+    "3": {
+      "question": "The position of the Sun in our Solar System is:",
+      "correct answer": "in the center",
+      "false answers": [
+        "at the periphery",
+        "next to Earth"
+      ]
+    }
+  },
+  "6": {
+    "1": {
+      "question": "What do you think the video shows?",
+      "correct answer": "a stellar explosion",
+      "false answers": [
+        "the collision between two meteorites",
+        "the destruction of a planet"
+      ]
+    },
+    "2": {
+      "question": "The explosion in the video:",
+      "correct answer": "Radiates intensely",
+      "false answers": [
+        "Does not recede",
+        "Has exclusively red color"
+      ]
+    }
+  },
+  "7": {
+    "1": {
+      "question": "The video shows:",
+      "correct answer": "a black hole",
+      "false answers": [
+        "our Solar System",
+        "a meteor shower"
+      ]
+    }
+  }
+},
+"MICROWORLD": {
+    "1": {
+      "1": {
+        "question": "What color eyes are visible in the video?",
+        "correct answer": "blue",
+        "false answers": [
+          "green",
+          "brown"
+        ]
+      },
+      "2": {
+        "question": "At the end of the video with magnification, what is visible?",
+        "correct answer": "a nail",
+        "false answers": [
+          "a hair follicle",
+          "an eye"
+        ]
+      },
+      "3": {
+        "question": "The human cells in the video are seen with:",
+        "correct answer": "a microscope at magnification",
+        "false answers": [
+          "naked eye",
+          "telescope because they are visible from afar"
+        ]
+      },
+      "4": {
+        "question": "Generally, the colors visible under the microscope in the specific video are:",
+        "correct answer": "pink and purple",
+        "false answers": [
+          "blue and green",
+          "black and yellow"
+        ]
+      },
+      "5": {
+        "question": "The shape through which the image provided by the microscope is seen is:",
+        "correct answer": "circle",
+        "false answers": [
+          "square",
+          "triangle"
+        ]
+      },
+      "6": {
+        "question": "At the end of the video, cells are seen forming:",
+        "correct answer": "small and numerous white circles",
+        "false answers": [
+          "large and few white circles",
+          "there is no gap/white space at all"
+        ]
+      },
+      "7": {
+        "question": "In the microscope, we use …… stain/-s to see the cells.",
+        "correct answer": "many",
+        "false answers": [
+          "only one",
+          "none"
+        ]
+      }
+    },
+    "2": {
+      "1": {
+        "question": "The video is related to:",
+        "correct answer": "insects",
+        "false answers": [
+          "plants",
+          "human cells"
+        ]
+      },
+      "2": {
+        "question": "Inside the fly's eye there are:",
+        "correct answer": "many small facets (like hexagons)",
+        "false answers": [
+          "the pupil (like humans)",
+          "a white and a black area"
+        ]
+      },
+      "3": {
+        "question": "What color is the head of the worm?",
+        "correct answer": "black",
+        "false answers": [
+          "white",
+          "red"
+        ]
+      },
+      "4": {
+        "question": "The beetle seems to be:",
+        "correct answer": "green",
+        "false answers": [
+          "red",
+          "orange"
+        ]
+      },
+      "5": {
+        "question": "The tip/foot visible under the microscope:",
+        "correct answer": "is light brown",
+        "false answers": [
+          "is from a black spider",
+          "has no hairs"
+        ]
+      },
+      "6": {
+        "question": "The last insect shown lacks what?",
+        "correct answer": "wings",
+        "false answers": [
+          "antennae",
+          "legs"
+        ]
+      }
+    },
+    "3": {
+      "1": {
+        "question": "The video is about:",
+        "correct answer": "microorganisms",
+        "false answers": [
+          "objects",
+          "human cells"
+        ]
+      },
+      "2": {
+        "question": "The first microorganism in the video has ends with structures resembling:",
+        "correct answer": "fingers (4 at each end)",
+        "false answers": [
+          "a tail",
+          "eyes (2 at each end)"
+        ]
+      },
+      "3": {
+        "question": "At the beginning of the video how many microorganisms are visible?",
+        "correct answer": "two",
+        "false answers": [
+          "five",
+          "none"
+        ]
+      },
+      "4": {
+        "question": "At the end of the video what does the microorganism do?",
+        "correct answer": "wiggles its tail/flagellum",
+        "false answers": [
+          "eats",
+          "walks"
+        ]
+      },
+      "5": {
+        "question": "What is not true about the microorganisms based on the videos you watched?",
+        "correct answer": "they all have the same shape",
+        "false answers": [
+          "they can move",
+          "they have different sizes"
+        ]
+      }
+    },
+    "4": {
+      "1": {
+        "question": "The video is about:",
+        "correct answer": "plants",
+        "false answers": [
+          "microorganisms",
+          "insects"
+        ]
+      },
+      "2": {
+        "question": "At the end of the video what is visible?",
+        "correct answer": "a walnut",
+        "false answers": [
+          "a flower",
+          "a leaf"
+        ]
+      },
+      "3": {
+        "question": "At the end of the video what is visible?",
+        "correct answer": "a lemon",
+        "false answers": [
+          "a grapefruit",
+          "a pineapple"
+        ]
+      },
+      "4": {
+        "question": "The only leaf visible in the video is:",
+        "correct answer": "from a microscope image",
+        "false answers": [
+          "is an oak leaf",
+          "is orange/red"
+        ]
+      }
+    },
+    "5": {
+      "1": {
+        "question": "At the end of the video what is visible?",
+        "correct answer": "a snowflake",
+        "false answers": [
+          "balls",
+          "cells"
+        ]
+      },
+      "2": {
+        "question": "The circles visible are:",
+        "correct answer": "air bubbles",
+        "false answers": [
+          "cells",
+          "microorganisms"
+        ]
+      },
+      "3": {
+        "question": "At the end the color of the material changes from:",
+        "correct answer": "black to white",
+        "false answers": [
+          "red to green",
+          "blue to black"
+        ]
+      }
+    },
+    "6": {
+      "1": {
+        "question": "What animal is shown in the video?",
+        "correct answer": "jellyfish",
+        "false answers": [
+          "jellyfish larva",
+          "octopus"
+        ]
+      },
+      "2": {
+        "question": "At the end of the video what does it show?",
+        "correct answer": "a fish",
+        "false answers": [
+          "a jellyfish",
+          "corals"
+        ]
+      }
+    },
+    "7": {
+      "1": {
+        "question": "What is visible in the video?",
+        "correct answer": "Many viruses with spikes",
+        "false answers": [
+          "human cells",
+          "bacteria"
+        ]
+      }
+    }
+  },"ANCIENT_CIVILIZATION": {
+      "3": {
+        "1": {
+          "question": "In the following video is shown:",
+          "correct answer": "the Parthenon",
+          "false answers": [
+            "the ancient theater of Dodona",
+            "the Temple of Poseidon at Sounion"
+          ]
+        },
+        "2": {
+          "question": "The video shows",
+          "correct answer": "the area of the Acropolis",
+          "false answers": [
+            "the center of Athens",
+            "a mountain village in Greece"
+          ]
+        },
+        "3": {
+          "question": "What does not exist on the Acropolis?",
+          "correct answer": "music hall",
+          "false answers": [
+            "ancient theater",
+            "museum"
+          ]
+        },
+        "4": {
+          "question": "In the video the Acropolis seems to be:",
+          "correct answer": "accessible",
+          "false answers": [
+            "inaccessible",
+            "restricted area"
+          ]
+        },
+        "5": {
+          "question": "The roof of the Parthenon",
+          "correct answer": "Has now collapsed",
+          "false answers": [
+            "Is domed",
+            "Is covered in gold"
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "question": "What does the video present?",
+          "correct answer": "the Great Wall of China",
+          "false answers": [
+            "the arena of the Colosseum",
+            "the Medieval Town of Rhodes"
+          ]
+        },
+        "2": {
+          "question": "What color sweater is the person wearing?",
+          "correct answer": "black",
+          "false answers": [
+            "white",
+            "red"
+          ]
+        },
+        "3": {
+          "question": "At the end of the video what is visible?",
+          "correct answer": "Palace Complex",
+          "false answers": [
+            "Great Wall of China",
+            "Theater"
+          ]
+        },
+        "4": {
+          "question": "What color is the door?",
+          "correct answer": "red and gold",
+          "false answers": [
+            "red and blue",
+            "brown and gold"
+          ]
+        }
+      },
+      "5": {
+        "1": {
+          "question": "Which ancient monument is presented in the video?",
+          "correct answer": "the Pyramids of Giza",
+          "false answers": [
+            "the Temple of Poseidon",
+            "the Sacred Valley of the Incas"
+          ]
+        },
+        "2": {
+          "question": "How many pyramids appear to exist in the area?",
+          "correct answer": "three",
+          "false answers": [
+            "five",
+            "two"
+          ]
+        },
+        "3": {
+          "question": "From the statues shown in the video which of the following does not appear?",
+          "correct answer": "Cat",
+          "false answers": [
+            "Human",
+            "Bird"
+          ]
+        }
+      },
+      "6": {
+        "1": {
+          "question": "The video starts with a shot of;",
+          "correct answer": "a snow-covered mountain",
+          "false answers": [
+            "a deserted valley",
+            "a beach"
+          ]
+        },
+        "2": {
+          "question": "In the corridor with the columns, what color are the columns?",
+          "correct answer": "red",
+          "false answers": [
+            "green",
+            "blue"
+          ]
+        }
+      },
+      "7": {
+        "1": {
+          "question": "At the end of the video where is the temple located in contrast to the other monuments?",
+          "correct answer": "on a mountain",
+          "false answers": [
+            "in a city",
+            "next to the sea"
+          ]
+        }
+      }
+    },
+    "LANDSCAPES": {
+      "4": {
+        "1": {
+          "question": "In the first scene:",
+          "correct answer": "a river is seen in a tropical forest",
+          "false answers": [
+            "a deserted landscape is seen",
+            "a plain is seen"
+          ]
+        },
+        "2": {
+          "question": "The trees in the tropical climate are:",
+          "correct answer": "tall and dense",
+          "false answers": [
+            "mainly olive trees",
+            "close and sparse"
+          ]
+        },
+        "3": {
+          "question": "The landscape is:",
+          "correct answer": "cloudy and foggy",
+          "false answers": [
+            "clear and sunny",
+            "rainy"
+          ]
+        },
+        "4": {
+          "question": "The river shown:",
+          "correct answer": "divides in the distance",
+          "false answers": [
+            "flows strongly",
+            "ends in a waterfall"
+          ]
+        }
+      },
+      "5": {
+        "1": {
+          "question": "In the video the camera passes:",
+          "correct answer": "through the center of a city",
+          "false answers": [
+            "from the edge of an iceberg",
+            "through a forest"
+          ]
+        },
+        "2": {
+          "question": "In the video among other things is shown:",
+          "correct answer": "an iceberg collapsing",
+          "false answers": [
+            "a polar bear",
+            "an airplane"
+          ]
+        },
+        "3": {
+          "question": "The iceberg in the last scene is:",
+          "correct answer": "white",
+          "false answers": [
+            "blue",
+            "transparent"
+          ]
+        }
+      },
+      "6": {
+        "1": {
+          "question": "The presented climate is:",
+          "correct answer": "desert",
+          "false answers": [
+            "tropical",
+            "temperate"
+          ]
+        },
+        "2": {
+          "question": "The footprints in the desert belong to:",
+          "correct answer": "human",
+          "false answers": [
+            "camel",
+            "bear"
+          ]
+        }
+      },
+      "7": {
+        "1": {
+          "question": "The weather is:",
+          "correct answer": "rainy",
+          "false answers": [
+            "cloudy",
+            "sunny"
+          ]
+        }
+      }
+    },
+    "NATURE_BLOOMING": {
+      "5": {
+        "1": {
+          "question": "How many seeds are visible in the second scene?",
+          "correct answer": "4",
+          "false answers": [
+            "6",
+            "1"
+          ]
+        },
+        "2": {
+          "question": "The seed in the second half starts its growth with:",
+          "correct answer": "2 roots",
+          "false answers": [
+            "5 roots",
+            "1 root"
+          ]
+        },
+        "3": {
+          "question": "At the end the growth shown is of:",
+          "correct answer": "4 plants",
+          "false answers": [
+            "1 plant",
+            "5 plants"
+          ]
+        }
+      },
+      "6": {
+        "1": {
+          "question": "The cap (head) of the mushrooms in the first scene is:",
+          "correct answer": "flat",
+          "false answers": [
+            "spherical",
+            "triangular"
+          ]
+        },
+        "2": {
+          "question": "In contrast to the previous ones, the last mushrooms have:",
+          "correct answer": "slightly yellowish color",
+          "false answers": [
+            "intense red color",
+            "stripes"
+          ]
+        }
+      },
+      "7": {
+        "1": {
+          "question": "The video is about:",
+          "correct answer": "flower blossoming",
+          "false answers": [
+            "seed growth",
+            "branch growth in plants"
+          ]
+        }
+      }
+    }
+  ,"FOOD": {
+      "6": {
+        "1": {
+          "question": "What food appears to be prepared in the video?",
+          "correct answer": "burger",
+          "false answers": [
+            "pizza",
+            "salad"
+          ]
+        },
+        "2": {
+          "question": "What ingredients were added to the burger?",
+          "correct answer": "patty, cheese, tomato, lettuce, bacon, egg",
+          "false answers": [
+            "patty, tomato, mushrooms",
+            "chicken, potatoes, cheese, onion"
+          ]
+        }
+      },
+      "7": {
+        "1": {
+          "question": "What color frosting does the cake have?",
+          "correct answer": "blue",
+          "false answers": [
+            "pink",
+            "yellow"
+          ]
+        }
+      }
+    },
+    "FUTURISTIC_TRANSPORTATION": {
+      "7": {
+        "1": {
+          "question": "What color is the futuristic train in the video?",
+          "correct answer": "white and blue",
+          "false answers": [
+            "black and blue",
+            "white and black"
+          ]
+        }
+      }
+    }  
+}
